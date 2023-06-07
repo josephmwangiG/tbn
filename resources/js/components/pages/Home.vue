@@ -2,7 +2,7 @@
     <div>
         <!--====== Start Saas-banner section ======-->
         <section class="saas-banner">
-            <div class="shape">
+            <div class="shape bg-dark">
                 <img data-src="https://profilo.xyz/assets/front/img/shape-1.png" class="img-fluid img-1 lazy entered loaded"
                     alt="" data-ll-status="loaded" src="https://profilo.xyz/assets/front/img/shape-1.png">
                 <img data-src="https://profilo.xyz/assets/front/img/shape-2.png" class="img-fluid img-2 lazy" alt="">
@@ -12,15 +12,16 @@
                     <div class="col-lg-6">
                         <div class="hero-content">
                             <span class="span">
-                                Our Platform, Your Success
+                                Enabling a collaborative environment
+                                for entrepreneurs to thrive
                             </span>
-                            <h1>Minimize the time, it takes to initiate a relationship between you and the customer.</h1>
+                            <h1>SUPPORTING BUSINESSES TO SCALE UP AND BECOME INVESTOR READY.</h1>
                             <ul>
 
                                 <li>
-                                    <a href="http://example.com/" class="main-btn">Explore Plans
-                                        <i class="fal fa-long-arrow-alt-right"></i>
-                                    </a>
+                                    <router-link :to="{ name: 'business-join' }" class="main-btn">Apply to Join us
+                                        <i class="ri-arrow-right-line pl-2"></i>
+                                    </router-link>
                                 </li>
                                 <li>
                                     <a href="https://www.youtube.com/watch?v=6KJqEPVfoDs" class="video-popup"><i
@@ -55,11 +56,13 @@
                         <div class="choose-content-box mb-40">
                             <div class="section-title-one section-title-two mb-20">
                                 <span class="span">About US</span>
-                                <h2>We beilieve in Customer Trust</h2>
+                                <h2>Transformational Business Network Africa</h2>
                             </div>
-                            <p>Donec scelerisque dolor id nunc dictum, interdum gravida mauris rhoncus. Aliquam at ultrices
-                                nunc. In sem leo, fermentum at lorem in, porta finibus mauris. Aliquam consectetur, ex in
-                                gravida porttitor, </p>
+                            <p>We are an Impact – led Global movement that supports
+                                both early stage and growth stage entrepreneurs to build profitable businesses and make them
+                                bankable/ investor ready.
+
+                                We achieve this by leveraging on our networks, skills and resources. </p>
                         </div>
                     </div>
                 </div>
@@ -346,8 +349,8 @@
                 <div class="row">
                     <div class="col-lg-6">
                         <div class="section-title-one section-title-two mb-50">
-                            <span class="span">Featured Users</span>
-                            <h2>Take a look at the featured users</h2>
+                            <span class="span">Featured Coaches</span>
+                            <h2>Take a look at the featured coaches</h2>
                         </div>
                     </div>
                 </div>
@@ -1627,7 +1630,7 @@
                 <div class="row justify-content-center">
                     <div class="col-lg-6">
                         <div class="section-title-one text-center mb-50">
-                            <h2>Our Latest Blogs</h2>
+                            <h2>Upcoming Events</h2>
                         </div>
                     </div>
                 </div>

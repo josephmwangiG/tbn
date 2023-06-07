@@ -6,6 +6,7 @@ import Training from "./../components/pages/Training.vue";
 import Contacts from "./../components/pages/Contacts.vue";
 import Pages from "./../components/pages/Pages.vue";
 import Login from "./../components/auth/Login.vue";
+import RegisterBusiness from "./../components/pages/RegisterBusiness.vue";
 
 export const routes = [
     {
@@ -41,6 +42,11 @@ export const routes = [
                 path: "/training",
                 name: "training",
                 component: Training,
+            },
+            {
+                path: "/business-application",
+                name: "business-join",
+                component: RegisterBusiness,
             },
             {
                 path: "/profile",
