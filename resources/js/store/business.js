@@ -15,4 +15,14 @@ export const useBusinessStore = defineStore("business", {
             }
         },
     },
+    actions: {
+        async addBusinesses(form) {
+            try {
+                let response = await axios.post("businesses", form);
+                return true;
+            } catch (e) {
+                return e.response;
+            }
+        },
+    },
 });

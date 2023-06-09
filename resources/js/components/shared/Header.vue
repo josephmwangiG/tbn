@@ -5,7 +5,8 @@
             <div class="nav-container d-flex align-items-center justify-content-between breakpoint-on">
                 <!-- site logo -->
                 <div class="brand_logo">
-                    <router-link :to="{ name: 'home' }"><img src="https://profilo.xyz/assets/front/img/60f55a8eea308.png"
+                    <router-link :to="{ name: 'home' }"><img style="height:80px"
+                            src="https://i0.wp.com/tbnetworkafrica.org/wp-content/uploads/2022/11/logo@2x.png?w=445&ssl=1"
                             class="img-fluid" alt=""></router-link>
                 </div>
                 <div class="nav-menu">
@@ -14,7 +15,8 @@
                         <div class="cross-wrap"><span class="top"></span><span class="bottom"></span></div>
                     </div>
                     <div class="mobile-logo">
-                        <router-link to="#"><img src="https://profilo.xyz/assets/front/img/60f55a8eea308.png"
+                        <router-link to="#"><img style="height:80px"
+                                src="https://i0.wp.com/tbnetworkafrica.org/wp-content/uploads/2022/11/logo@2x.png?w=445&ssl=1"
                                 class="img-fluid" alt=""></router-link>
                     </div>
                     <!-- nav-menu -->

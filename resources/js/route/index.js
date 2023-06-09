@@ -7,6 +7,7 @@ import Contacts from "./../components/pages/Contacts.vue";
 import Pages from "./../components/pages/Pages.vue";
 import Login from "./../components/auth/Login.vue";
 import RegisterBusiness from "./../components/pages/RegisterBusiness.vue";
+import RegisterCoach from "./../components/pages/RegisterCoach.vue";
 
 export const routes = [
     {
@@ -47,6 +48,11 @@ export const routes = [
                 path: "/business-application",
                 name: "business-join",
                 component: RegisterBusiness,
+            },
+            {
+                path: "/coach-application",
+                name: "coach-join",
+                component: RegisterCoach,
             },
             {
                 path: "/profile",

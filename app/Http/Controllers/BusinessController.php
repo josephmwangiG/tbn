@@ -29,7 +29,21 @@ class BusinessController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $data = $request->validate([
+            "business_name" => "required",
+            "email" => "required:unique:users",
+            "address" => "",
+            "number_of_employees" => "",
+            "specialization" => "",
+            "phone_number" => "required",
+            "owners" => "",
+            "description" => "",
+            "annual_revenue" => "",
+            "years_of_operation" => "",
+            "website" => "",
+        ]);
+
+        return $data;
     }
 
     /**

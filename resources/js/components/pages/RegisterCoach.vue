@@ -21,13 +21,13 @@
         </section>
         <section class="contacts-section pt-80 pb-80">
             <div class="container">
-                <h3>Fill the form below to join Transformational Business Network</h3>
+                <h3>Fill the form below to join Transformational Business Network as a Coach</h3>
                 <form @submit.prevent="addBusiness">
                     <div class="row mt-5">
                         <div class="form-group col-lg-6 mt-2">
-                            <span>Business/Company Name</span>
+                            <span>Full Names</span>
                             <el-input style="border:black" v-model="form.business_name" size="large"
-                                placeholder="Business/Company Name" type="text" required="required"></el-input>
+                                placeholder="Full Names" type="text" required="required"></el-input>
                             <span class="text-danger" v-if="errors.business_name">{{ errors.business_name[0] }}</span>
                         </div>
                         <div class="form-group col-lg-6 mt-2">
@@ -59,7 +59,7 @@
                         </div>
 
                         <div class="col-12  my-5">
-                            <h5>Additional Business/Company Details.</h5>
+                            <h5>Additional Details.</h5>
                             <hr>
                         </div>
 
@@ -82,52 +82,23 @@
                         </div>
                         <div class="col-lg-4">
                             <div class="form-group">
-                                <span>Years of Operation</span>
-                                <el-input type="number" style="border:black" v-model="form.years_of_operation" size="large"
-                                    placeholder="Years of Operation" />
-                                <span class="text-danger" v-if="errors.years_of_operation">{{ errors.years_of_operation[0]
+                                <span>Years of Experience</span>
+                                <el-input type="number" style="border:black" v-model="form.years_of_experience" size="large"
+                                    placeholder="Years of Experience" />
+                                <span class="text-danger" v-if="errors.years_of_experience">{{ errors.years_of_experience[0]
                                 }}</span>
                             </div>
                         </div>
                         <div class="col-lg-4">
                             <div class="form-group">
-                                <span>Approximate Annual Revenue</span>
-                                <el-input :formatter="removeletter" :parser="(value) => value.replace(/\$\s?|(,*)/g, '')"
-                                    style="border:black" v-model="revenue" size="large"
-                                    placeholder="Approximate Annual Revenue" />
-                                <span class="text-danger" v-if="errors.annual_revenue">{{ errors.annual_revenue[0] }}</span>
+                                <span>Highest Level of Education</span>
+                                <el-input type="number" style="border:black" v-model="form.highest_level_of_education" size="large"
+                                    placeholder="Highest Level of Education" />
+                                <span class="text-danger" v-if="errors.highest_level_of_education">{{ errors.highest_level_of_education[0]
+                                }}</span>
                             </div>
                         </div>
 
-                        <div class="col-12">
-                            <div class="d-flex justify-content-between my-3">
-                                <h5>Business Owners</h5>
-                                <i @click="addOwner" style="font-size: 30px;" class="ri-add-circle-line"></i>
-                            </div>
-                            <div class="row" v-for="(item, index) in form.owners" :key="index">
-                                <div class="col-lg-4 ">
-                                    <span>Full Names</span>
-                                    <div class="form-group">
-                                        <el-input style="border:black" v-model="item.name" type="text" size="large"
-                                            placeholder="Full Names" required="" />
-                                    </div>
-                                </div>
-                                <div class="col-lg-4">
-                                    <div class="form-group">
-                                        <span>Owner Email</span>
-                                        <el-input style="border:black" v-model="item.email" size="large" type="email"
-                                            placeholder="Owner Email" />
-                                    </div>
-                                </div>
-                                <div class="col-lg-4">
-                                    <div class="form-group">
-                                        <span>Phone Number</span>
-                                        <el-input style="border:black" v-model="item.phone_number" size="large"
-                                            placeholder="Phone Number" />
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
 
                         <div class="col-lg-12">
                             <div class="form-group">

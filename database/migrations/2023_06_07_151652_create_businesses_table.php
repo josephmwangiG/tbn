@@ -23,6 +23,7 @@ return new class extends Migration
             $table->text("description")->nullable();
             $table->double("annual_revenue")->nullable();
             $table->integer("years_of_operation")->nullable();
+            $table->string("website")->nullable();
             $table->timestamps();
             $table->softDeletes();
             $table->index('id');

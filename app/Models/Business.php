@@ -22,5 +22,6 @@ class Business extends Model
         "description",
         "annual_revenue",
         "years_of_operation",
+        "website",
     ];
 }
