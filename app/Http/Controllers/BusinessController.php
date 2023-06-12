@@ -3,7 +3,10 @@
 namespace App\Http\Controllers;
 
 use App\Models\Business;
+use App\Models\BusinessOwner;
+use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Hash;
 
 class BusinessController extends Controller
 {
@@ -43,7 +46,26 @@ class BusinessController extends Controller
             "website" => "",
         ]);
 
-        return $data;
+        $user  = User::create([
+            "email" => $data['email'],
+            "password" => Hash::make($data['password']),
+            "name" => $data['full_name']
+        ]);
+
+        $data['user_id'] = $user->id;
+
+        $business = Business::create($data);
+
+        foreach ($data['owners'] as $owner) {
+            BusinessOwner::create([
+                "business_id" => $business->id,
+                "name" => $owner['name'],
+                "email" => $owner['email'],
+                "phone_number" => $owner['phone_number'],
+            ]);
+        }
+
+        return response(["successe" => $owner['name'], "success", 200]);
     }
 
     /**

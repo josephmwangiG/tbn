@@ -13,7 +13,20 @@ return new class extends Migration
     {
         Schema::create('coaches', function (Blueprint $table) {
             $table->id();
+            $table->unsignedBigInteger("user_id");
+            $table->string("name");
+            $table->string("website")->nullable();
+            $table->string("highest_level_of_education")->nullable();
+            $table->text("description")->nullable();
+            $table->string("status")->default('Pending');
+            $table->string("phone")->nullable();
+            $table->string("profile")->defaul('profile.png');
+            $table->string("specialization")->nullable();
             $table->timestamps();
+            $table->softDeletes();
+            $table->index('id');
+
+            $table->foreign('user_id')->references('user_id')->on('users')->onDelete('cascade');
         });
     }
 

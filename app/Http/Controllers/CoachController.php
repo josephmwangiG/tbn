@@ -3,7 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\Models\Coach;
+use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Hash;
 
 class CoachController extends Controller
 {
@@ -12,7 +14,9 @@ class CoachController extends Controller
      */
     public function index()
     {
-        //
+
+        $coaches = Coach::latest()->get();
+        return response(['coaches' => $coaches], 200);
     }
 
     /**
@@ -28,7 +32,29 @@ class CoachController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $data = $request->validate([
+            "name" => 'required',
+            "email" => 'required',
+            "password" => 'required',
+            "highest_level_of_education" => '',
+            "description" => '',
+            "website" => '',
+            "phone_number" => 'required',
+            "specialization" => 'required',
+        ]);
+
+        $user  = User::create([
+            "email" => $data['email'],
+            "password" => Hash::make($data['password']),
+            "name" => $data['name']
+        ]);
+
+
+        $data['user_id'] = $user->id;
+
+        Coach::create($data);
+
+        return response(["success" => "Success"], 200);
     }
 
     /**
