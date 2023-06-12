@@ -6,11 +6,11 @@
             <div class="row justify-content-center">
                 <div class="col-lg-12">
                     <div class="breadcrumbs-content text-center">
-                        <h1> Login
+                        <h1> Reset Password
                         </h1>
                         <ul class="breadcrumbs-link">
                             <li><a href="https://profilo.xyz">Home</a></li>
-                            <li class="active"> Login
+                            <li class="active"> Reset Password
                             </li>
                         </ul>
                     </div>
@@ -24,21 +24,17 @@
                 <div class="col-lg-8">
                     <div class="user-form">
                         <div class="title">
-                            <h3>Login to your account</h3>
+                            <h3>Reset your password</h3>
                         </div>
                         <form @submit.prevent="login">
                             <div class="form_group">
                                 <span>Email Address*</span>
                                 <el-input size="large" v-model="form.email" type="email" />
                             </div>
-                            <div class="form_group">
-                                <span>Password *</span>
-                                <el-input size="large" v-model="form.password" type="password" />
-                            </div>
 
                             <div class="form_group d-sm-flex justify-content-between">
                                 <div>
-                                    <router-link :to="{ name: 'reset-password' }">Lost your password?</router-link>
+                                    <router-link :to="{ name: 'login' }">Go back to Login</router-link>
                                 </div>
                                 <div>
                                     <span>Don't have an account? <router-link class="btn-link"

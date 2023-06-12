@@ -6,8 +6,11 @@ import Training from "./../components/pages/Training.vue";
 import Contacts from "./../components/pages/Contacts.vue";
 import Pages from "./../components/pages/Pages.vue";
 import Login from "./../components/auth/Login.vue";
+import ResetPassword from "./../components/auth/ResetPassword.vue";
 import RegisterBusiness from "./../components/pages/RegisterBusiness.vue";
 import RegisterCoach from "./../components/pages/RegisterCoach.vue";
+import Admin from "./../components/admin/Admin.vue";
+import Dashboard from "./../components/admin/Dashboard.vue";
 
 export const routes = [
     {
@@ -23,6 +26,11 @@ export const routes = [
                 path: "/login",
                 name: "login",
                 component: Login,
+            },
+            {
+                path: "/reset-password",
+                name: "reset-password",
+                component: ResetPassword,
             },
             {
                 path: "/about",
@@ -58,6 +66,18 @@ export const routes = [
                 path: "/profile",
                 name: "profile",
                 component: Profile,
+            },
+        ],
+    },
+    {
+        path: "/admin",
+        component: Admin,
+        children: [
+            {
+                path: "",
+                alias: "dashboard",
+                name: "dashboard",
+                component: Dashboard,
             },
         ],
     },

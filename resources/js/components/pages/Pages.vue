@@ -9,10 +9,9 @@
 
     </div>
 </template>
-<script>
-export default {
+<script setup>
+import "./../../static/main.js"
 
-}
 </script>
 <style lang="">
     
