@@ -4,6 +4,7 @@ import Coaches from "./../components/pages/Coaches.vue";
 import Profile from "./../components/pages/Profile.vue";
 import Training from "./../components/pages/Training.vue";
 import Contacts from "./../components/pages/Contacts.vue";
+import AccountCreated from "./../components/pages/AccountCreated.vue";
 import Pages from "./../components/pages/Pages.vue";
 import Login from "./../components/auth/Login.vue";
 import ResetPassword from "./../components/auth/ResetPassword.vue";
@@ -61,6 +62,11 @@ export const routes = [
                 path: "/coach-application",
                 name: "coach-join",
                 component: RegisterCoach,
+            },
+            {
+                path: "/account-created",
+                name: "account-created",
+                component: AccountCreated,
             },
             {
                 path: "/profile",

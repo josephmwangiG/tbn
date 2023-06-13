@@ -1,7 +1,7 @@
 <template>
     <!--====== Start Footer ======-->
     <footer class="saas-footer">
-        <div class="footer-widget pt-145 pb-60">
+        <div class="footer-widget py-5 mt-5">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-4 col-md-6 col-sm-12">

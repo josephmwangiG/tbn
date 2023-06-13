@@ -20,13 +20,15 @@ return new class extends Migration
             $table->text("description")->nullable();
             $table->string("status")->default('Pending');
             $table->string("phone")->nullable();
-            $table->string("profile")->defaul('profile.png');
+            $table->string("profile")->default('profile.png');
             $table->string("specialization")->nullable();
+            $table->string("current_employment")->nullable();
+            $table->string("current_employer")->nullable();
             $table->timestamps();
             $table->softDeletes();
             $table->index('id');
 
-            $table->foreign('user_id')->references('user_id')->on('users')->onDelete('cascade');
+            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
         });
     }
 

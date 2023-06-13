@@ -20,5 +20,7 @@ class Coach extends Model
         "phone",
         "profile",
         "specialization",
+        "current_employment",
+        "current_employer",
     ];
 }

@@ -11,7 +11,7 @@
                             </h1>
                             <ul class="breadcrumbs-link">
                                 <li><a href="https://profilo.xyz">Home</a></li>
-                                <li class="active"> About Us
+                                <li class="active"> Coaches
                                 </li>
                             </ul>
                         </div>
@@ -20,9 +20,9 @@
             </div>
         </section>
 
-        <section class="saas-featured-users pt-120 pb-80">
+        <section class="saas-featured-users py-5">
             <div class="container">
-                <div class="search-filter mb-30">
+                <div class="search-filter mb-5">
                     <form action="https://profilo.xyz/users">
                         <div class="row align-items-center">
                             <div class="col-lg-4">
@@ -53,7 +53,7 @@
                 </div>
                 <div class="row">
                     <div class="col-lg-4 col-md-6 col-sm-12">
-                        <div class="user-item mb-40">
+                        <div class="user-item mb-5">
                             <div class="title">
                                 <img class="lazy entered loaded"
                                     data-src="https://profilo.xyz/assets/front/img/user/1677050633author-6.jpg" alt=""
@@ -331,77 +331,78 @@
                                 </ul>
                             </div>
                         </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-sm-12">
+                        <div class="user-item mb-40">
+                            <div class="title">
+                                <img class="lazy"
+                                    data-src="https://profilo.xyz/assets/front/img/user/162739107109 220x220.png" alt="">
+                                <h5>Dani Olmo</h5>
+                                <span>California, USA</span>
+                            </div>
+                            <div class="user-button">
+                                <ul>
+                                    <li><a href="//profilo.xyz/Olmo" class="main-btn"><i class="fas fa-eye"></i>View
+                                            Profile</a></li>
+                                    <li>
+                                        <a href="https://profilo.xyz/user/follow/65" class="main-btn"><i
+                                                class="fal fa-user-plus"></i>Follow
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="social-box">
+                                <ul class="social-link">
+                                    <li><a href="https://www.facebook.com/" class="facebook" target="_blank"><i
+                                                class="fab fa-facebook-f"></i></a></li>
+                                    <li><a href="https://twitter.com/?lang=en" class="facebook" target="_blank"><i
+                                                class="fab fa-twitter"></i></a></li>
+                                    <li><a href="https://www.linkedin.com/login" class="facebook" target="_blank"><i
+                                                class="fab fa-linkedin-in"></i></a></li>
+                                    <li><a href="https://dribbble.com/" class="facebook" target="_blank"><i
+                                                class="fab fa-dribbble"></i></a></li>
+                                    <li><a href="https://github.com/" class="facebook" target="_blank"><i
+                                                class="fab fa-github"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="col-lg-4 col-md-6 col-sm-12">
-                    <div class="user-item mb-40">
-                        <div class="title">
-                            <img class="lazy"
-                                data-src="https://profilo.xyz/assets/front/img/user/162739107109 220x220.png" alt="">
-                            <h5>Dani Olmo</h5>
-                            <span>California, USA</span>
-                        </div>
-                        <div class="user-button">
-                            <ul>
-                                <li><a href="//profilo.xyz/Olmo" class="main-btn"><i class="fas fa-eye"></i>View
-                                        Profile</a></li>
-                                <li>
-                                    <a href="https://profilo.xyz/user/follow/65" class="main-btn"><i
-                                            class="fal fa-user-plus"></i>Follow
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="social-box">
-                            <ul class="social-link">
-                                <li><a href="https://www.facebook.com/" class="facebook" target="_blank"><i
-                                            class="fab fa-facebook-f"></i></a></li>
-                                <li><a href="https://twitter.com/?lang=en" class="facebook" target="_blank"><i
-                                            class="fab fa-twitter"></i></a></li>
-                                <li><a href="https://www.linkedin.com/login" class="facebook" target="_blank"><i
-                                            class="fab fa-linkedin-in"></i></a></li>
-                                <li><a href="https://dribbble.com/" class="facebook" target="_blank"><i
-                                            class="fab fa-dribbble"></i></a></li>
-                                <li><a href="https://github.com/" class="facebook" target="_blank"><i
-                                            class="fab fa-github"></i></a></li>
-                            </ul>
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="saas-pagination text-center d-flex justify-content-center">
+                            <nav>
+                                <ul class="pagination">
+
+                                    <li class="page-item disabled" aria-disabled="true" aria-label="« Previous">
+                                        <span class="page-link" aria-hidden="true">‹</span>
+                                    </li>
+
+
+
+
+
+                                    <li class="page-item active" aria-current="page"><span class="page-link">1</span></li>
+                                    <li class="page-item"><a class="page-link" href="https://profilo.xyz/users?page=2">2</a>
+                                    </li>
+
+
+                                    <li class="page-item">
+                                        <a class="page-link" href="https://profilo.xyz/users?page=2" rel="next"
+                                            aria-label="Next »">›</a>
+                                    </li>
+                                </ul>
+                            </nav>
+
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="saas-pagination text-center d-flex justify-content-center">
-                        <nav>
-                            <ul class="pagination">
-
-                                <li class="page-item disabled" aria-disabled="true" aria-label="« Previous">
-                                    <span class="page-link" aria-hidden="true">‹</span>
-                                </li>
+        </section>
 
 
-
-
-
-                                <li class="page-item active" aria-current="page"><span class="page-link">1</span></li>
-                                <li class="page-item"><a class="page-link" href="https://profilo.xyz/users?page=2">2</a>
-                                </li>
-
-
-                                <li class="page-item">
-                                    <a class="page-link" href="https://profilo.xyz/users?page=2" rel="next"
-                                        aria-label="Next »">›</a>
-                                </li>
-                            </ul>
-                        </nav>
-
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-
-</div></template>
+    </div>
+</template>
 <script>
 export default {
 

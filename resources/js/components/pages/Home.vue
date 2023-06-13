@@ -43,7 +43,7 @@
         <!--====== End Saas-banner section ======-->
 
         <!--====== Start saas-analysis section ======-->
-        <section class="saas-analysis pt-120 pb-80">
+        <section class="saas-analysis py-5">
             <div class="container">
                 <div class="row align-items-center">
                     <div class="col-lg-7">
@@ -72,7 +72,7 @@
 
 
         <!--====== Start saas-features section ======-->
-        <section class="saas-features pb-80">
+        <section class="saas-features pb-5">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-6">
@@ -82,6 +82,14 @@
                     </div>
                 </div>
                 <div class="row">
+                    <div class="col-lg-4 col-md-6 col-sm-12">
+                        <div class="features-item mb-40">
+                            <i class="fas fa-adjust"></i>
+                            <h4>Dark &amp; Light Version</h4>
+                            <p>It is a long established fact that a reader will be distracted by the readable content of a
+                                page</p>
+                        </div>
+                    </div>
                     <div class="col-lg-4 col-md-6 col-sm-12">
                         <div class="features-item mb-40">
                             <i class="fas fa-adjust"></i>
@@ -115,16 +123,13 @@
             <div class="container">
                 <div class="row justify-content-center">
                     <div class="col-lg-6">
-                        <div class="section-title-one text-center mb-55">
+                        <div class="section-title-one text-center mb-5">
                             <span class="span">Work Process</span>
                             <h2>How It Works</h2>
                         </div>
                     </div>
                 </div>
                 <div class="work-slide slick-initialized slick-slider">
-
-
-
 
 
                     <div class="slick-list draggable">
@@ -207,8 +212,7 @@
                                     <h5>Upload Profile Contents</h5>
                                 </div>
                             </div>
-                            <div class="work-item slick-slide" style="width: 217px;" tabindex="0" data-slick-index="4"
-                                aria-hidden="true">
+                            <div class="work-item slick-slide" style="width: 217px;" aria-hidden="true">
                                 <div class="work-img">
                                     <img data-src="https://profilo.xyz/assets/front/img/process/1627279606.jpg"
                                         class="img-fluid lazy" alt="">
@@ -280,71 +284,9 @@
         </section>
         <!--====== End saas-project section ======-->
 
-        <section class="saas-features pt-120">
-            <div class="container">
-                <div class="row justify-content-center text-center">
-                    <div class="col-lg-6">
-                        <div class="section-title-one mb-55">
-                            <span class="span">Available Templates</span>
-                            <h2>Take a look at our awesome templates</h2>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-lg-4 col-md-6 col-sm-12">
-                        <a class="d-block features-item mb-40 p-0" href="//profilo.xyz/veratti" target="_blank">
-                            <img src="https://profilo.xyz/assets/front/img/template-previews/61e2b6e97bace.jpg" alt=""
-                                class="w-100 lazy">
-                        </a>
-                    </div>
-                    <div class="col-lg-4 col-md-6 col-sm-12">
-                        <a class="d-block features-item mb-40 p-0" href="//profilo.xyz/Berrardi" target="_blank">
-                            <img src="https://profilo.xyz/assets/front/img/template-previews/61e29a3868723.jpg" alt=""
-                                class="w-100 lazy">
-                        </a>
-                    </div>
-                    <div class="col-lg-4 col-md-6 col-sm-12">
-                        <a class="d-block features-item mb-40 p-0" href="//profilo.xyz/chiesa" target="_blank">
-                            <img src="https://profilo.xyz/assets/front/img/template-previews/61e29a17e156d.jpg" alt=""
-                                class="w-100 lazy">
-                        </a>
-                    </div>
-                    <div class="col-lg-4 col-md-6 col-sm-12">
-                        <a class="d-block features-item mb-40 p-0" href="//profilo.xyz/Rabiot" target="_blank">
-                            <img src="https://profilo.xyz/assets/front/img/template-previews/61e2b72def454.jpg" alt=""
-                                class="w-100 lazy">
-                        </a>
-                    </div>
-                    <div class="col-lg-4 col-md-6 col-sm-12">
-                        <a class="d-block features-item mb-40 p-0" href="//profilo.xyz/Rakitic" target="_blank">
-                            <img src="https://profilo.xyz/assets/front/img/template-previews/61e29a4363cb1.jpg" alt=""
-                                class="w-100 lazy">
-                        </a>
-                    </div>
-                    <div class="col-lg-4 col-md-6 col-sm-12">
-                        <a class="d-block features-item mb-40 p-0" href="//profilo.xyz/albertlucas" target="_blank">
-                            <img src="https://profilo.xyz/assets/front/img/template-previews/63f5c162a9e2c.png" alt=""
-                                class="w-100 lazy">
-                        </a>
-                    </div>
-                    <div class="col-lg-4 col-md-6 col-sm-12">
-                        <a class="d-block features-item mb-40 p-0" href="//profilo.xyz/ronaldcortez" target="_blank">
-                            <img src="https://profilo.xyz/assets/front/img/template-previews/63f5c16eb6176.png" alt=""
-                                class="w-100 lazy">
-                        </a>
-                    </div>
-                    <div class="col-lg-4 col-md-6 col-sm-12">
-                        <a class="d-block features-item mb-40 p-0" href="//profilo.xyz/Russell" target="_blank">
-                            <img src="https://profilo.xyz/assets/front/img/template-previews/63f5c177aeb20.png" alt=""
-                                class="w-100 lazy">
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </section>
 
         <!--====== Start saas-featured-users section ======-->
-        <section class="saas-featured-users pt-120 pb-120">
+        <section class="saas-featured-users py-5">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-6">
@@ -354,366 +296,144 @@
                         </div>
                     </div>
                 </div>
-                <div class="user-slide slick-initialized slick-slider">
-
-
-
-
-                    <div class="slick-list draggable">
-                        <div class="slick-track"
-                            style="opacity: 1; width: 3600px; transform: translate3d(-1440px, 0px, 0px);">
-                            <div class="user-item slick-slide slick-cloned" style="width: 330px;" tabindex="-1"
-                                data-slick-index="-2" aria-hidden="true">
-                                <div class="title">
-                                    <img class="lazy"
-                                        data-src="https://profilo.xyz/assets/front/img/user/1627281726thumb-4.jpg"
-                                        alt="user">
-                                    <h5>Romario Sara</h5>
-                                    <span>Romario</span>
-                                </div>
-                                <div class="user-button">
-                                    <ul>
-                                        <li><a href="//profilo.xyz/Romario" class="main-btn" tabindex="-1"><i
-                                                    class="fas fa-eye"></i>View Profile</a></li>
-                                        <li>
-                                            <a href="https://profilo.xyz/user/follow/62" class="main-btn" tabindex="-1"><i
-                                                    class="fal fa-user-plus"></i>Follow
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <div class="social-box">
-                                    <ul class="social-link">
-                                        <li><a href="https://www.facebook.com/" class="facebook" target="_blank"
-                                                tabindex="-1"><i class="fab fa-facebook-f"></i></a></li>
-                                        <li><a href="https://twitter.com/?lang=en" class="facebook" target="_blank"
-                                                tabindex="-1"><i class="fab fa-twitter"></i></a></li>
-                                        <li><a href="https://www.linkedin.com/login" class="facebook" target="_blank"
-                                                tabindex="-1"><i class="fab fa-linkedin-in iconpicker-component"></i></a>
-                                        </li>
-                                        <li><a href="https://dribbble.com/" class="facebook" target="_blank"
-                                                tabindex="-1"><i class="fab fa-dribbble"></i></a></li>
-                                        <li><a href="https://github.com/" class="facebook" target="_blank" tabindex="-1"><i
-                                                    class="fab fa-github"></i></a></li>
-                                    </ul>
-                                </div>
+                <div class="row">
+                    <div class="col-lg-4 col-md-6 col-sm-12">
+                        <div class="user-item mb-5">
+                            <div class="title">
+                                <img class="lazy entered loaded"
+                                    data-src="https://profilo.xyz/assets/front/img/user/1677050633author-6.jpg" alt=""
+                                    data-ll-status="loaded"
+                                    src="https://profilo.xyz/assets/front/img/user/1677050633author-6.jpg">
+                                <h5>RUSSELL OWENS</h5>
+                                <span>N Meadow Park Dr Sun City,, Arizona</span>
                             </div>
-                            <div class="user-item slick-slide slick-cloned" style="width: 330px;" tabindex="-1"
-                                data-slick-index="-1" aria-hidden="true">
-                                <div class="title">
-                                    <img class="lazy"
-                                        data-src="https://profilo.xyz/assets/front/img/user/162737889801 220x220.jpg"
-                                        alt="user">
-                                    <h5>Ciro Immobile</h5>
-                                    <span>Immobile</span>
-                                </div>
-                                <div class="user-button">
-                                    <ul>
-                                        <li><a href="//profilo.xyz/Immobile" class="main-btn" tabindex="-1"><i
-                                                    class="fas fa-eye"></i>View Profile</a></li>
-                                        <li>
-                                            <a href="https://profilo.xyz/user/follow/63" class="main-btn" tabindex="-1"><i
-                                                    class="fal fa-user-plus"></i>Follow
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <div class="social-box">
-                                    <ul class="social-link">
-                                        <li><a href="https://www.facebook.com/" class="facebook" target="_blank"
-                                                tabindex="-1"><i class="fab fa-facebook-f"></i></a></li>
-                                        <li><a href="https://twitter.com/?lang=en" class="facebook" target="_blank"
-                                                tabindex="-1"><i class="fab fa-twitter"></i></a></li>
-                                        <li><a href="https://www.linkedin.com/login" class="facebook" target="_blank"
-                                                tabindex="-1"><i class="fab fa-linkedin-in"></i></a></li>
-                                        <li><a href="https://dribbble.com/" class="facebook" target="_blank"
-                                                tabindex="-1"><i class="fab fa-dribbble"></i></a></li>
-                                        <li><a href="https://github.com/" class="facebook" target="_blank" tabindex="-1"><i
-                                                    class="fab fa-github"></i></a></li>
-                                    </ul>
-                                </div>
+                            <div class="user-button">
+                                <ul>
+                                    <li><a href="//profilo.xyz/Russell" class="main-btn"><i class="fas fa-eye"></i>View
+                                            Profile</a></li>
+                                    <li>
+                                        <a href="https://profilo.xyz/user/follow/80" class="main-btn"><i
+                                                class="fal fa-user-plus"></i>Follow
+                                        </a>
+                                    </li>
+                                </ul>
                             </div>
-                            <div class="user-item slick-slide" style="width: 330px;" tabindex="-1" data-slick-index="0"
-                                aria-hidden="true">
-                                <div class="title">
-                                    <img class="lazy"
-                                        data-src="https://profilo.xyz/assets/front/img/user/162738555302 220x220.jpg"
-                                        alt="user">
-                                    <h5>Lorenzo Insigne</h5>
-                                    <span>Insigne</span>
-                                </div>
-                                <div class="user-button">
-                                    <ul>
-                                        <li><a href="//profilo.xyz/Insigne" class="main-btn" tabindex="-1"><i
-                                                    class="fas fa-eye"></i>View Profile</a></li>
-                                        <li>
-                                            <a href="https://profilo.xyz/user/follow/64" class="main-btn" tabindex="-1"><i
-                                                    class="fal fa-user-plus"></i>Follow
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <div class="social-box">
-                                    <ul class="social-link">
-                                        <li><a href="https://www.facebook.com/" class="facebook" target="_blank"
-                                                tabindex="-1"><i class="fab fa-facebook-f"></i></a></li>
-                                        <li><a href="https://twitter.com/?lang=en" class="facebook" target="_blank"
-                                                tabindex="-1"><i class="fab fa-twitter"></i></a></li>
-                                        <li><a href="https://www.linkedin.com/login" class="facebook" target="_blank"
-                                                tabindex="-1"><i class="fab fa-linkedin-in"></i></a></li>
-                                        <li><a href="https://dribbble.com/" class="facebook" target="_blank"
-                                                tabindex="-1"><i class="fab fa-dribbble"></i></a></li>
-                                        <li><a href="https://github.com/" class="facebook" target="_blank" tabindex="-1"><i
-                                                    class="fab fa-github"></i></a></li>
-                                    </ul>
-                                </div>
+                            <div class="social-box">
+                                <ul class="social-link">
+                                    <li><a href="http://example.com/" class="facebook" target="_blank"><i
+                                                class="fab fa-facebook"></i></a></li>
+                                    <li><a href="http://example.com/" class="facebook" target="_blank"><i
+                                                class="fab fa-twitter"></i></a></li>
+                                    <li><a href="http://example.com/" class="facebook" target="_blank"><i
+                                                class="fab fa-google-plus-g"></i></a></li>
+                                    <li><a href="http://example.com/" class="facebook" target="_blank"><i
+                                                class="fab fa-linkedin"></i></a></li>
+                                </ul>
                             </div>
-                            <div class="user-item slick-slide" style="width: 330px;" tabindex="-1" data-slick-index="1"
-                                aria-hidden="true">
-                                <div class="title">
-                                    <img class="lazy"
-                                        data-src="https://profilo.xyz/assets/front/img/user/162739662810 220x220.png"
-                                        alt="user">
-                                    <h5>Ivan Rakitic</h5>
-                                    <span>Rakitic</span>
-                                </div>
-                                <div class="user-button">
-                                    <ul>
-                                        <li><a href="//profilo.xyz/Rakitic" class="main-btn" tabindex="-1"><i
-                                                    class="fas fa-eye"></i>View Profile</a></li>
-                                        <li>
-                                            <a href="https://profilo.xyz/user/follow/67" class="main-btn" tabindex="-1"><i
-                                                    class="fal fa-user-plus"></i>Follow
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <div class="social-box">
-                                    <ul class="social-link">
-                                        <li><a href="https://www.facebook.com/" class="facebook" target="_blank"
-                                                tabindex="-1"><i class="fab fa-facebook-f"></i></a></li>
-                                        <li><a href="https://twitter.com/?lang=en" class="facebook" target="_blank"
-                                                tabindex="-1"><i class="fab fa-twitter"></i></a></li>
-                                        <li><a href="https://www.linkedin.com/login" class="facebook" target="_blank"
-                                                tabindex="-1"><i class="fab fa-linkedin-in"></i></a></li>
-                                        <li><a href="https://dribbble.com/" class="facebook" target="_blank"
-                                                tabindex="-1"><i class="fab fa-dribbble"></i></a></li>
-                                        <li><a href="https://github.com/" class="facebook" target="_blank" tabindex="-1"><i
-                                                    class="fab fa-github"></i></a></li>
-                                    </ul>
-                                </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-sm-12">
+                        <div class="user-item mb-40">
+                            <div class="title">
+                                <img class="lazy entered loaded"
+                                    data-src="https://profilo.xyz/assets/front/img/user/1676197017avatar-1.jpg" alt=""
+                                    data-ll-status="loaded"
+                                    src="https://profilo.xyz/assets/front/img/user/1676197017avatar-1.jpg">
+                                <h5>Ronald Cortez</h5>
+                                <span>Lee, Florida</span>
                             </div>
-                            <div class="user-item slick-slide slick-current slick-active" style="width: 330px;" tabindex="0"
-                                data-slick-index="2" aria-hidden="false">
-                                <div class="title">
-                                    <img class="lazy"
-                                        data-src="https://profilo.xyz/assets/front/img/user/1627281726thumb-4.jpg"
-                                        alt="user">
-                                    <h5>Romario Sara</h5>
-                                    <span>Romario</span>
-                                </div>
-                                <div class="user-button">
-                                    <ul>
-                                        <li><a href="//profilo.xyz/Romario" class="main-btn" tabindex="0"><i
-                                                    class="fas fa-eye"></i>View Profile</a></li>
-                                        <li>
-                                            <a href="https://profilo.xyz/user/follow/62" class="main-btn" tabindex="0"><i
-                                                    class="fal fa-user-plus"></i>Follow
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <div class="social-box">
-                                    <ul class="social-link">
-                                        <li><a href="https://www.facebook.com/" class="facebook" target="_blank"
-                                                tabindex="0"><i class="fab fa-facebook-f"></i></a></li>
-                                        <li><a href="https://twitter.com/?lang=en" class="facebook" target="_blank"
-                                                tabindex="0"><i class="fab fa-twitter"></i></a></li>
-                                        <li><a href="https://www.linkedin.com/login" class="facebook" target="_blank"
-                                                tabindex="0"><i class="fab fa-linkedin-in iconpicker-component"></i></a>
-                                        </li>
-                                        <li><a href="https://dribbble.com/" class="facebook" target="_blank" tabindex="0"><i
-                                                    class="fab fa-dribbble"></i></a></li>
-                                        <li><a href="https://github.com/" class="facebook" target="_blank" tabindex="0"><i
-                                                    class="fab fa-github"></i></a></li>
-                                    </ul>
-                                </div>
+                            <div class="user-button">
+                                <ul>
+                                    <li><a href="//profilo.xyz/ronaldcortez" class="main-btn"><i class="fas fa-eye"></i>View
+                                            Profile</a></li>
+                                    <li>
+                                        <a href="https://profilo.xyz/user/follow/79" class="main-btn"><i
+                                                class="fal fa-user-plus"></i>Follow
+                                        </a>
+                                    </li>
+                                </ul>
                             </div>
-                            <div class="user-item slick-slide slick-active" style="width: 330px;" tabindex="0"
-                                data-slick-index="3" aria-hidden="false">
-                                <div class="title">
-                                    <img class="lazy"
-                                        data-src="https://profilo.xyz/assets/front/img/user/162737889801 220x220.jpg"
-                                        alt="user">
-                                    <h5>Ciro Immobile</h5>
-                                    <span>Immobile</span>
-                                </div>
-                                <div class="user-button">
-                                    <ul>
-                                        <li><a href="//profilo.xyz/Immobile" class="main-btn" tabindex="0"><i
-                                                    class="fas fa-eye"></i>View Profile</a></li>
-                                        <li>
-                                            <a href="https://profilo.xyz/user/follow/63" class="main-btn" tabindex="0"><i
-                                                    class="fal fa-user-plus"></i>Follow
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <div class="social-box">
-                                    <ul class="social-link">
-                                        <li><a href="https://www.facebook.com/" class="facebook" target="_blank"
-                                                tabindex="0"><i class="fab fa-facebook-f"></i></a></li>
-                                        <li><a href="https://twitter.com/?lang=en" class="facebook" target="_blank"
-                                                tabindex="0"><i class="fab fa-twitter"></i></a></li>
-                                        <li><a href="https://www.linkedin.com/login" class="facebook" target="_blank"
-                                                tabindex="0"><i class="fab fa-linkedin-in"></i></a></li>
-                                        <li><a href="https://dribbble.com/" class="facebook" target="_blank" tabindex="0"><i
-                                                    class="fab fa-dribbble"></i></a></li>
-                                        <li><a href="https://github.com/" class="facebook" target="_blank" tabindex="0"><i
-                                                    class="fab fa-github"></i></a></li>
-                                    </ul>
-                                </div>
+                            <div class="social-box">
+                                <ul class="social-link">
+                                    <li><a href="http://example.com/" class="facebook" target="_blank"><i
+                                                class="fab fa-facebook"></i></a></li>
+                                    <li><a href="http://example.com/" class="facebook" target="_blank"><i
+                                                class="fab fa-twitter"></i></a></li>
+                                    <li><a href="http://example.com/" class="facebook" target="_blank"><i
+                                                class="fab fa-instagram"></i></a></li>
+                                    <li><a href="http://example.com/" class="facebook" target="_blank"><i
+                                                class="fab fa-pinterest"></i></a></li>
+                                </ul>
                             </div>
-                            <div class="user-item slick-slide slick-cloned" style="width: 330px;" tabindex="-1"
-                                data-slick-index="4" aria-hidden="true">
-                                <div class="title">
-                                    <img class="lazy"
-                                        data-src="https://profilo.xyz/assets/front/img/user/162738555302 220x220.jpg"
-                                        alt="user">
-                                    <h5>Lorenzo Insigne</h5>
-                                    <span>Insigne</span>
-                                </div>
-                                <div class="user-button">
-                                    <ul>
-                                        <li><a href="//profilo.xyz/Insigne" class="main-btn" tabindex="-1"><i
-                                                    class="fas fa-eye"></i>View Profile</a></li>
-                                        <li>
-                                            <a href="https://profilo.xyz/user/follow/64" class="main-btn" tabindex="-1"><i
-                                                    class="fal fa-user-plus"></i>Follow
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <div class="social-box">
-                                    <ul class="social-link">
-                                        <li><a href="https://www.facebook.com/" class="facebook" target="_blank"
-                                                tabindex="-1"><i class="fab fa-facebook-f"></i></a></li>
-                                        <li><a href="https://twitter.com/?lang=en" class="facebook" target="_blank"
-                                                tabindex="-1"><i class="fab fa-twitter"></i></a></li>
-                                        <li><a href="https://www.linkedin.com/login" class="facebook" target="_blank"
-                                                tabindex="-1"><i class="fab fa-linkedin-in"></i></a></li>
-                                        <li><a href="https://dribbble.com/" class="facebook" target="_blank"
-                                                tabindex="-1"><i class="fab fa-dribbble"></i></a></li>
-                                        <li><a href="https://github.com/" class="facebook" target="_blank" tabindex="-1"><i
-                                                    class="fab fa-github"></i></a></li>
-                                    </ul>
-                                </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-sm-12">
+                        <div class="user-item mb-40">
+                            <div class="title">
+                                <img class="lazy entered loaded"
+                                    data-src="https://profilo.xyz/assets/front/img/user/1676197017avatar-1.jpg" alt=""
+                                    data-ll-status="loaded"
+                                    src="https://profilo.xyz/assets/front/img/user/1676197017avatar-1.jpg">
+                                <h5>Ronald Cortez</h5>
+                                <span>Lee, Florida</span>
                             </div>
-                            <div class="user-item slick-slide slick-cloned" style="width: 330px;" tabindex="-1"
-                                data-slick-index="5" aria-hidden="true">
-                                <div class="title">
-                                    <img class="lazy"
-                                        data-src="https://profilo.xyz/assets/front/img/user/162739662810 220x220.png"
-                                        alt="user">
-                                    <h5>Ivan Rakitic</h5>
-                                    <span>Rakitic</span>
-                                </div>
-                                <div class="user-button">
-                                    <ul>
-                                        <li><a href="//profilo.xyz/Rakitic" class="main-btn" tabindex="-1"><i
-                                                    class="fas fa-eye"></i>View Profile</a></li>
-                                        <li>
-                                            <a href="https://profilo.xyz/user/follow/67" class="main-btn" tabindex="-1"><i
-                                                    class="fal fa-user-plus"></i>Follow
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <div class="social-box">
-                                    <ul class="social-link">
-                                        <li><a href="https://www.facebook.com/" class="facebook" target="_blank"
-                                                tabindex="-1"><i class="fab fa-facebook-f"></i></a></li>
-                                        <li><a href="https://twitter.com/?lang=en" class="facebook" target="_blank"
-                                                tabindex="-1"><i class="fab fa-twitter"></i></a></li>
-                                        <li><a href="https://www.linkedin.com/login" class="facebook" target="_blank"
-                                                tabindex="-1"><i class="fab fa-linkedin-in"></i></a></li>
-                                        <li><a href="https://dribbble.com/" class="facebook" target="_blank"
-                                                tabindex="-1"><i class="fab fa-dribbble"></i></a></li>
-                                        <li><a href="https://github.com/" class="facebook" target="_blank" tabindex="-1"><i
-                                                    class="fab fa-github"></i></a></li>
-                                    </ul>
-                                </div>
+                            <div class="user-button">
+                                <ul>
+                                    <li><a href="//profilo.xyz/ronaldcortez" class="main-btn"><i class="fas fa-eye"></i>View
+                                            Profile</a></li>
+                                    <li>
+                                        <a href="https://profilo.xyz/user/follow/79" class="main-btn"><i
+                                                class="fal fa-user-plus"></i>Follow
+                                        </a>
+                                    </li>
+                                </ul>
                             </div>
-                            <div class="user-item slick-slide slick-cloned" style="width: 330px;" tabindex="-1"
-                                data-slick-index="6" aria-hidden="true">
-                                <div class="title">
-                                    <img class="lazy"
-                                        data-src="https://profilo.xyz/assets/front/img/user/1627281726thumb-4.jpg"
-                                        alt="user">
-                                    <h5>Romario Sara</h5>
-                                    <span>Romario</span>
-                                </div>
-                                <div class="user-button">
-                                    <ul>
-                                        <li><a href="//profilo.xyz/Romario" class="main-btn" tabindex="-1"><i
-                                                    class="fas fa-eye"></i>View Profile</a></li>
-                                        <li>
-                                            <a href="https://profilo.xyz/user/follow/62" class="main-btn" tabindex="-1"><i
-                                                    class="fal fa-user-plus"></i>Follow
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <div class="social-box">
-                                    <ul class="social-link">
-                                        <li><a href="https://www.facebook.com/" class="facebook" target="_blank"
-                                                tabindex="-1"><i class="fab fa-facebook-f"></i></a></li>
-                                        <li><a href="https://twitter.com/?lang=en" class="facebook" target="_blank"
-                                                tabindex="-1"><i class="fab fa-twitter"></i></a></li>
-                                        <li><a href="https://www.linkedin.com/login" class="facebook" target="_blank"
-                                                tabindex="-1"><i class="fab fa-linkedin-in iconpicker-component"></i></a>
-                                        </li>
-                                        <li><a href="https://dribbble.com/" class="facebook" target="_blank"
-                                                tabindex="-1"><i class="fab fa-dribbble"></i></a></li>
-                                        <li><a href="https://github.com/" class="facebook" target="_blank" tabindex="-1"><i
-                                                    class="fab fa-github"></i></a></li>
-                                    </ul>
-                                </div>
+                            <div class="social-box">
+                                <ul class="social-link">
+                                    <li><a href="http://example.com/" class="facebook" target="_blank"><i
+                                                class="fab fa-facebook"></i></a></li>
+                                    <li><a href="http://example.com/" class="facebook" target="_blank"><i
+                                                class="fab fa-twitter"></i></a></li>
+                                    <li><a href="http://example.com/" class="facebook" target="_blank"><i
+                                                class="fab fa-instagram"></i></a></li>
+                                    <li><a href="http://example.com/" class="facebook" target="_blank"><i
+                                                class="fab fa-pinterest"></i></a></li>
+                                </ul>
                             </div>
-                            <div class="user-item slick-slide slick-cloned" style="width: 330px;" tabindex="-1"
-                                data-slick-index="7" aria-hidden="true">
-                                <div class="title">
-                                    <img class="lazy"
-                                        data-src="https://profilo.xyz/assets/front/img/user/162737889801 220x220.jpg"
-                                        alt="user">
-                                    <h5>Ciro Immobile</h5>
-                                    <span>Immobile</span>
-                                </div>
-                                <div class="user-button">
-                                    <ul>
-                                        <li><a href="//profilo.xyz/Immobile" class="main-btn" tabindex="-1"><i
-                                                    class="fas fa-eye"></i>View Profile</a></li>
-                                        <li>
-                                            <a href="https://profilo.xyz/user/follow/63" class="main-btn" tabindex="-1"><i
-                                                    class="fal fa-user-plus"></i>Follow
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <div class="social-box">
-                                    <ul class="social-link">
-                                        <li><a href="https://www.facebook.com/" class="facebook" target="_blank"
-                                                tabindex="-1"><i class="fab fa-facebook-f"></i></a></li>
-                                        <li><a href="https://twitter.com/?lang=en" class="facebook" target="_blank"
-                                                tabindex="-1"><i class="fab fa-twitter"></i></a></li>
-                                        <li><a href="https://www.linkedin.com/login" class="facebook" target="_blank"
-                                                tabindex="-1"><i class="fab fa-linkedin-in"></i></a></li>
-                                        <li><a href="https://dribbble.com/" class="facebook" target="_blank"
-                                                tabindex="-1"><i class="fab fa-dribbble"></i></a></li>
-                                        <li><a href="https://github.com/" class="facebook" target="_blank" tabindex="-1"><i
-                                                    class="fab fa-github"></i></a></li>
-                                    </ul>
-                                </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-sm-12">
+                        <div class="user-item mb-40">
+                            <div class="title">
+                                <img class="lazy entered loaded"
+                                    data-src="https://profilo.xyz/assets/front/img/user/1676197017avatar-1.jpg" alt=""
+                                    data-ll-status="loaded"
+                                    src="https://profilo.xyz/assets/front/img/user/1676197017avatar-1.jpg">
+                                <h5>Ronald Cortez</h5>
+                                <span>Lee, Florida</span>
+                            </div>
+                            <div class="user-button">
+                                <ul>
+                                    <li><a href="//profilo.xyz/ronaldcortez" class="main-btn"><i class="fas fa-eye"></i>View
+                                            Profile</a></li>
+                                    <li>
+                                        <a href="https://profilo.xyz/user/follow/79" class="main-btn"><i
+                                                class="fal fa-user-plus"></i>Follow
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="social-box">
+                                <ul class="social-link">
+                                    <li><a href="http://example.com/" class="facebook" target="_blank"><i
+                                                class="fab fa-facebook"></i></a></li>
+                                    <li><a href="http://example.com/" class="facebook" target="_blank"><i
+                                                class="fab fa-twitter"></i></a></li>
+                                    <li><a href="http://example.com/" class="facebook" target="_blank"><i
+                                                class="fab fa-instagram"></i></a></li>
+                                    <li><a href="http://example.com/" class="facebook" target="_blank"><i
+                                                class="fab fa-pinterest"></i></a></li>
+                                </ul>
                             </div>
                         </div>
                     </div>
@@ -722,751 +442,6 @@
         </section>
         <!--====== End saas-featured-users section ======-->
 
-        <!--====== Start saas-pricing section ======-->
-        <section class="saas-pricing pt-110 pb-120">
-            <div class="container">
-                <div class="row justify-content-center">
-                    <div class="col-lg-6">
-                        <div class="section-title-one text-center mb-50">
-                            <span class="span">Pricing</span>
-                            <h2>Choose Your Perfect Package</h2>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="row justify-content-center">
-                    <div class="col-lg-4">
-                        <div class="pricing-tabs text-center">
-                            <ul class="nav nav-tabs">
-                                <li class="nav-item mr-1">
-                                    <a class="nav-link active" data-toggle="tab" href="#monthly">Monthly</a>
-                                </li>
-                                <li class="nav-item mr-1">
-                                    <a class="nav-link " data-toggle="tab" href="#yearly">Yearly</a>
-                                </li>
-                                <li class="nav-item mr-1">
-                                    <a class="nav-link " data-toggle="tab" href="#lifetime">Lifetime</a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="pricing-wrapper tab-content">
-                    <div id="monthly" class="tab-pane show active fade">
-                        <div class="row no-gutters ">
-                            <div class="col-lg-4 col-md-6 col-sm-12">
-                                <div class="pricing-item">
-                                    <div class="title">
-                                        <h3>Begninner</h3>
-                                        <h2 class="price">
-                                            $6<span class="month">/ monthly</span>
-                                        </h2>
-                                    </div>
-                                    <div class="pricing-body">
-                                        <ul class="list">
-                                            <li class="unchecked">
-                                                Custom Domain
-                                            </li>
-                                            <li class="unchecked">
-                                                Subdomain
-                                            </li>
-                                            <li class="unchecked">
-                                                QR Builder
-                                            </li>
-                                            <li class="unchecked">
-                                                vCards
-                                            </li>
-                                            <li class="unchecked">
-                                                Online CV &amp; Export
-                                            </li>
-                                            <li class="checked">
-                                                Follow/Unfollow
-                                            </li>
-                                            <li class="checked">
-                                                Blog
-                                            </li>
-                                            <li class="checked">
-                                                Portfolio
-                                            </li>
-                                            <li class="checked">
-                                                Achievements
-                                            </li>
-                                            <li class="checked">
-                                                Skill
-                                            </li>
-                                            <li class="checked">
-                                                Service
-                                            </li>
-                                            <li class="checked">
-                                                Experience
-                                            </li>
-                                            <li class="checked">
-                                                Testimonial
-                                            </li>
-                                            <li class="unchecked">
-                                                Appointment
-                                            </li>
-                                            <li class="unchecked">
-                                                Google Analytics
-                                            </li>
-                                            <li class="unchecked">
-                                                Disqus
-                                            </li>
-                                            <li class="checked">
-                                                WhatsApp
-                                            </li>
-                                            <li class="unchecked">
-                                                Facebook Pixel
-                                            </li>
-                                            <li class="unchecked">
-                                                Tawk.to
-                                            </li>
-                                        </ul>
-                                    </div>
-                                    <div class="pricing-button">
-                                        <a href="https://profilo.xyz/registration/step-1/trial/10"
-                                            class="main-btn">Trial</a>
-                                        <a href="https://profilo.xyz/registration/step-1/regular/10"
-                                            class="main-btn">Purchase</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-4 col-md-6 col-sm-12">
-                                <div class="pricing-item">
-                                    <div class="title">
-                                        <h3>Freelancer</h3>
-                                        <h2 class="price">
-                                            $11<span class="month">/ monthly</span>
-                                        </h2>
-                                    </div>
-                                    <div class="pricing-body">
-                                        <ul class="list">
-                                            <li class="unchecked">
-                                                Custom Domain
-                                            </li>
-                                            <li class="checked">
-                                                Subdomain
-                                            </li>
-                                            <li class="checked">
-                                                QR Builder
-                                            </li>
-                                            <li class="checked">
-                                                3
-                                                vCards
-                                            </li>
-                                            <li class="checked">
-                                                Online CV &amp; Export
-                                            </li>
-                                            <li class="checked">
-                                                Follow/Unfollow
-                                            </li>
-                                            <li class="checked">
-                                                Blog
-                                            </li>
-                                            <li class="checked">
-                                                Portfolio
-                                            </li>
-                                            <li class="checked">
-                                                Achievements
-                                            </li>
-                                            <li class="checked">
-                                                Skill
-                                            </li>
-                                            <li class="checked">
-                                                Service
-                                            </li>
-                                            <li class="checked">
-                                                Experience
-                                            </li>
-                                            <li class="checked">
-                                                Testimonial
-                                            </li>
-                                            <li class="checked">
-                                                Appointment
-                                            </li>
-                                            <li class="checked">
-                                                Google Analytics
-                                            </li>
-                                            <li class="unchecked">
-                                                Disqus
-                                            </li>
-                                            <li class="checked">
-                                                WhatsApp
-                                            </li>
-                                            <li class="unchecked">
-                                                Facebook Pixel
-                                            </li>
-                                            <li class="checked">
-                                                Tawk.to
-                                            </li>
-                                        </ul>
-                                    </div>
-                                    <div class="pricing-button">
-                                        <a href="https://profilo.xyz/registration/step-1/trial/13"
-                                            class="main-btn">Trial</a>
-                                        <a href="https://profilo.xyz/registration/step-1/regular/13"
-                                            class="main-btn">Purchase</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-4 col-md-6 col-sm-12">
-                                <div class="pricing-item">
-                                    <div class="title">
-                                        <h3>Entrepreneur</h3>
-                                        <h2 class="price">
-                                            $19<span class="month">/ monthly</span>
-                                        </h2>
-                                    </div>
-                                    <div class="pricing-body">
-                                        <ul class="list">
-                                            <li class="checked">
-                                                Custom Domain
-                                            </li>
-                                            <li class="checked">
-                                                Subdomain
-                                            </li>
-                                            <li class="checked">
-                                                QR Builder
-                                            </li>
-                                            <li class="checked">
-                                                10
-                                                vCards
-                                            </li>
-                                            <li class="checked">
-                                                Online CV &amp; Export
-                                            </li>
-                                            <li class="checked">
-                                                Follow/Unfollow
-                                            </li>
-                                            <li class="checked">
-                                                Blog
-                                            </li>
-                                            <li class="checked">
-                                                Portfolio
-                                            </li>
-                                            <li class="checked">
-                                                Achievements
-                                            </li>
-                                            <li class="checked">
-                                                Skill
-                                            </li>
-                                            <li class="checked">
-                                                Service
-                                            </li>
-                                            <li class="checked">
-                                                Experience
-                                            </li>
-                                            <li class="checked">
-                                                Testimonial
-                                            </li>
-                                            <li class="checked">
-                                                Appointment
-                                            </li>
-                                            <li class="checked">
-                                                Google Analytics
-                                            </li>
-                                            <li class="checked">
-                                                Disqus
-                                            </li>
-                                            <li class="checked">
-                                                WhatsApp
-                                            </li>
-                                            <li class="checked">
-                                                Facebook Pixel
-                                            </li>
-                                            <li class="checked">
-                                                Tawk.to
-                                            </li>
-                                        </ul>
-                                    </div>
-                                    <div class="pricing-button">
-                                        <a href="https://profilo.xyz/registration/step-1/trial/15"
-                                            class="main-btn">Trial</a>
-                                        <a href="https://profilo.xyz/registration/step-1/regular/15"
-                                            class="main-btn">Purchase</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div id="yearly" class="tab-pane  fade">
-                        <div class="row no-gutters ">
-                            <div class="col-lg-4 col-md-6 col-sm-12">
-                                <div class="pricing-item">
-                                    <div class="title">
-                                        <h3>Begninner</h3>
-                                        <h2 class="price">
-                                            $40<span class="month">/ yearly</span>
-                                        </h2>
-                                    </div>
-                                    <div class="pricing-body">
-                                        <ul class="list">
-                                            <li class="unchecked">
-                                                Custom Domain
-                                            </li>
-                                            <li class="unchecked">
-                                                Subdomain
-                                            </li>
-                                            <li class="unchecked">
-                                                QR Builder
-                                            </li>
-                                            <li class="unchecked">
-                                                vCards
-                                            </li>
-                                            <li class="unchecked">
-                                                Online CV &amp; Export
-                                            </li>
-                                            <li class="checked">
-                                                Follow/Unfollow
-                                            </li>
-                                            <li class="checked">
-                                                Blog
-                                            </li>
-                                            <li class="checked">
-                                                Portfolio
-                                            </li>
-                                            <li class="checked">
-                                                Achievements
-                                            </li>
-                                            <li class="checked">
-                                                Skill
-                                            </li>
-                                            <li class="checked">
-                                                Service
-                                            </li>
-                                            <li class="checked">
-                                                Experience
-                                            </li>
-                                            <li class="checked">
-                                                Testimonial
-                                            </li>
-                                            <li class="unchecked">
-                                                Appointment
-                                            </li>
-                                            <li class="unchecked">
-                                                Google Analytics
-                                            </li>
-                                            <li class="unchecked">
-                                                Disqus
-                                            </li>
-                                            <li class="checked">
-                                                WhatsApp
-                                            </li>
-                                            <li class="unchecked">
-                                                Facebook Pixel
-                                            </li>
-                                            <li class="unchecked">
-                                                Tawk.to
-                                            </li>
-                                        </ul>
-                                    </div>
-                                    <div class="pricing-button">
-                                        <a href="https://profilo.xyz/registration/step-1/trial/11"
-                                            class="main-btn">Trial</a>
-                                        <a href="https://profilo.xyz/registration/step-1/regular/11"
-                                            class="main-btn">Purchase</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-4 col-md-6 col-sm-12">
-                                <div class="pricing-item">
-                                    <div class="title">
-                                        <h3>Freelancer</h3>
-                                        <h2 class="price">
-                                            $110<span class="month">/ yearly</span>
-                                        </h2>
-                                    </div>
-                                    <div class="pricing-body">
-                                        <ul class="list">
-                                            <li class="unchecked">
-                                                Custom Domain
-                                            </li>
-                                            <li class="checked">
-                                                Subdomain
-                                            </li>
-                                            <li class="checked">
-                                                QR Builder
-                                            </li>
-                                            <li class="checked">
-                                                3
-                                                vCards
-                                            </li>
-                                            <li class="checked">
-                                                Online CV &amp; Export
-                                            </li>
-                                            <li class="checked">
-                                                Follow/Unfollow
-                                            </li>
-                                            <li class="checked">
-                                                Blog
-                                            </li>
-                                            <li class="checked">
-                                                Portfolio
-                                            </li>
-                                            <li class="checked">
-                                                Achievements
-                                            </li>
-                                            <li class="checked">
-                                                Skill
-                                            </li>
-                                            <li class="checked">
-                                                Service
-                                            </li>
-                                            <li class="checked">
-                                                Experience
-                                            </li>
-                                            <li class="checked">
-                                                Testimonial
-                                            </li>
-                                            <li class="checked">
-                                                Appointment
-                                            </li>
-                                            <li class="checked">
-                                                Google Analytics
-                                            </li>
-                                            <li class="unchecked">
-                                                Disqus
-                                            </li>
-                                            <li class="checked">
-                                                WhatsApp
-                                            </li>
-                                            <li class="unchecked">
-                                                Facebook Pixel
-                                            </li>
-                                            <li class="checked">
-                                                Tawk.to
-                                            </li>
-                                        </ul>
-                                    </div>
-                                    <div class="pricing-button">
-                                        <a href="https://profilo.xyz/registration/step-1/trial/14"
-                                            class="main-btn">Trial</a>
-                                        <a href="https://profilo.xyz/registration/step-1/regular/14"
-                                            class="main-btn">Purchase</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-4 col-md-6 col-sm-12">
-                                <div class="pricing-item">
-                                    <div class="title">
-                                        <h3>Entrepreneur</h3>
-                                        <h2 class="price">
-                                            $180<span class="month">/ yearly</span>
-                                        </h2>
-                                    </div>
-                                    <div class="pricing-body">
-                                        <ul class="list">
-                                            <li class="checked">
-                                                Custom Domain
-                                            </li>
-                                            <li class="checked">
-                                                Subdomain
-                                            </li>
-                                            <li class="checked">
-                                                QR Builder
-                                            </li>
-                                            <li class="checked">
-                                                10
-                                                vCards
-                                            </li>
-                                            <li class="checked">
-                                                Online CV &amp; Export
-                                            </li>
-                                            <li class="checked">
-                                                Follow/Unfollow
-                                            </li>
-                                            <li class="checked">
-                                                Blog
-                                            </li>
-                                            <li class="checked">
-                                                Portfolio
-                                            </li>
-                                            <li class="checked">
-                                                Achievements
-                                            </li>
-                                            <li class="checked">
-                                                Skill
-                                            </li>
-                                            <li class="checked">
-                                                Service
-                                            </li>
-                                            <li class="checked">
-                                                Experience
-                                            </li>
-                                            <li class="checked">
-                                                Testimonial
-                                            </li>
-                                            <li class="checked">
-                                                Appointment
-                                            </li>
-                                            <li class="checked">
-                                                Google Analytics
-                                            </li>
-                                            <li class="checked">
-                                                Disqus
-                                            </li>
-                                            <li class="checked">
-                                                WhatsApp
-                                            </li>
-                                            <li class="checked">
-                                                Facebook Pixel
-                                            </li>
-                                            <li class="checked">
-                                                Tawk.to
-                                            </li>
-                                        </ul>
-                                    </div>
-                                    <div class="pricing-button">
-                                        <a href="https://profilo.xyz/registration/step-1/trial/16"
-                                            class="main-btn">Trial</a>
-                                        <a href="https://profilo.xyz/registration/step-1/regular/16"
-                                            class="main-btn">Purchase</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div id="lifetime" class="tab-pane  fade">
-                        <div class="row no-gutters ">
-                            <div class="col-lg-4 col-md-6 col-sm-12">
-                                <div class="pricing-item">
-                                    <div class="title">
-                                        <h3>Free</h3>
-                                        <h2 class="price">
-                                            Free<span class="month">/ lifetime</span>
-                                        </h2>
-                                    </div>
-                                    <div class="pricing-body">
-                                        <ul class="list">
-                                            <li class="unchecked">
-                                                Custom Domain
-                                            </li>
-                                            <li class="unchecked">
-                                                Subdomain
-                                            </li>
-                                            <li class="unchecked">
-                                                QR Builder
-                                            </li>
-                                            <li class="unchecked">
-                                                vCards
-                                            </li>
-                                            <li class="unchecked">
-                                                Online CV &amp; Export
-                                            </li>
-                                            <li class="unchecked">
-                                                Follow/Unfollow
-                                            </li>
-                                            <li class="unchecked">
-                                                Blog
-                                            </li>
-                                            <li class="checked">
-                                                Portfolio
-                                            </li>
-                                            <li class="checked">
-                                                Achievements
-                                            </li>
-                                            <li class="checked">
-                                                Skill
-                                            </li>
-                                            <li class="unchecked">
-                                                Service
-                                            </li>
-                                            <li class="checked">
-                                                Experience
-                                            </li>
-                                            <li class="checked">
-                                                Testimonial
-                                            </li>
-                                            <li class="unchecked">
-                                                Appointment
-                                            </li>
-                                            <li class="unchecked">
-                                                Google Analytics
-                                            </li>
-                                            <li class="unchecked">
-                                                Disqus
-                                            </li>
-                                            <li class="unchecked">
-                                                WhatsApp
-                                            </li>
-                                            <li class="unchecked">
-                                                Facebook Pixel
-                                            </li>
-                                            <li class="unchecked">
-                                                Tawk.to
-                                            </li>
-                                        </ul>
-                                    </div>
-                                    <div class="pricing-button">
-                                        <a href="https://profilo.xyz/registration/step-1/regular/31"
-                                            class="main-btn">Signup</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-4 col-md-6 col-sm-12">
-                                <div class="pricing-item">
-                                    <div class="title">
-                                        <h3>Golden</h3>
-                                        <h2 class="price">
-                                            $499<span class="month">/ lifetime</span>
-                                        </h2>
-                                    </div>
-                                    <div class="pricing-body">
-                                        <ul class="list">
-                                            <li class="unchecked">
-                                                Custom Domain
-                                            </li>
-                                            <li class="checked">
-                                                Subdomain
-                                            </li>
-                                            <li class="checked">
-                                                QR Builder
-                                            </li>
-                                            <li class="checked">
-                                                3
-                                                vCards
-                                            </li>
-                                            <li class="checked">
-                                                Online CV &amp; Export
-                                            </li>
-                                            <li class="checked">
-                                                Follow/Unfollow
-                                            </li>
-                                            <li class="checked">
-                                                Blog
-                                            </li>
-                                            <li class="checked">
-                                                Portfolio
-                                            </li>
-                                            <li class="checked">
-                                                Achievements
-                                            </li>
-                                            <li class="checked">
-                                                Skill
-                                            </li>
-                                            <li class="checked">
-                                                Service
-                                            </li>
-                                            <li class="checked">
-                                                Experience
-                                            </li>
-                                            <li class="checked">
-                                                Testimonial
-                                            </li>
-                                            <li class="checked">
-                                                Appointment
-                                            </li>
-                                            <li class="checked">
-                                                Google Analytics
-                                            </li>
-                                            <li class="unchecked">
-                                                Disqus
-                                            </li>
-                                            <li class="checked">
-                                                WhatsApp
-                                            </li>
-                                            <li class="unchecked">
-                                                Facebook Pixel
-                                            </li>
-                                            <li class="checked">
-                                                Tawk.to
-                                            </li>
-                                        </ul>
-                                    </div>
-                                    <div class="pricing-button">
-                                        <a href="https://profilo.xyz/registration/step-1/trial/32"
-                                            class="main-btn">Trial</a>
-                                        <a href="https://profilo.xyz/registration/step-1/regular/32"
-                                            class="main-btn">Purchase</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-4 col-md-6 col-sm-12">
-                                <div class="pricing-item">
-                                    <div class="title">
-                                        <h3>Plutinum</h3>
-                                        <h2 class="price">
-                                            $999<span class="month">/ lifetime</span>
-                                        </h2>
-                                    </div>
-                                    <div class="pricing-body">
-                                        <ul class="list">
-                                            <li class="checked">
-                                                Custom Domain
-                                            </li>
-                                            <li class="checked">
-                                                Subdomain
-                                            </li>
-                                            <li class="checked">
-                                                QR Builder
-                                            </li>
-                                            <li class="checked">
-                                                20
-                                                vCards
-                                            </li>
-                                            <li class="checked">
-                                                Online CV &amp; Export
-                                            </li>
-                                            <li class="checked">
-                                                Follow/Unfollow
-                                            </li>
-                                            <li class="checked">
-                                                Blog
-                                            </li>
-                                            <li class="checked">
-                                                Portfolio
-                                            </li>
-                                            <li class="checked">
-                                                Achievements
-                                            </li>
-                                            <li class="checked">
-                                                Skill
-                                            </li>
-                                            <li class="checked">
-                                                Service
-                                            </li>
-                                            <li class="checked">
-                                                Experience
-                                            </li>
-                                            <li class="checked">
-                                                Testimonial
-                                            </li>
-                                            <li class="checked">
-                                                Appointment
-                                            </li>
-                                            <li class="checked">
-                                                Google Analytics
-                                            </li>
-                                            <li class="checked">
-                                                Disqus
-                                            </li>
-                                            <li class="checked">
-                                                WhatsApp
-                                            </li>
-                                            <li class="checked">
-                                                Facebook Pixel
-                                            </li>
-                                            <li class="checked">
-                                                Tawk.to
-                                            </li>
-                                        </ul>
-                                    </div>
-                                    <div class="pricing-button">
-                                        <a href="https://profilo.xyz/registration/step-1/trial/33"
-                                            class="main-btn">Trial</a>
-                                        <a href="https://profilo.xyz/registration/step-1/regular/33"
-                                            class="main-btn">Purchase</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-        </section>
-        <!--====== End saas-pricing section ======-->
 
         <!--====== Start saas-testimonial section ======-->
         <section class="saas-testimonial pb-120">
@@ -1480,8 +455,6 @@
                     </div>
                 </div>
                 <div class="testimonial-slide slick-initialized slick-slider">
-
-
 
 
                     <div class="slick-list draggable">
@@ -1527,7 +500,7 @@
                                 </div>
                             </div>
                             <div class="testimonial-item slick-slide slick-current slick-active" style="width: 330px;"
-                                tabindex="0" data-slick-index="1" aria-hidden="false">
+                                aria-hidden="false">
                                 <div class="thumb">
                                     <img class="lazy"
                                         data-src="https://profilo.xyz/assets/front/img/testimonials/1627201214.jpg" alt="">
@@ -1627,9 +600,9 @@
         <!--====== Start saas-blog section ======-->
         <section class="saas-blog pb-80">
             <div class="container">
-                <div class="row justify-content-center">
+                <div class="row">
                     <div class="col-lg-6">
-                        <div class="section-title-one text-center mb-50">
+                        <div class="section-title-one mb-50">
                             <h2>Upcoming Events</h2>
                         </div>
                     </div>
@@ -1661,6 +634,36 @@
                             <a class="post-img d-block"
                                 href="https://profilo.xyz/blog/consectetur,-adipisci-velit,-sed-quia-non-numquam-eius/91">
                                 <img data-src="https://profilo.xyz/assets/front/img/blogs/1627199423.jpg"
+                                    class="img-fluid lazy" alt="">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="blog-item mb-40">
+                            <div class="entry-content">
+                                <div class="entry-meta">
+                                    <ul>
+                                        <li><span><i class="fas fa-user"></i><a
+                                                    href="https://profilo.xyz/blogs?category=13">International</a></span>
+                                        </li>
+                                        <li>
+                                            <span>
+                                                <i class="fas fa-calendar-alt"></i>
+                                                <a href="#">July 25, 2021</a>
+                                            </span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <h3 class="title"><a
+                                        href="https://profilo.xyz/blog/on-the-other-hand,-we-denounce-with-righteous-indignation/90">On
+                                        the other hand, we denounce with righteous indignation</a>
+                                </h3>
+                                <a href="https://profilo.xyz/blog/on-the-other-hand,-we-denounce-with-righteous-indignation/90"
+                                    class="read-btn">Read More</a>
+                            </div>
+                            <a class="post-img d-block"
+                                href="https://profilo.xyz/blog/on-the-other-hand,-we-denounce-with-righteous-indignation/90">
+                                <img data-src="https://profilo.xyz/assets/front/img/blogs/1627199343.jpg"
                                     class="img-fluid lazy" alt="">
                             </a>
                         </div>

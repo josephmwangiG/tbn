@@ -19,37 +19,43 @@
                 </div>
             </div>
         </section>
-        <section class="contacts-section pt-80 pb-80">
+        <section class="contacts-section mt-5">
             <div class="container">
                 <h3>Fill the form below to join Transformational Business Network</h3>
                 <form @submit.prevent="addBusiness">
                     <div class="row mt-5">
-                        <div class="form-group col-lg-6 mt-2">
+                        <div class="form-group col-lg-4 mt-2">
                             <span>Business/Company Name</span>
                             <el-input style="border:black" v-model="form.business_name" size="large"
                                 placeholder="Business/Company Name" type="text" required="required"></el-input>
                             <span class="text-danger" v-if="errors.business_name">{{ errors.business_name[0] }}</span>
                         </div>
-                        <div class="form-group col-lg-6 mt-2">
+                        <div class="form-group col-lg-4 mt-2">
                             <span>Email Address*</span>
                             <el-input style="border:black" v-model="form.email" size="large" placeholder="Email Address"
                                 type="email" required="required"></el-input>
                             <span class="text-danger" v-if="errors.email">{{ errors.email[0] }}</span>
                         </div>
+                        <div class="form-group col-lg-4 mt-2">
+                            <span>Password*</span>
+                            <el-input style="border:black" v-model="form.password" size="large" placeholder="Password"
+                                type="password" required="required"></el-input>
+                            <span class="text-danger" v-if="errors.password">{{ errors.password[0] }}</span>
+                        </div>
 
-                        <div class="form-group col-lg-6 mt-2">
+                        <div class="form-group col-lg-4 mt-2">
                             <span>Phone Number</span>
                             <el-input style="border:black" v-model="form.phone_number" size="large" type="text"
                                 placeholder="Phone Number" required="required"></el-input>
                             <span class="text-danger" v-if="errors.phone_number">{{ errors.phone_number[0] }}</span>
                         </div>
-                        <div class="form-group col-lg-3 mt-2">
+                        <div class="form-group col-lg-4 mt-2">
                             <span>Address/Location</span>
                             <el-input style="border:black" v-model="form.address" size="large" type="text"
                                 placeholder="Address details"></el-input>
                             <span class="text-danger" v-if="errors.address">{{ errors.address[0] }}</span>
                         </div>
-                        <div class="form-group col-lg-3 mt-2">
+                        <div class="form-group col-lg-4 mt-2">
                             <span>Specialization</span>
                             <el-select filterable class="w-100" v-model="form.specialization" size="large" type="text"
                                 placeholder="Address details">
@@ -154,9 +160,11 @@
 </template>
 <script setup>
 import { ref } from "vue"
+import { useRouter } from "vue-router"
 import { useBusinessStore } from "@/store/business.js"
 
 const store = useBusinessStore()
+const router = useRouter()
 
 let revenue = ref('')
 let errors = ref({})
@@ -164,6 +172,7 @@ let errors = ref({})
 let form = ref({
     business_name: "",
     email: "",
+    password: "",
     address: "",
     number_of_employees: "",
     specialization: "",
@@ -197,7 +206,7 @@ const addBusiness = async () => {
     let response = await store.addBusinesses(form.value)
 
     if (response == true) {
-
+        router.push({ name: "account-created" })
     } else {
         errors.value = response.data.errors
     }

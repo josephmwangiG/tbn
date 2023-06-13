@@ -6,6 +6,7 @@ use App\Models\Business;
 use App\Models\BusinessOwner;
 use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Hash;
 
 class BusinessController extends Controller
@@ -34,38 +35,54 @@ class BusinessController extends Controller
     {
         $data = $request->validate([
             "business_name" => "required",
-            "email" => "required:unique:users",
+            "email" => "required|unique:users",
             "address" => "",
             "number_of_employees" => "",
             "specialization" => "",
             "phone_number" => "required",
             "owners" => "",
             "description" => "",
+            "password" => "required",
             "annual_revenue" => "",
             "years_of_operation" => "",
             "website" => "",
         ]);
 
-        $user  = User::create([
-            "email" => $data['email'],
-            "password" => Hash::make($data['password']),
-            "name" => $data['full_name']
-        ]);
-
-        $data['user_id'] = $user->id;
-
-        $business = Business::create($data);
-
-        foreach ($data['owners'] as $owner) {
-            BusinessOwner::create([
-                "business_id" => $business->id,
-                "name" => $owner['name'],
-                "email" => $owner['email'],
-                "phone_number" => $owner['phone_number'],
+        DB::transaction(function () use ($data) {
+            $user  = User::create([
+                "email" => $data['email'],
+                "password" => Hash::make($data['password']),
+                "name" => $data['business_name']
             ]);
-        }
 
-        return response(["successe" => $owner['name'], "success", 200]);
+            $data['user_id'] = $user->id;
+
+            $business = Business::create([
+                "user_id" => $data['user_id'],
+                "business_name" => $data['business_name'],
+                "email" => $data['email'],
+                "address" => $data['address'],
+                "number_of_employees" => $data['number_of_employees'],
+                "specialization" => $data['specialization'],
+                "phone_number" => $data['phone_number'],
+                "description" => $data['description'],
+                "annual_revenue" => $data['annual_revenue'],
+                "years_of_operation" => $data['years_of_operation'],
+                "website" => $data['website'],
+            ]);
+
+
+            foreach ($data['owners'] as $owner) {
+                BusinessOwner::create([
+                    "business_id" => $business->id,
+                    "name" => $owner['name'],
+                    "email" => $owner['email'],
+                    "phone_number" => $owner['phone_number'],
+                ]);
+            }
+        });
+
+        return response(["successe" => "success", "success", 200]);
     }
 
     /**

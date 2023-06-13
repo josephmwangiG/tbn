@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Coach;
 use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Hash;
 
 class CoachController extends Controller
@@ -34,25 +35,28 @@ class CoachController extends Controller
     {
         $data = $request->validate([
             "name" => 'required',
-            "email" => 'required',
+            "email" => 'required|unique:users',
             "password" => 'required',
             "highest_level_of_education" => '',
             "description" => '',
             "website" => '',
             "phone_number" => 'required',
             "specialization" => 'required',
+            "current_employment" => '',
+            "current_employer" => '',
         ]);
 
-        $user  = User::create([
-            "email" => $data['email'],
-            "password" => Hash::make($data['password']),
-            "name" => $data['name']
-        ]);
+        DB::transaction(function () use ($data) {
+            $user  = User::create([
+                "email" => $data['email'],
+                "password" => Hash::make($data['password']),
+                "name" => $data['name']
+            ]);
 
+            $data['user_id'] = $user->id;
 
-        $data['user_id'] = $user->id;
-
-        Coach::create($data);
+            Coach::create($data);
+        });
 
         return response(["success" => "Success"], 200);
     }

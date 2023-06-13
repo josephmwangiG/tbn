@@ -18,7 +18,6 @@ class Business extends Model
         "number_of_employees",
         "specialization",
         "phone_number",
-        "owners",
         "description",
         "annual_revenue",
         "years_of_operation",
