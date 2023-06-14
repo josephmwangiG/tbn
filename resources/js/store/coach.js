@@ -9,13 +9,12 @@ export const useCoachStore = defineStore("coach", {
         async getCoaches() {
             try {
                 let response = await axios.get("coaches");
+                this.coaches = response.data.coaches
                 return true;
             } catch (e) {
                 return e.response;
             }
         },
-    },
-    actions: {
         async addCoach(form) {
             try {
                 let response = await axios.post("coaches", form);

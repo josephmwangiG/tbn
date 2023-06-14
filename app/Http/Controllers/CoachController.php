@@ -16,7 +16,9 @@ class CoachController extends Controller
     public function index()
     {
 
-        $coaches = Coach::latest()->get();
+        $coaches = Coach::latest()
+            ->with('user')
+            ->get();
         return response(['coaches' => $coaches], 200);
     }
 

@@ -14,9 +14,9 @@
                 </span>
             </button>
             <button class="topbar-toggler more"><i class="ri-menu-3-line"></i></button>
-            <div class="nav-toggle bg-dark">
-                <button class="btn btn-toggle toggle-sidebar bg-dark" style="z-index:1000000; width:30px">
-                    <i class="ri-menu-3-line text-dark"></i>
+            <div class="nav-toggle">
+                <button class="btn btn-toggle toggle-sidebar" style="z-index:1000000; width:30px">
+                    <i class="ri-menu-3-line"></i>
                 </button>
             </div>
         </div>
@@ -114,5 +114,20 @@ export default {
 <style scoped>
 div.main-header {
     height: 70px;
+}
+
+
+.navbar-toggler {
+    display: none !important;
+}
+
+.nav-toggle {
+    display: none !important;
+}
+
+@media (max-width: 991px) {
+    .navbar-toggler {
+        display: block !important;
+    }
 }
 </style>

@@ -19,7 +19,7 @@ return new class extends Migration
             $table->string("highest_level_of_education")->nullable();
             $table->text("description")->nullable();
             $table->string("status")->default('Pending');
-            $table->string("phone")->nullable();
+            $table->string("phone_number")->nullable();
             $table->string("profile")->default('profile.png');
             $table->string("specialization")->nullable();
             $table->string("current_employment")->nullable();

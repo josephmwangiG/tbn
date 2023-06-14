@@ -12,6 +12,16 @@ import RegisterBusiness from "./../components/pages/RegisterBusiness.vue";
 import RegisterCoach from "./../components/pages/RegisterCoach.vue";
 import Admin from "./../components/admin/Admin.vue";
 import Dashboard from "./../components/admin/Dashboard.vue";
+import TrainingEvents from "./../components/admin/TrainingEvents.vue";
+import CoachingEvents from "./../components/admin/CoachingEvents.vue";
+import Businesses from "./../components/admin/Businesses.vue";
+import AdminCoaches from "./../components/admin/AdminCoaches.vue";
+import Users from "./../components/admin/Users.vue";
+import Roles from "./../components/admin/Roles.vue";
+import ChangePassword from "./../components/admin/ChangePassword.vue";
+import Reports from "./../components/admin/Reports.vue";
+import Settings from "./../components/admin/Settings.vue";
+import AdminProfile from "./../components/admin/AdminProfile.vue";
 
 export const routes = [
     {
@@ -84,6 +94,56 @@ export const routes = [
                 alias: "dashboard",
                 name: "dashboard",
                 component: Dashboard,
+            },
+            {
+                path: "training-events",
+                name: "training-events",
+                component: TrainingEvents,
+            },
+            {
+                path: "coaching-events",
+                name: "coaching-events",
+                component: CoachingEvents,
+            },
+            {
+                path: "businesses",
+                name: "businesses",
+                component: Businesses,
+            },
+            {
+                path: "coaches",
+                name: "admin-coaches",
+                component: AdminCoaches,
+            },
+            {
+                path: "users-roles",
+                name: "users-roles",
+                component: Roles,
+            },
+            {
+                path: "users",
+                name: "users",
+                component: Users,
+            },
+            {
+                path: "change-password",
+                name: "change-password",
+                component: ChangePassword,
+            },
+            {
+                path: "profile",
+                name: "profile",
+                component: AdminProfile,
+            },
+            {
+                path: "reports",
+                name: "reports",
+                component: Reports,
+            },
+            {
+                path: "settings",
+                name: "settings",
+                component: Settings,
             },
         ],
     },

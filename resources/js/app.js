@@ -11,7 +11,7 @@ import "element-plus/dist/index.css";
 import axios from "axios";
 import {createPinia} from "pinia";
 
-axios.defaults.baseURL = "api";
+axios.defaults.baseURL = "/api";
 
 const router = createRouter({
     history: createWebHistory(),

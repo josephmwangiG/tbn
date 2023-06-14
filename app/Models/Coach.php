@@ -17,10 +17,15 @@ class Coach extends Model
         "highest_level_of_education",
         "description",
         "status",
-        "phone",
+        "phone_number",
         "profile",
         "specialization",
         "current_employment",
         "current_employer",
     ];
+
+    public function user()
+    {
+        return $this->belongsTo(User::class);
+    }
 }

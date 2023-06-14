@@ -5,7 +5,6 @@ export const useBusinessStore = defineStore("business", {
     state: () => ({
         businesses: null,
     }),
-
     actions: {
         async getBusinesses() {
             try {

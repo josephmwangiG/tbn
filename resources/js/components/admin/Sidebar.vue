@@ -1,10 +1,9 @@
 <template>
     <div class="sidebar sidebar-style-2">
-        <div class="scroll-wrapper sidebar-wrapper scrollbar scrollbar-inner" style="position: relative;">
-            <div class="sidebar-wrapper scrollbar scrollbar-inner scroll-content scroll-scrollx_visible scroll-scrolly_visible"
-                style="height: auto; margin-bottom: 0px; margin-right: 0px; max-height: 672px;">
+        <div class="scroll-wrapper sidebar-wrapper" style="position: relative;">
+            <div class="sidebar-wrapper" style="height: auto; margin-bottom: 0px; margin-right: 0px; overflow-y: auto;">
                 <div class="sidebar-content">
-                    <div class="user pt-4">
+                    <div class="user">
                         <div class="avatar-sm float-left mr-2">
                             <img src="https://profilo.xyz/assets/admin/img/propics/5f5797dbc520b.png" alt="..."
                                 class="avatar-img rounded">
@@ -22,17 +21,17 @@
                             <div class="collapse in" id="collapseExample">
                                 <ul class="nav">
                                     <li>
-                                        <a href="https://profilo.xyz/admin/profile/edit">
+                                        <router-link :to="{ name: 'profile' }">
                                             <span class="link-collapse">Edit Profile</span>
-                                        </a>
+                                        </router-link>
                                     </li>
                                     <li>
-                                        <a href="https://profilo.xyz/admin/changePassword">
+                                        <router-link :to="{ name: 'change-password' }">
                                             <span class="link-collapse">Change Password</span>
-                                        </a>
+                                        </router-link>
                                     </li>
                                     <li>
-                                        <a href="https://profilo.xyz/admin/logout?language=en">
+                                        <a @click="logout" href="#">
                                             <span class="link-collapse">Logout</span>
                                         </a>
                                     </li>
@@ -42,280 +41,95 @@
                     </div>
                     <ul class="nav nav-primary">
 
-                        <li class="nav-item ">
-                            <a href="https://profilo.xyz/admin/dashboard?language=en">
-                                <i class="la flaticon-paint-palette"></i>
+                        <li class="nav-item" :class="route.name == 'dashboard' ? 'active' : ''">
+                            <router-link :to="{ name: 'dashboard' }">
+                                <i class="ri-home-2-line"></i>
                                 <p>Dashboard</p>
-                            </a>
+                            </router-link>
+                        </li>
+                        <li class="nav-item" :class="route.name == 'training-events' ? 'active' : ''">
+                            <router-link :to="{ name: 'training-events' }">
+                                <i class="ri-calendar-event-line"></i>
+                                <p>Training Events</p>
+                            </router-link>
+                        </li>
+
+                        <li class="nav-item" :class="route.name == 'coaching-events' ? 'active' : ''">
+                            <router-link :to="{ name: 'coaching-events' }">
+                                <i class="ri-graduation-cap-fill"></i>
+                                <p>Coaching Events</p>
+                            </router-link>
+                        </li>
+
+                        <li class="nav-item" :class="route.name == 'businesses' ? 'active' : ''">
+                            <router-link :to="{ name: 'businesses' }">
+                                <i class="ri-stack-fill"></i>
+                                <p>Registered Businesses</p>
+                            </router-link>
+                        </li>
+                        <li class="nav-item" :class="route.name == 'admin-coaches' ? 'active' : ''">
+                            <router-link :to="{ name: 'admin-coaches' }">
+                                <i class="ri-group-line"></i>
+                                <p>Registered Coaches</p>
+                            </router-link>
                         </li>
 
 
-                        <li class="nav-item">
-                            <a data-toggle="collapse" href="#packageManagement">
-                                <i class="fas fa-receipt"></i>
-                                <p>Training</p>
-                                <span class="caret"></span>
-                            </a>
-                            <div class="collapse" id="packageManagement">
-                                <ul class="nav nav-collapse">
-                                    <li class="">
-                                        <a href="https://profilo.xyz/admin/package/settings?language=en">
-                                            <span class="sub-item">Settings</span>
-                                        </a>
-                                    </li>
-                                    <li class="">
-                                        <a href="https://profilo.xyz/admin/coupon?language=en">
-                                            <span class="sub-item">Coupons</span>
-                                        </a>
-                                    </li>
-                                    <li class="">
-                                        <a href="https://profilo.xyz/admin/package/features?language=en">
-                                            <span class="sub-item">Package Features</span>
-                                        </a>
-                                    </li>
-                                    <li class="">
-                                        <a href="https://profilo.xyz/admin/packages?language=en">
-                                            <span class="sub-item">Packages</span>
-                                        </a>
-                                    </li>
-                                </ul>
-                            </div>
+                        <li class="nav-item" :class="route.name == 'reports' ? 'active' : ''">
+                            <router-link :to="{ name: 'reports' }">
+                                <i class="ri-folder-chart-line"></i>
+                                <p>Reports</p>
+                            </router-link>
                         </li>
 
-                        <li class="nav-item">
-                            <a href="https://profilo.xyz/admin/payment-log?language=en">
-                                <i class="fas fa-file-invoice-dollar"></i>
-                                <p>Payment Log</p>
-                            </a>
-                        </li>
-
-                        <li class="nav-item">
-                            <a data-toggle="collapse" href="#customDomains">
-                                <i class="fas fa-link"></i>
-                                <p>Custom Domains</p>
-                                <span class="caret"></span>
-                            </a>
-                            <div class="collapse" id="customDomains">
-                                <ul class="nav nav-collapse">
-                                    <li class="">
-                                        <a href="https://profilo.xyz/admin/domain/texts?language=en">
-                                            <span class="sub-item">Request Page Texts</span>
-                                        </a>
-                                    </li>
-                                    <li class="">
-                                        <a href="https://profilo.xyz/admin/domains?language=en">
-                                            <span class="sub-item">All Requests</span>
-                                        </a>
-                                    </li>
-                                    <li class="">
-                                        <a href="https://profilo.xyz/admin/domains?type=pending?language=en">
-                                            <span class="sub-item">Pending Requests</span>
-                                        </a>
-                                    </li>
-                                    <li class="">
-                                        <a href="https://profilo.xyz/admin/domains?type=connected?language=en">
-                                            <span class="sub-item">Connected Requests</span>
-                                        </a>
-                                    </li>
-                                    <li class="">
-                                        <a href="https://profilo.xyz/admin/domains?type=rejected?language=en">
-                                            <span class="sub-item">Rejected Requests</span>
-                                        </a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </li>
-
-                        <li class="nav-item">
-                            <a data-toggle="collapse" href="#subDomains">
-                                <i class="fas fa-link"></i>
-                                <p>Subdomains</p>
-                                <span class="caret"></span>
-                            </a>
-                            <div class="collapse" id="subDomains">
-                                <ul class="nav nav-collapse">
-                                    <li class="">
-                                        <a href="https://profilo.xyz/admin/subdomains?language=en">
-                                            <span class="sub-item">All Subdomains</span>
-                                        </a>
-                                    </li>
-                                    <li class="">
-                                        <a href="https://profilo.xyz/admin/subdomains?type=pending?language=en">
-                                            <span class="sub-item">Pending Subdomains</span>
-                                        </a>
-                                    </li>
-                                    <li class="">
-                                        <a href="https://profilo.xyz/admin/subdomains?type=connected?language=en">
-                                            <span class="sub-item">Connected Subdomains</span>
-                                        </a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </li>
-
-
-
-                        <li class="nav-item active">
-                            <a href="https://profilo.xyz/admin/register/users?language=en">
-                                <i class="la flaticon-users"></i>
-                                <p>Registered Users</p>
-                            </a>
-                        </li>
-
-
-
-
-                        <li class="nav-item
-   ">
-                            <a href="https://profilo.xyz/admin/faqs?language=en">
-                                <i class="la flaticon-round"></i>
-                                <p>FAQ Management</p>
-                            </a>
-                        </li>
-
-
-
-
-                        <li class="nav-item">
-                            <a data-toggle="collapse" href="#basic">
-                                <i class="la flaticon-settings"></i>
+                        <li class="nav-item" :class="route.fullPath.startsWith('/admin/settings') ? 'active' : ''">
+                            <a data-toggle="collapse" href="#settings">
+                                <i class="ri-settings-4-line"></i>
                                 <p>Settings</p>
                                 <span class="caret"></span>
                             </a>
-                            <div class="collapse" id="basic">
+                            <div class="collapse" id="settings">
                                 <ul class="nav nav-collapse">
                                     <li class="">
-                                        <a href="https://profilo.xyz/admin/favicon?language=en">
-                                            <span class="sub-item">Favicon</span>
-                                        </a>
+                                        <router-link :to="{ name: 'settings' }">
+                                            <span class="sub-item">Settings</span>
+                                        </router-link>
                                     </li>
-                                    <li class="">
-                                        <a href="https://profilo.xyz/admin/logo?language=en">
-                                            <span class="sub-item">Logo</span>
-                                        </a>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="nav-item" :class="route.fullPath.startsWith('/admin/users') ? 'active' : ''">
+                            <a data-toggle="collapse" href="#roles">
+                                <i class="ri-equalizer-line"></i>
+                                <p>Roles & Users</p>
+                                <span class="caret"></span>
+                            </a>
+                            <div class="collapse" id="roles">
+                                <ul class="nav nav-collapse">
+                                    <li :class="route.name == 'users-roles' ? 'active' : ''">
+                                        <router-link :to="{ name: 'users-roles' }">
+                                            <span class="sub-item">Roles</span>
+                                        </router-link>
                                     </li>
-                                    <li class="">
-                                        <a href="https://profilo.xyz/admin/basicinfo?language=en">
-                                            <span class="sub-item">General Settings</span>
-                                        </a>
-                                    </li>
-
-                                    <li class="submenu">
-                                        <a data-toggle="collapse" href="#emailset" aria-expanded="false">
-                                            <span class="sub-item">Email Settings</span>
-                                            <span class="caret"></span>
-                                        </a>
-                                        <div class="collapse " id="emailset">
-                                            <ul class="nav nav-collapse subnav">
-                                                <li class="">
-                                                    <a href="https://profilo.xyz/admin/mail-from-admin?language=en">
-                                                        <span class="sub-item">Mail from Admin</span>
-                                                    </a>
-                                                </li>
-                                                <li class="">
-                                                    <a href="https://profilo.xyz/admin/mail-to-admin?language=en">
-                                                        <span class="sub-item">Mail to Admin</span>
-                                                    </a>
-                                                </li>
-                                                <li class="">
-                                                    <a href="https://profilo.xyz/admin/mail_templates?language=en">
-                                                        <span class="sub-item">Mail Templates</span>
-                                                    </a>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </li>
-                                    <li class="">
-                                        <a href="https://profilo.xyz/admin/preloader?language=en">
-                                            <span class="sub-item">Preloader</span>
-                                        </a>
-                                    </li>
-                                    <li class="">
-                                        <a href="https://profilo.xyz/admin/breadcrumb?language=en">
-                                            <span class="sub-item">Breadcrumb</span>
-                                        </a>
-                                    </li>
-
-                                    <li class="">
-                                        <a href="https://profilo.xyz/admin/social?language=en">
-                                            <span class="sub-item">Social Links</span>
-                                        </a>
-                                    </li>
-
-                                    <li class="">
-                                        <a href="https://profilo.xyz/admin/script?language=en">
-                                            <span class="sub-item">Plugins</span>
-                                        </a>
-                                    </li>
-
-                                    <li class="">
-                                        <a href="https://profilo.xyz/admin/maintainance?language=en">
-                                            <span class="sub-item">Maintainance Mode</span>
-                                        </a>
-                                    </li>
-                                    <li class="">
-                                        <a href="https://profilo.xyz/admin/cookie-alert?language=en">
-                                            <span class="sub-item">Cookie Alert</span>
-                                        </a>
-                                    </li>
-                                    <li class="">
-                                        <a href="https://profilo.xyz/admin/seo?language=en">
-                                            <span class="sub-item">SEO Information</span>
-                                        </a>
+                                    <li :class="route.name == 'users' ? 'active' : ''">
+                                        <router-link :to="{ name: 'users' }">
+                                            <span class="sub-item">Users</span>
+                                        </router-link>
                                     </li>
                                 </ul>
                             </div>
                         </li>
 
-
-
-
-
-                        <li class="nav-item
-  ">
-                            <a href="https://profilo.xyz/admin/roles?language=en">
-                                <i class="la flaticon-multimedia-2"></i>
-                                <p>Role Management</p>
-                            </a>
-                        </li>
-
-
-
-
-                        <li class="nav-item
-   ">
-                            <a href="https://profilo.xyz/admin/users?language=en">
-                                <i class="la flaticon-user-5"></i>
-                                <p>Admins Management</p>
-                            </a>
-                        </li>
-
-
-                        <li class="nav-item
-    ">
-                            <a href="https://profilo.xyz/admin/sitemap?language=en">
-                                <i class="fa fa-sitemap"></i>
-                                <p>Sitemap</p>
-                            </a>
-                        </li>
                     </ul>
                 </div>
             </div>
 
-            <div class="scroll-element scroll-y scroll-scrollx_visible scroll-scrolly_visible">
-                <div class="scroll-element_outer">
-                    <div class="scroll-element_size"></div>
-                    <div class="scroll-element_track"></div>
-                    <div class="scroll-bar ui-draggable ui-draggable-handle" style="height: 322px; top: 0px;"></div>
-                </div>
-            </div>
         </div>
     </div>
 </template>
-<script>
-export default {
-
-}
+<script setup>
+import { useRoute } from "vue-router"
+const route = useRoute()
 </script>
 <style lang="">
     
