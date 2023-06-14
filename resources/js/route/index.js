@@ -23,6 +23,27 @@ import Reports from "./../components/admin/Reports.vue";
 import Settings from "./../components/admin/Settings.vue";
 import AdminProfile from "./../components/admin/AdminProfile.vue";
 
+import { useRouter } from "vue-router";
+
+const router = useRouter();
+
+// function checkLogin(to, from, next) {
+//     if (to.meta.title != undefined) {
+//         document.title = "QI | " + to.meta.title;
+//     } else {
+//         document.title = "Quanta Insure";
+//     }
+//     if (localStorage.getItem("token") == null) {
+//         next({ name: "login" });
+//     } else {
+//         next();
+//     }
+// }
+
+// router.beforeEach((to, from) => {
+//     document.title = "QI | " + to.meta.title;
+// });
+
 export const routes = [
     {
         path: "",
