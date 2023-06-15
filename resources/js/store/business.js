@@ -23,5 +23,14 @@ export const useBusinessStore = defineStore("business", {
                 return e.response;
             }
         },
+        async approveAccount(id, option) {
+            try {
+                let response = await axios.put("businesses/" + id + "/" + option);
+                this.businesses = response.data.businesses;
+                return true;
+            } catch (e) {
+                return e.response;
+            }
+        },
     },
 });

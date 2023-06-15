@@ -6,25 +6,20 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
-class Business extends Model
+class TrainingEvent extends Model
 {
     use HasFactory, SoftDeletes;
 
     protected $fillable = [
-        "user_id",
-        "business_name",
-        "email",
-        "address",
-        "number_of_employees",
-        "specialization",
-        "phone_number",
-        "description",
-        "annual_revenue",
-        "years_of_operation",
-        "website",
-        "status",
+        'name',
+        'start_date',
+        'end_date',
+        'location',
+        'description',
+        'duration',
+        'image',
+        'registration_deadline',
     ];
-
     public function user()
     {
         return $this->belongsTo(User::class);

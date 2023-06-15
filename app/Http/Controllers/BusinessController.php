@@ -93,6 +93,20 @@ class BusinessController extends Controller
         //
     }
 
+    public function approveAccount($id, $action)
+    {
+        $business = Business::find($id);
+        $business->update([
+            'status' => $action,
+        ]);
+
+        $businesses = Business::latest()
+            ->with('user')
+            ->get();
+
+        return response(['businesses' => $businesses], 200);
+    }
+
     /**
      * Show the form for editing the specified resource.
      */

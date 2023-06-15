@@ -56,6 +56,7 @@
                                                     <th scope="col">Employees</th>
                                                     <th scope="col">Email</th>
                                                     <th scope="col">Phone</th>
+                                                    <th scope="col">Status</th>
                                                     <td scope="col">Action</td>
                                                 </tr>
                                             </thead>
@@ -69,6 +70,7 @@
                                                     <td>{{ item.number_of_employees }}</td>
                                                     <td>{{ item.email }}</td>
                                                     <td>{{ item.phone_number }}</td>
+                                                    <td>{{ item.status }}</td>
                                                     <td>
                                                         <div class="dropdown">
                                                             <button class="btn btn-info btn-sm dropdown-toggle"
@@ -80,9 +82,20 @@
                                                                 <button class="editbtn dropdown-item" data-toggle="modal"
                                                                     data-target="#mailModal"
                                                                     data-email="pefen68317@iucake.com">View</button>
-                                                                <button class="editbtn dropdown-item" data-toggle="modal"
-                                                                    data-target="#mailModal"
-                                                                    data-email="pefen68317@iucake.com">Approve
+                                                                <button class="editbtn dropdown-item"
+                                                                    @click="itemID = item.id; accountAction = 'Approve'"
+                                                                    data-toggle="modal" data-target="#approveUser"
+                                                                    v-if="item.status == 'Pending'">Approve
+                                                                </button>
+                                                                <button class="editbtn dropdown-item"
+                                                                    @click="itemID = item.id; accountAction = 'Deactivate'"
+                                                                    data-toggle="modal" data-target="#approveUser"
+                                                                    v-if="item.status == 'Active'">Deactivate
+                                                                </button>
+                                                                <button class="editbtn dropdown-item"
+                                                                    @click="itemID = item.id; accountAction = 'Activate'"
+                                                                    data-toggle="modal" data-target="#approveUser"
+                                                                    v-if="item.status == 'Deactivated'">Activate
                                                                 </button>
                                                                 <button class="editbtn dropdown-item" data-toggle="modal"
                                                                     data-target="#mailModal"
@@ -104,18 +117,56 @@
                 </div>
             </div>
 
-            <AddBusiness />
+            <ApproveUser @confirmOption="confirmOption" :option="accountAction" />
         </div>
     </div>
 </template>
 <script setup>
-import { onMounted } from "vue"
-import AddBusiness from "./forms/AddBusiness.vue"
+import { onMounted, ref } from "vue"
+import ApproveUser from "./forms/ApproveUser.vue"
 import DataTable from 'datatables.net-vue3';
 import DataTablesCore from 'datatables.net';
 import { useBusinessStore } from "@/store/business.js"
+import { ElNotification } from 'element-plus'
 
 const store = useBusinessStore()
+const itemID = ref(0)
+const accountAction = ref('')
+
+const confirmOption = async (res) => {
+    if (res && accountAction.value == 'Approve') {
+        let response = await store.approveAccount(itemID.value, accountAction.value == 'Approve' ? 'Active' : '')
+        if (response == true) {
+            ElNotification({
+                title: 'Success',
+                type: 'success',
+                message: 'Account Approved',
+                duration: 2000,
+            })
+        }
+    } else if (res, accountAction.value == 'Deactivate') {
+        let response = await store.approveAccount(itemID.value, accountAction.value == 'Deactivate' ? 'Deactivated' : '')
+        if (response == true) {
+            ElNotification({
+                title: 'Success',
+                type: 'success',
+                message: 'Account Approved',
+                duration: 2000,
+            })
+        }
+    }
+    else if (res, accountAction.value == 'Activate') {
+        let response = await store.approveAccount(itemID.value, accountAction.value == 'Activate' ? 'Active' : '')
+        if (response == true) {
+            ElNotification({
+                title: 'Success',
+                type: 'success',
+                message: 'Account Approved',
+                duration: 2000,
+            })
+        }
+    }
+}
 
 onMounted(async () => {
     let response = await store.getBusinesses()

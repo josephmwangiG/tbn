@@ -24,6 +24,7 @@ return new class extends Migration
             $table->double("annual_revenue")->nullable();
             $table->integer("years_of_operation")->nullable();
             $table->string("website")->nullable();
+            $table->string("status")->default('Pending');
             $table->timestamps();
             $table->softDeletes();
             $table->index('id');

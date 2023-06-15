@@ -1,4 +1,51 @@
 <template>
+    <section class="hero-section hero-section-one" id="home">
+        <div class="container">
+            <div class="row align-items-center justify-content-center">
+                <div class="col-lg-5 col-md-6">
+                    <div class="hero-text">
+                        <span class="tagline">Hi I'm,</span>
+                        <h1 class="hero-title">Adrien
+                            Rabiot</h1>
+                        <div>
+                            <p id="typed" class="d-inline-block">Lawye</p><span class="typed-cursor">|</span>
+                        </div>
+                        <div class="type-string" style="display: none;">
+                            <p>Lawyer</p>
+                            <p>Attorney</p>
+                        </div>
+                        <ul class="social-links">
+                            <li>
+                                <a href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                            </li>
+                            <li>
+                                <a href="https://twitter.com/?lang=en" target="_blank"><i class="fab fa-twitter"></i></a>
+                            </li>
+                            <li>
+                                <a href="https://www.linkedin.com/login" target="_blank"><i
+                                        class="fab fa-linkedin-in"></i></a>
+                            </li>
+                            <li>
+                                <a href="https://dribbble.com/" target="_blank"><i class="fab fa-dribbble"></i></a>
+                            </li>
+                            <li>
+                                <a href="https://github.com/" target="_blank"><i class="fab fa-github"></i></a>
+                            </li>
+                        </ul>
+                        <a href="#contact" class="template-btn">Hire me</a>
+                    </div>
+                </div>
+                <div class="col-lg-7 col-md-6 col-sm-9">
+                    <div class="hero-img text-right">
+                        <img data-src="https://profilo.xyz/assets/front/img/user/home_settings/617bc3fe734ce.png"
+                            class="animate-float-bob-y lazy entered loaded" alt="" data-ll-status="loaded"
+                            src="https://profilo.xyz/assets/front/img/user/home_settings/617bc3fe734ce.png">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--====== Hero Area End ======-->
 
     <!--====== About Section Start ======-->
     <section class="about-section section-gap" id="about">
@@ -14,7 +61,7 @@
                 <div class="col-lg-6 col-md-10">
                     <div class="about-content">
                         <div class="common-heading mb-30">
-                            <span class="tagline">Joseph Mwangi</span>
+                            <span class="tagline">My Resume</span>
                             <h2 class="title">About Me</h2>
                         </div>
                         <p class="mb-30">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis at est id leo luctus
@@ -308,7 +355,118 @@
     </section>
     <!--====== Counter Section End ======-->
 
-  
+    <!--====== Portfolios Section Start ======-->
+    <section class="portfolio-section section-gap" id="portfolio">
+        <div class="container">
+            <div class="common-heading text-center mb-50">
+                <span class="tagline">Portfolios</span>
+                <h2 class="title">Awesome Projects</h2>
+            </div>
+
+            <div class="portfolio-filter-wrap mb-20">
+                <ul class="portfolio-filter">
+                    <li><a href="#" data-filter="*" class="filter-active">All</a></li>
+                    <li><a href="#" data-filter=".cat-39">Web Development</a>
+                    </li>
+                    <li><a href="#" data-filter=".cat-40">Graphic Design</a>
+                    </li>
+                    <li><a href="#" data-filter=".cat-41">MISC</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="row portfolio-items filter-items justify-content-center"
+                style="position: relative; height: 1305px;">
+                <div class="col-lg-4 col-md-6 filter-item cat-39" style="position: absolute; left: 0px; top: 0px;">
+                    <div class="portfolio-item mt-30">
+                        <div class="portfolio-thumb">
+                            <img src="https://profilo.xyz/assets/front/img/user/portfolios/1627286836.jpg" alt="Image">
+                            <a href="https://profilo.xyz/Rabiot/portfolio/ecommerce-website/74" class="portfolio-link">
+                                <span></span>
+                            </a>
+                        </div>
+                        <div class="portfolio-content">
+                            <h4 class="title"><a href="https://profilo.xyz/Rabiot/portfolio/ecommerce-website/74">Ecommerce
+                                    Website</a>
+                            </h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 filter-item cat-40" style="position: absolute; left: 360px; top: 0px;">
+                    <div class="portfolio-item mt-30">
+                        <div class="portfolio-thumb">
+                            <img src="https://profilo.xyz/assets/front/img/user/portfolios/1627286882.jpg" alt="Image">
+                            <a href="https://profilo.xyz/Rabiot/portfolio/logo-design/75" class="portfolio-link">
+                                <span></span>
+                            </a>
+                        </div>
+                        <div class="portfolio-content">
+                            <h4 class="title"><a href="https://profilo.xyz/Rabiot/portfolio/logo-design/75">Logo Design</a>
+                            </h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 filter-item cat-41" style="position: absolute; left: 0px; top: 435px;">
+                    <div class="portfolio-item mt-30">
+                        <div class="portfolio-thumb">
+                            <img src="https://profilo.xyz/assets/front/img/user/portfolios/1627286919.jpg" alt="Image">
+                            <a href="https://profilo.xyz/Rabiot/portfolio/medical-app/76" class="portfolio-link">
+                                <span></span>
+                            </a>
+                        </div>
+                        <div class="portfolio-content">
+                            <h4 class="title"><a href="https://profilo.xyz/Rabiot/portfolio/medical-app/76">Medical App</a>
+                            </h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 filter-item cat-39" style="position: absolute; left: 360px; top: 435px;">
+                    <div class="portfolio-item mt-30">
+                        <div class="portfolio-thumb">
+                            <img src="https://profilo.xyz/assets/front/img/user/portfolios/1627286965.jpg" alt="Image">
+                            <a href="https://profilo.xyz/Rabiot/portfolio/taxi-app/77" class="portfolio-link">
+                                <span></span>
+                            </a>
+                        </div>
+                        <div class="portfolio-content">
+                            <h4 class="title"><a href="https://profilo.xyz/Rabiot/portfolio/taxi-app/77">Taxi App</a>
+                            </h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 filter-item cat-40" style="position: absolute; left: 0px; top: 870px;">
+                    <div class="portfolio-item mt-30">
+                        <div class="portfolio-thumb">
+                            <img src="https://profilo.xyz/assets/front/img/user/portfolios/1627287017.jpg" alt="Image">
+                            <a href="https://profilo.xyz/Rabiot/portfolio/investment-app-ui/78" class="portfolio-link">
+                                <span></span>
+                            </a>
+                        </div>
+                        <div class="portfolio-content">
+                            <h4 class="title"><a href="https://profilo.xyz/Rabiot/portfolio/investment-app-ui/78">Investment
+                                    App UI</a>
+                            </h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 filter-item cat-41" style="position: absolute; left: 360px; top: 870px;">
+                    <div class="portfolio-item mt-30">
+                        <div class="portfolio-thumb">
+                            <img src="https://profilo.xyz/assets/front/img/user/portfolios/1627287054.jpg" alt="Image">
+                            <a href="https://profilo.xyz/Rabiot/portfolio/qr-menu-maker/79" class="portfolio-link">
+                                <span></span>
+                            </a>
+                        </div>
+                        <div class="portfolio-content">
+                            <h4 class="title"><a href="https://profilo.xyz/Rabiot/portfolio/qr-menu-maker/79">QR Menu
+                                    Maker</a>
+                            </h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--====== Portfolios Section End ======-->
 
     <!--====== Testimonial Section Start ======-->
     <section class="testimonial-section section-gap bg-offwhite-color">
@@ -664,6 +822,54 @@
     </section>
     <!--====== Latest Blog Section End ======-->
 
+    <!--====== Contact Section Start ======-->
+    <section class="contact-section section-gap" id="contact">
+        <div class="container">
+            <div class="common-heading mb-50">
+                <span class="tagline">Contact</span>
+                <h2 class="title">Get in Touch</h2>
+            </div>
+
+            <div class="contact-form-one">
+                <div class="row justify-content-center">
+                    <div class="col-lg-10">
+                        <form action="https://profilo.xyz/Rabiot/contact/message" enctype="multipart/form-data"
+                            method="post">
+                            <input type="hidden" name="_token" value="Fw9UF108cFC6Lqh72jT9hCj7wAoChBGBVS2Laopv"> <input
+                                type="hidden" name="id" value="66">
+                            <div class="row gutters-20">
+                                <div class="col-lg-4 col-md-6">
+                                    <div class="input-field mb-20">
+                                        <input type="text" placeholder="Name" name="fullname">
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 col-md-6">
+                                    <div class="input-field mb-20">
+                                        <input type="email" placeholder="Email Address" name="email" required="">
+                                    </div>
+                                </div>
+                                <div class="col-lg-4">
+                                    <div class="input-field mb-20">
+                                        <input type="text" placeholder="Subject" name="subject" required="">
+                                    </div>
+                                </div>
+                                <div class="col-lg-12">
+                                    <div class="input-field mb-20">
+                                        <textarea placeholder="Message" name="message" required=""></textarea>
+                                    </div>
+                                </div>
+                                <div class="col-lg-12">
+                                    <div class="input-field text-center mt-30">
+                                        <button type="submit" class="template-btn">Send Message</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 </template>
 <script>
 export default {

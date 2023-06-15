@@ -74,6 +74,19 @@ class CoachController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
+    public function approveAccount($id, $action)
+    {
+        $coach = Coach::find($id);
+        $coach->update([
+            'status' => $action,
+        ]);
+
+        $coaches = Coach::latest()
+            ->with('user')
+            ->get();
+            
+        return response(['coaches' => $coaches], 200);
+    }
     public function edit(Coach $coach)
     {
         //

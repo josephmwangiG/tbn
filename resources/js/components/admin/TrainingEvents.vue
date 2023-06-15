@@ -3,7 +3,7 @@
         <div class="page-inner">
             <div class="page-header">
                 <h4 class="page-title">
-                    Registered Users
+                    Training Events
                 </h4>
                 <ul class="breadcrumbs">
                     <li class="nav-home">
@@ -15,18 +15,18 @@
                         <i class="ri-arrow-right-s-line  bg-white"></i>
                     </li>
                     <li class="nav-item">
-                        <a class="bg-white" href="#">Registered Users</a>
+                        <a class="bg-white" href="#">Training Events</a>
                     </li>
                 </ul>
             </div>
-            <div class="row" v-if="store.businesses != null">
+            <div class="row" v-if="store.trainingEvents != null">
                 <div class="col-md-12">
                     <div class="card">
                         <div class="card-header">
                             <div class="row">
                                 <div class="col-lg-6">
                                     <div class="card-title">
-                                        Registered Users
+                                        Training Events
                                     </div>
                                 </div>
                                 <div class="col-lg-6 mt-2 mt-lg-0">
@@ -35,8 +35,8 @@
                                             class="flaticon-interface-5"></i>
                                         Delete</button>
                                     <button class="btn btn-primary float-lg-right float-none btn-sm ml-2 mt-1"
-                                        data-toggle="modal" data-target="#addUserModal"><i class="fas fa-plus"></i>
-                                        Add User</button>
+                                        data-toggle="modal" data-target="#trainingEventModal"><i class="fas fa-plus"></i>
+                                        Add Event</button>
                                 </div>
                             </div>
                         </div>
@@ -45,7 +45,7 @@
                             <div class="row">
                                 <div class="col-lg-12">
                                     <div class="table-responsive">
-                                        <table class="table table-striped mt-3" id="businessTable">
+                                        <table class="table table-striped mt-3" id="trainingEventTable">
                                             <thead>
                                                 <tr>
                                                     <th scope="col" class="pt-2">
@@ -60,7 +60,7 @@
                                                 </tr>
                                             </thead>
                                             <tbody>
-                                                <tr v-for="(item, index) in store.businesses">
+                                                <tr v-for="(item, index) in store.trainingEvents">
                                                     <td>
                                                         <input type="checkbox" class="bulk-check" style="width:16px">
                                                     </td>
@@ -106,22 +106,23 @@
                 </div>
             </div>
 
-            <AddBusiness />
+            <TrainingEvent :form="form" />
         </div>
     </div>
 </template>
 <script setup>
-import { onMounted } from "vue"
-import AddBusiness from "./forms/AddBusiness.vue"
+import { onMounted, ref } from "vue"
+import TrainingEvent from "./forms/TrainingEvent.vue"
 import DataTable from 'datatables.net-vue3';
 import DataTablesCore from 'datatables.net';
-import { useBusinessStore } from "@/store/business.js"
+import { useTrainingEventStore } from "@/store/event.js"
 
-const store = useBusinessStore()
+const store = useTrainingEventStore()
+const form = ref({})
 
 onMounted(async () => {
-    let response = await store.getBusinesses()
-    $("#businessTable").DataTable()
+    let response = await store.getTrainingEvents()
+    $("#trainingEventTable").DataTable()
 })
 </script>
 <style scoped>

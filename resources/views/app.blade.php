@@ -101,7 +101,6 @@
     <script src="https://profilo.xyz/assets/admin/js/plugin/fontawesome-iconpicker/fontawesome-iconpicker.min.js"></script>
 
 
-    <script src="https://profilo.xyz/assets/admin/js/plugin/webfont/webfont.min.js"></script>
 
     <!-- Custom JS -->
     <script src="https://profilo.xyz/assets/admin/js/custom.js"></script>

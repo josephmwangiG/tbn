@@ -9,7 +9,7 @@ export const useCoachStore = defineStore("coach", {
         async getCoaches() {
             try {
                 let response = await axios.get("coaches");
-                this.coaches = response.data.coaches
+                this.coaches = response.data.coaches;
                 return true;
             } catch (e) {
                 return e.response;
@@ -18,6 +18,15 @@ export const useCoachStore = defineStore("coach", {
         async addCoach(form) {
             try {
                 let response = await axios.post("coaches", form);
+                return true;
+            } catch (e) {
+                return e.response;
+            }
+        },
+        async approveAccount(id, option) {
+            try {
+                let response = await axios.put("coaches/" + id + "/" + option);
+                this.coaches = response.data.coaches;
                 return true;
             } catch (e) {
                 return e.response;

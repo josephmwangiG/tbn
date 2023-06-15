@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\BusinessController;
 use App\Http\Controllers\CoachController;
+use App\Http\Controllers\TrainingEventsController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -21,4 +22,7 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 });
 Route::post("/login", [LoginController::class, 'authenticate']);
 Route::resource("businesses", BusinessController::class);
+Route::put("businesses/{id}/{option}", [BusinessController::class, 'approveAccount']);
 Route::resource("coaches", CoachController::class);
+Route::put("coaches/{id}/{option}", [CoachController::class, 'approveAccount']);
+Route::resource("trainingEvents", TrainingEventsController::class);

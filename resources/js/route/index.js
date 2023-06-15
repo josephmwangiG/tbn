@@ -152,8 +152,8 @@ export const routes = [
                 component: ChangePassword,
             },
             {
-                path: "profile",
-                name: "profile",
+                path: "admin-profile",
+                name: "admin-profile",
                 component: AdminProfile,
             },
             {
