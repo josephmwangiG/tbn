@@ -36,8 +36,6 @@ class TrainingEventsController extends Controller
             'end_date' => 'required|date',
             'location' => 'required|string|max:255',
             'description' => 'required|string',
-            'duration' => 'required|string|max:255',
-            'image' => 'nullable|image|mimes:jpeg,png,jpg|max:2048',
             'registration_deadline' => 'required|date',
         ]);
 
@@ -51,7 +49,13 @@ class TrainingEventsController extends Controller
         $months = $interval->m;
         $days = $interval->d;
 
-        $data['duration'] =  "Duration: {$months} months and {$days} days";
+        if ($months < 1 && $days > 0) {
+            $data['duration'] =  "{$days} days";
+        } elseif ($months > 0 && $days > 0) {
+            $data['duration'] =  "{$months} months and {$days} days";
+        } else {
+            $data['duration'] =  "{$months} months";
+        }
 
         // Upload and save the event image
         if ($request->hasFile('image')) {
@@ -86,16 +90,59 @@ class TrainingEventsController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, string $id)
+    public function update(Request $request, $id)
     {
-        //
+        $data = $request->validate([
+            'name' => 'required|string|max:255',
+            'start_date' => 'required|date',
+            'end_date' => 'required|date',
+            'location' => 'required|string|max:255',
+            'description' => 'required|string',
+            'registration_deadline' => 'required|date',
+        ]);
+
+        $startDateObj = new DateTime($data['start_date']);
+        $endDateObj = new DateTime($data['end_date']);
+
+        $interval = $startDateObj->diff($endDateObj);
+
+        $months = $interval->m;
+        $days = $interval->d;
+
+        if ($months < 1 && $days > 0) {
+            $data['duration'] =  "{$days} days";
+        } elseif ($months > 0 && $days > 0) {
+            $data['duration'] =  "{$months} months and {$days} days";
+        } else {
+            $data['duration'] =  "{$months} months";
+        }
+
+        // Upload and save the event image
+        if ($request->hasFile('image')) {
+            $image = $request->file('event_image');
+            $imagePath = $image->store('uploads/events', 'public');
+            $data['image'] = $imagePath;
+        }
+
+        // Create a new TrainingEvent instance with mass assignment
+        $event = TrainingEvent::find($id);
+
+        $event->update($data);
+
+        $trainingEvents = TrainingEvent::latest()->get();
+        return response(['trainingEvents' => $trainingEvents], 200);
     }
 
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(string $id)
+    public function destroy($id)
     {
-        //
+        $event = TrainingEvent::find($id);
+
+        $event->delete();
+
+        $trainingEvents = TrainingEvent::latest()->get();
+        return response(['trainingEvents' => $trainingEvents], 200);
     }
 }

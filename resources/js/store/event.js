@@ -24,5 +24,26 @@ export const useTrainingEventStore = defineStore("trainingEvent", {
                 return e.response;
             }
         },
+        async updateTrainingEvent(form) {
+            try {
+                let response = await axios.put(
+                    "trainingEvents/" + form.id,
+                    form
+                );
+                this.trainingEvents = response.data.trainingEvents;
+                return true;
+            } catch (e) {
+                return e.response;
+            }
+        },
+        async deleteTrainingEvent() {
+            try {
+                let response = await axios.delete("trainingEvents/" + id);
+                this.trainingEvents = response.data.trainingEvents;
+                return true;
+            } catch (e) {
+                return e.response;
+            }
+        },
     },
 });
