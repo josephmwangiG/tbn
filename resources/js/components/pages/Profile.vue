@@ -1,675 +1,500 @@
 <template>
-
-    <!--====== About Section Start ======-->
-    <section class="about-section section-gap" id="about">
-        <div class="container">
-            <div class="row align-items-center justify-content-center">
-                <div class="col-lg-6 col-sm-9">
-                    <div class="block-img text-center pr-0 pr-lg-5 md-gap-50">
-                        <img data-src="https://profilo.xyz/assets/front/img/user/home_settings/60fe5a0ff1573.png"
-                            class="animate-float-bob-y lazy entered loaded" alt="About Image" data-ll-status="loaded"
-                            src="https://profilo.xyz/assets/front/img/user/home_settings/60fe5a0ff1573.png">
-                    </div>
-                </div>
-                <div class="col-lg-6 col-md-10">
-                    <div class="about-content">
-                        <div class="common-heading mb-30">
-                            <span class="tagline">Joseph Mwangi</span>
-                            <h2 class="title">About Me</h2>
-                        </div>
-                        <p class="mb-30">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis at est id leo luctus
-                            gravida a in ipsum. Vivamus vel molestie nisi. Aliquam maximus maximus velit, id scelerisque
-                            urna elementum nec. Aenean laoreet bibendum tellus sed tincidunt. Proin commodo blandit gravida.
-                            Etiam sollicitudin aliquet vehicula. Morbi ante libero, porttitor ut sodales non, gravida at
-                            lacus.
-                        </p>
-                        <a href="https://profilo.xyz/assets/front/img/user/cv/617d27f9ab997.pdf" class="template-btn"
-                            download="Rabiot.pdf" target="_blank">
-                            Download CV</a>
-                    </div>
-                </div>
-            </div>
+  <section
+    class="breadcrumbs-section bg_cover lazy entered loaded"
+    data-bg="https://profilo.xyz/assets/front/img/60ea8dcf724d7.jpg"
+    data-ll-status="loaded"
+    style="
+      background-image: url('https://profilo.xyz/assets/front/img/60ea8dcf724d7.jpg');
+    "
+  >
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-12">
+          <div class="breadcrumbs-content text-center">
+            <h1>Profile</h1>
+            <ul class="breadcrumbs-link">
+              <li><a href="https://profilo.xyz">Home</a></li>
+              <li class="active">Profile</li>
+            </ul>
+          </div>
         </div>
-    </section>
-    <!--====== End Text Block ======-->
-
-    <!--====== Skill Section Start ======-->
-    <section class="skill-section section-gap" id="skill">
-        <div class="container">
-            <div class="row align-items-center justify-content-center">
-                <div class="col-lg-6 order-lg-last col-sm-9">
-                    <div class="block-img pl-0 pl-xl-5 md-gap-50">
-                        <img data-src="https://profilo.xyz/assets/front/img/user/home_settings/60fe5a0ff1a9c.png"
-                            class="animate-float-bob-y lazy entered loaded" alt="Image" data-ll-status="loaded"
-                            src="https://profilo.xyz/assets/front/img/user/home_settings/60fe5a0ff1a9c.png">
-                    </div>
-                </div>
-                <div class="col-lg-6 order-lg-first col-md-10">
-                    <div class="skill-content">
-                        <div class="common-heading mb-30">
-                            <span class="tagline">Skills</span>
-                            <h2 class="title">Technical Skills</h2>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis at est id leo luctus gravida a
-                                in ipsum. Vivamus vel molestie nisi. Aliquam maximus maximus velit, id scelerisque urna
-                                elementum nec. Aenean laoreet bibendum tellus sed tincidunt.</p>
-                        </div>
-                        <div class="progress-bars">
-                            <div class="single-progress-bar color-1" data-percentage="80">
-                                <h6 class="title">HTML5</h6>
-                                <div class="progress-bar-wrap">
-                                    <div class="progress-line">
-                                        <div class="line" style="background-color: rgb(75, 56, 105); width: 80%;"></div>
-                                    </div>
-                                    <div class="counter-wrap">
-                                        <span class="count">80</span>
-                                        <span class="suffix">%</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="single-progress-bar color-1" data-percentage="70">
-                                <h6 class="title">CSS3</h6>
-                                <div class="progress-bar-wrap">
-                                    <div class="progress-line">
-                                        <div class="line" style="background-color: rgb(20, 39, 155); width: 70%;"></div>
-                                    </div>
-                                    <div class="counter-wrap">
-                                        <span class="count">70</span>
-                                        <span class="suffix">%</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="single-progress-bar color-1" data-percentage="90">
-                                <h6 class="title">Laravel</h6>
-                                <div class="progress-bar-wrap">
-                                    <div class="progress-line">
-                                        <div class="line" style="background-color: rgb(224, 36, 1); width: 90%;"></div>
-                                    </div>
-                                    <div class="counter-wrap">
-                                        <span class="count">90</span>
-                                        <span class="suffix">%</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+      </div>
+    </div>
+  </section>
+  <!--====== About Section Start ======-->
+  <section class="about-section mt-5" id="about">
+    <div class="container">
+      <div class="row align-items-center justify-content-center">
+        <div class="col-lg-6 col-sm-9">
+          <div class="block-img text-center pr-0 pr-lg-5 md-gap-50">
+            <img
+              data-src="https://profilo.xyz/assets/front/img/user/home_settings/60fe5a0ff1573.png"
+              class="animate-float-bob-y lazy entered loaded"
+              alt="About Image"
+              data-ll-status="loaded"
+              src="https://profilo.xyz/assets/front/img/user/home_settings/60fe5a0ff1573.png"
+            />
+          </div>
         </div>
-    </section>
-    <!--====== Skill Section End ======-->
-
-    <!--====== Service Section Start ======-->
-    <section class="service-section section-gap bg-offwhite-color" id="service">
-        <div class="container">
-            <div class="common-heading text-center mb-20">
-                <span class="tagline">Service</span>
-                <h2 class="title">Services I Provide</h2>
+        <div class="col-lg-6 col-md-10">
+          <div class="about-content">
+            <div class="common-heading mb-30">
+              <span class="tagline">Joseph Mwangi</span>
+              <h2 class="title">About Me</h2>
             </div>
-
-            <div class="row service-boxes justify-content-center">
-                <div class="col-lg-4 col-md-6 col-sm-10">
-                    <div class="service-box-one mt-30">
-                        <a class="service-thumb" href="https://profilo.xyz/Rabiot/service/ecommerce-website/64">
-                            <img data-src="https://profilo.xyz/assets/front/img/user/services/1627283854.jpg"
-                                class="lazy entered loaded" alt="" data-ll-status="loaded"
-                                src="https://profilo.xyz/assets/front/img/user/services/1627283854.jpg">
-                        </a>
-                        <h4 class="title">
-                            <a href="https://profilo.xyz/Rabiot/service/ecommerce-website/64">Ecommerce Website</a>
-                        </h4>
-                        <p>
-                            There are many variations of passages of Lorem Ipsum available, but the majority have suff
-                        </p>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 col-sm-10">
-                    <div class="service-box-one mt-30">
-                        <a class="service-thumb" href="https://profilo.xyz/Rabiot/service/logo-design/65">
-                            <img data-src="https://profilo.xyz/assets/front/img/user/services/1627283873.jpg"
-                                class="lazy entered loaded" alt="" data-ll-status="loaded"
-                                src="https://profilo.xyz/assets/front/img/user/services/1627283873.jpg">
-                        </a>
-                        <h4 class="title">
-                            <a href="https://profilo.xyz/Rabiot/service/logo-design/65">Logo Design</a>
-                        </h4>
-                        <p>
-                            There are many variations of passages of Lorem Ipsum available, but the majority have suff
-                        </p>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 col-sm-10">
-                    <div class="service-box-one mt-30">
-                        <a class="service-thumb" href="https://profilo.xyz/Rabiot/service/html-templates/66">
-                            <img data-src="https://profilo.xyz/assets/front/img/user/services/1627283902.jpg"
-                                class="lazy entered loaded" alt="" data-ll-status="loaded"
-                                src="https://profilo.xyz/assets/front/img/user/services/1627283902.jpg">
-                        </a>
-                        <h4 class="title">
-                            <a href="https://profilo.xyz/Rabiot/service/html-templates/66">HTML Templates</a>
-                        </h4>
-                        <p>
-                            There are many variations of passages of Lorem Ipsum available, but the majority have suff
-                        </p>
-                    </div>
-                </div>
-            </div>
+            <p class="mb-30">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis at
+              est id leo luctus gravida a in ipsum. Vivamus vel molestie nisi.
+              Aliquam maximus maximus velit, id scelerisque urna elementum nec.
+              Aenean laoreet bibendum tellus sed tincidunt. Proin commodo
+              blandit gravida. Etiam sollicitudin aliquet vehicula. Morbi ante
+              libero, porttitor ut sodales non, gravida at lacus.
+            </p>
+            <a
+              href="https://profilo.xyz/assets/front/img/user/cv/617d27f9ab997.pdf"
+              class="template-btn"
+              download="Rabiot.pdf"
+              target="_blank"
+            >
+              Download CV</a
+            >
+          </div>
         </div>
-    </section>
-    <!--====== Service Section End ======-->
+      </div>
+    </div>
+  </section>
+  <!--====== End Text Block ======-->
 
-    <!--====== Experience Section Start ======-->
-    <section class="experience-section section-gap" id="experience">
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-lg-6 col-md-9">
-                    <div class="common-heading text-center mb-50">
-                        <span class="tagline">Experience</span>
-                        <h2 class="title">Job and Educational Experiences</h2>
-                    </div>
-                </div>
-            </div>
-            <div class="experience-wrapper boxed-wrapper">
-                <div class="row justify-content-between">
-                    <div class="col-lg-6 md-gap-80">
-                        <h4 class="experience-wrapper-title">
-                            <span><img class="lazy entered loaded"
-                                    data-src="https://profilo.xyz/assets/front/img/profile1/education.png" alt=""
-                                    data-ll-status="loaded"
-                                    src="https://profilo.xyz/assets/front/img/profile1/education.png"></span>
-                            Education
-                        </h4>
-                        <div class="experience-list">
-                            <div class="single-experience">
-                                <h5 class="title">Bachelor of Science</h5>
-                                <span class="duration">
-                                    Jan 18, 2013
-                                    -
-                                    Nov 28, 2017
-                                </span>
-                                <p>There are many variations of passages of Lorem Ipsum available, but the majority have
-                                    suffered alteration in some form, by injected humour, or randomised</p>
-                            </div>
-                            <div class="single-experience">
-                                <h5 class="title">Higher Secondary School Certificate</h5>
-                                <span class="duration">
-                                    Jan 1, 2011
-                                    -
-                                    Dec 14, 2012
-                                </span>
-                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum
-                                    has been the industry's standard dummy text ever since the 1500s</p>
-                            </div>
-                            <div class="single-experience">
-                                <h5 class="title">Secondary School Certificate</h5>
-                                <span class="duration">
-                                    Jan 26, 2001
-                                    -
-                                    Dec 28, 2010
-                                </span>
-                                <p>It is a long established fact that a reader will be distracted by the readable content of
-                                    a page when looking at its layout. The point of using Lorem Ipsum is that it</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-6">
-                        <h4 class="experience-wrapper-title">
-                            <span><img class="lazy entered loaded"
-                                    data-src="https://profilo.xyz/assets/front/img/profile1/job.png" alt=""
-                                    data-ll-status="loaded"
-                                    src="https://profilo.xyz/assets/front/img/profile1/job.png"></span>
-                            Job
-                        </h4>
-                        <div class="experience-list">
-                            <div class="single-experience">
-                                <h5 class="title">Laravel Developer
-                                    [ABC Group]</h5>
-                                <span class="duration">
-                                    Jul 1, 2021
-                                    -
-                                    Present
-                                </span>
-                                <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a
-                                    piece of classical Latin literature from 45 BC, making it over 2000 years old.</p>
-                            </div>
-                            <div class="single-experience">
-                                <h5 class="title">Full-stack Developer
-                                    [XYZsoft LTD]</h5>
-                                <span class="duration">
-                                    Feb 26, 2020
-                                    -
-                                    Jun 9, 2021
-                                </span>
-                                <p>There are many variations of passages of Lorem Ipsum available, but the majority have
-                                    suffered alteration in some form, by injected humour, or randomised words</p>
-                            </div>
-                            <div class="single-experience">
-                                <h5 class="title">Frontend Designer
-                                    [MNO Tech]</h5>
-                                <span class="duration">
-                                    Feb 26, 2020
-                                    -
-                                    Mar 9, 2020
-                                </span>
-                                <p>It is a long established fact that a reader will be distracted by the readable content of
-                                    a page when looking at its layout. The point of using Lorem Ipsum is that it</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+  <!--====== Skill Section Start ======-->
+  <section class="skill-section section-gap" id="skill">
+    <div class="container">
+      <div class="row align-items-center justify-content-center">
+        <div class="col-lg-6 order-lg-last col-sm-9">
+          <div class="block-img pl-0 pl-xl-5 md-gap-50">
+            <img
+              data-src="https://profilo.xyz/assets/front/img/user/home_settings/60fe5a0ff1a9c.png"
+              class="animate-float-bob-y lazy entered loaded"
+              alt="Image"
+              data-ll-status="loaded"
+              src="https://profilo.xyz/assets/front/img/user/home_settings/60fe5a0ff1a9c.png"
+            />
+          </div>
         </div>
-    </section>
-    <!--====== Experience Section End ======-->
-
-    <!--====== Counter Section Start ======-->
-    <section class="counter-section lazy entered loaded"
-        data-bg="https://profilo.xyz/assets/front/img/user/home_settings/60fe5a94d25ab.jpg" data-ll-status="loaded"
-        style="background-image: url(&quot;https://profilo.xyz/assets/front/img/user/home_settings/60fe5a94d25ab.jpg&quot;);">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-3 col-md-6 col-sm-6">
-                    <div class="counter-box mb-40">
-                        <div class="counter-wrap">
-                            <span class="count">12</span>
-                            <span class="suffix">+</span>
-                        </div>
-                        <h6 class="title">Years of Experience</h6>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 col-sm-6">
-                    <div class="counter-box mb-40">
-                        <div class="counter-wrap">
-                            <span class="count">250</span>
-                            <span class="suffix">+</span>
-                        </div>
-                        <h6 class="title">Satisfied Customes</h6>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 col-sm-6">
-                    <div class="counter-box mb-40">
-                        <div class="counter-wrap">
-                            <span class="count">800</span>
-                            <span class="suffix">+</span>
-                        </div>
-                        <h6 class="title">Projects Completed</h6>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 col-sm-6">
-                    <div class="counter-box mb-40">
-                        <div class="counter-wrap">
-                            <span class="count">70</span>
-                            <span class="suffix">+</span>
-                        </div>
-                        <h6 class="title">Countries</h6>
-                    </div>
-                </div>
+        <div class="col-lg-6 order-lg-first col-md-10">
+          <div class="skill-content">
+            <div class="common-heading mb-30">
+              <span class="tagline">Skills</span>
+              <h2 class="title">Technical Skills</h2>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis at
+                est id leo luctus gravida a in ipsum. Vivamus vel molestie nisi.
+                Aliquam maximus maximus velit, id scelerisque urna elementum
+                nec. Aenean laoreet bibendum tellus sed tincidunt.
+              </p>
             </div>
+            <div class="progress-bars">
+              <div class="single-progress-bar color-1" data-percentage="80">
+                <h6 class="title">HTML5</h6>
+                <div class="progress-bar-wrap">
+                  <div class="progress-line">
+                    <div
+                      class="line"
+                      style="background-color: rgb(75, 56, 105); width: 80%"
+                    ></div>
+                  </div>
+                  <div class="counter-wrap">
+                    <span class="count">80</span>
+                    <span class="suffix">%</span>
+                  </div>
+                </div>
+              </div>
+              <div class="single-progress-bar color-1" data-percentage="70">
+                <h6 class="title">CSS3</h6>
+                <div class="progress-bar-wrap">
+                  <div class="progress-line">
+                    <div
+                      class="line"
+                      style="background-color: rgb(20, 39, 155); width: 70%"
+                    ></div>
+                  </div>
+                  <div class="counter-wrap">
+                    <span class="count">70</span>
+                    <span class="suffix">%</span>
+                  </div>
+                </div>
+              </div>
+              <div class="single-progress-bar color-1" data-percentage="90">
+                <h6 class="title">Laravel</h6>
+                <div class="progress-bar-wrap">
+                  <div class="progress-line">
+                    <div
+                      class="line"
+                      style="background-color: rgb(224, 36, 1); width: 90%"
+                    ></div>
+                  </div>
+                  <div class="counter-wrap">
+                    <span class="count">90</span>
+                    <span class="suffix">%</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-    </section>
-    <!--====== Counter Section End ======-->
+      </div>
+    </div>
+  </section>
+  <!--====== Skill Section End ======-->
 
-  
+  <!--====== Service Section Start ======-->
+  <section class="service-section section-gap bg-offwhite-color" id="service">
+    <div class="container">
+      <div class="common-heading text-center mb-20">
+        <span class="tagline">Service</span>
+        <h2 class="title">Services I Provide</h2>
+      </div>
 
-    <!--====== Testimonial Section Start ======-->
-    <section class="testimonial-section section-gap bg-offwhite-color">
-        <div class="container">
-            <div class="common-heading text-center mb-50">
-                <span class="tagline">Testimonials</span>
-                <h2 class="title">Clients Sayings</h2>
-            </div>
-
-            <div class="row testimonial-slider slick-initialized slick-slider">
-
-
-
-
-                <div class="slick-list draggable">
-                    <div class="slick-track" style="opacity: 1; width: 2640px; transform: translate3d(-720px, 0px, 0px);">
-                        <div class="col-lg-4 slick-slide slick-cloned" style="width: 240px;" tabindex="-1"
-                            data-slick-index="-3" aria-hidden="true">
-                            <div class="testimonial-box-one">
-                                <div class="author-wrap">
-                                    <div class="author">
-                                        <img src="https://profilo.xyz/assets/front/img/user/testimonials/1627295753.jpg"
-                                            alt="Author">
-                                    </div>
-
-                                    <span class="quote-icon">
-                                        <img src="https://profilo.xyz/assets/front/img/profile1/quote.png" alt="">
-                                    </span>
-                                </div>
-                                <div class="content">
-                                    <p>There are many variations of passages of Lorem Ipsum available, but the majority have
-                                        suffered alteration in some form</p>
-                                    <div class="author-info">
-                                        <h6 class="name">Mateo Lorenzo</h6>
-                                        <span class="title">Manager, Bank</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 slick-slide slick-cloned" style="width: 240px;" tabindex="-1"
-                            data-slick-index="-2" aria-hidden="true">
-                            <div class="testimonial-box-one">
-                                <div class="author-wrap">
-                                    <div class="author">
-                                        <img src="https://profilo.xyz/assets/front/img/user/testimonials/1627295811.jpg"
-                                            alt="Author">
-                                    </div>
-
-                                    <span class="quote-icon">
-                                        <img src="https://profilo.xyz/assets/front/img/profile1/quote.png" alt="">
-                                    </span>
-                                </div>
-                                <div class="content">
-                                    <p>It is a long established fact that a reader will be distracted by the readable
-                                        content of a page when looking at its layout.</p>
-                                    <div class="author-info">
-                                        <h6 class="name">Federico Chiesa</h6>
-                                        <span class="title">Football Coach</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 slick-slide slick-cloned" style="width: 240px;" tabindex="-1"
-                            data-slick-index="-1" aria-hidden="true">
-                            <div class="testimonial-box-one">
-                                <div class="author-wrap">
-                                    <div class="author">
-                                        <img src="https://profilo.xyz/assets/front/img/user/testimonials/1627295859.jpg"
-                                            alt="Author">
-                                    </div>
-
-                                    <span class="quote-icon">
-                                        <img src="https://profilo.xyz/assets/front/img/profile1/quote.png" alt="">
-                                    </span>
-                                </div>
-                                <div class="content">
-                                    <p>when an unknown printer took a galley of type and scrambled it to make a type
-                                        specimen book It has survived</p>
-                                    <div class="author-info">
-                                        <h6 class="name">Seargio Romero</h6>
-                                        <span class="title">Lawyer</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 slick-slide slick-current slick-active" style="width: 240px;" tabindex="0"
-                            data-slick-index="0" aria-hidden="false">
-                            <div class="testimonial-box-one">
-                                <div class="author-wrap">
-                                    <div class="author">
-                                        <img src="https://profilo.xyz/assets/front/img/user/testimonials/1627295686.jpg"
-                                            alt="Author">
-                                    </div>
-
-                                    <span class="quote-icon">
-                                        <img src="https://profilo.xyz/assets/front/img/profile1/quote.png" alt="">
-                                    </span>
-                                </div>
-                                <div class="content">
-                                    <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a
-                                        piece of classical Latin literature from 45 BC</p>
-                                    <div class="author-info">
-                                        <h6 class="name">Helen Martinez</h6>
-                                        <span class="title">Food Business</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 slick-slide slick-active" style="width: 240px;" tabindex="0"
-                            data-slick-index="1" aria-hidden="false">
-                            <div class="testimonial-box-one">
-                                <div class="author-wrap">
-                                    <div class="author">
-                                        <img src="https://profilo.xyz/assets/front/img/user/testimonials/1627295753.jpg"
-                                            alt="Author">
-                                    </div>
-
-                                    <span class="quote-icon">
-                                        <img src="https://profilo.xyz/assets/front/img/profile1/quote.png" alt="">
-                                    </span>
-                                </div>
-                                <div class="content">
-                                    <p>There are many variations of passages of Lorem Ipsum available, but the majority have
-                                        suffered alteration in some form</p>
-                                    <div class="author-info">
-                                        <h6 class="name">Mateo Lorenzo</h6>
-                                        <span class="title">Manager, Bank</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 slick-slide slick-active" style="width: 240px;" tabindex="0"
-                            data-slick-index="2" aria-hidden="false">
-                            <div class="testimonial-box-one">
-                                <div class="author-wrap">
-                                    <div class="author">
-                                        <img src="https://profilo.xyz/assets/front/img/user/testimonials/1627295811.jpg"
-                                            alt="Author">
-                                    </div>
-
-                                    <span class="quote-icon">
-                                        <img src="https://profilo.xyz/assets/front/img/profile1/quote.png" alt="">
-                                    </span>
-                                </div>
-                                <div class="content">
-                                    <p>It is a long established fact that a reader will be distracted by the readable
-                                        content of a page when looking at its layout.</p>
-                                    <div class="author-info">
-                                        <h6 class="name">Federico Chiesa</h6>
-                                        <span class="title">Football Coach</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 slick-slide" style="width: 240px;" tabindex="-1" data-slick-index="3"
-                            aria-hidden="true">
-                            <div class="testimonial-box-one">
-                                <div class="author-wrap">
-                                    <div class="author">
-                                        <img src="https://profilo.xyz/assets/front/img/user/testimonials/1627295859.jpg"
-                                            alt="Author">
-                                    </div>
-
-                                    <span class="quote-icon">
-                                        <img src="https://profilo.xyz/assets/front/img/profile1/quote.png" alt="">
-                                    </span>
-                                </div>
-                                <div class="content">
-                                    <p>when an unknown printer took a galley of type and scrambled it to make a type
-                                        specimen book It has survived</p>
-                                    <div class="author-info">
-                                        <h6 class="name">Seargio Romero</h6>
-                                        <span class="title">Lawyer</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 slick-slide slick-cloned" style="width: 240px;" tabindex="-1"
-                            data-slick-index="4" aria-hidden="true">
-                            <div class="testimonial-box-one">
-                                <div class="author-wrap">
-                                    <div class="author">
-                                        <img src="https://profilo.xyz/assets/front/img/user/testimonials/1627295686.jpg"
-                                            alt="Author">
-                                    </div>
-
-                                    <span class="quote-icon">
-                                        <img src="https://profilo.xyz/assets/front/img/profile1/quote.png" alt="">
-                                    </span>
-                                </div>
-                                <div class="content">
-                                    <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a
-                                        piece of classical Latin literature from 45 BC</p>
-                                    <div class="author-info">
-                                        <h6 class="name">Helen Martinez</h6>
-                                        <span class="title">Food Business</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 slick-slide slick-cloned" style="width: 240px;" tabindex="-1"
-                            data-slick-index="5" aria-hidden="true">
-                            <div class="testimonial-box-one">
-                                <div class="author-wrap">
-                                    <div class="author">
-                                        <img src="https://profilo.xyz/assets/front/img/user/testimonials/1627295753.jpg"
-                                            alt="Author">
-                                    </div>
-
-                                    <span class="quote-icon">
-                                        <img src="https://profilo.xyz/assets/front/img/profile1/quote.png" alt="">
-                                    </span>
-                                </div>
-                                <div class="content">
-                                    <p>There are many variations of passages of Lorem Ipsum available, but the majority have
-                                        suffered alteration in some form</p>
-                                    <div class="author-info">
-                                        <h6 class="name">Mateo Lorenzo</h6>
-                                        <span class="title">Manager, Bank</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 slick-slide slick-cloned" style="width: 240px;" tabindex="-1"
-                            data-slick-index="6" aria-hidden="true">
-                            <div class="testimonial-box-one">
-                                <div class="author-wrap">
-                                    <div class="author">
-                                        <img src="https://profilo.xyz/assets/front/img/user/testimonials/1627295811.jpg"
-                                            alt="Author">
-                                    </div>
-
-                                    <span class="quote-icon">
-                                        <img src="https://profilo.xyz/assets/front/img/profile1/quote.png" alt="">
-                                    </span>
-                                </div>
-                                <div class="content">
-                                    <p>It is a long established fact that a reader will be distracted by the readable
-                                        content of a page when looking at its layout.</p>
-                                    <div class="author-info">
-                                        <h6 class="name">Federico Chiesa</h6>
-                                        <span class="title">Football Coach</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 slick-slide slick-cloned" style="width: 240px;" tabindex="-1"
-                            data-slick-index="7" aria-hidden="true">
-                            <div class="testimonial-box-one">
-                                <div class="author-wrap">
-                                    <div class="author">
-                                        <img src="https://profilo.xyz/assets/front/img/user/testimonials/1627295859.jpg"
-                                            alt="Author">
-                                    </div>
-
-                                    <span class="quote-icon">
-                                        <img src="https://profilo.xyz/assets/front/img/profile1/quote.png" alt="">
-                                    </span>
-                                </div>
-                                <div class="content">
-                                    <p>when an unknown printer took a galley of type and scrambled it to make a type
-                                        specimen book It has survived</p>
-                                    <div class="author-info">
-                                        <h6 class="name">Seargio Romero</h6>
-                                        <span class="title">Lawyer</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+      <div class="row service-boxes justify-content-center">
+        <div class="col-lg-4 col-md-6 col-sm-10">
+          <div class="service-box-one mt-30">
+            <a
+              class="service-thumb"
+              href="https://profilo.xyz/Rabiot/service/ecommerce-website/64"
+            >
+              <img
+                data-src="https://profilo.xyz/assets/front/img/user/services/1627283854.jpg"
+                class="lazy entered loaded"
+                alt=""
+                data-ll-status="loaded"
+                src="https://profilo.xyz/assets/front/img/user/services/1627283854.jpg"
+              />
+            </a>
+            <h4 class="title">
+              <a href="https://profilo.xyz/Rabiot/service/ecommerce-website/64"
+                >Ecommerce Website</a
+              >
+            </h4>
+            <p>
+              There are many variations of passages of Lorem Ipsum available,
+              but the majority have suff
+            </p>
+          </div>
         </div>
-    </section>
-    <!--====== Testimonial Section End ======-->
-
-    <!--====== Latest Blog Section Start ======-->
-    <section class="latest-blog-section section-gap-top" id="blog">
-        <div class="container">
-            <div class="common-heading mb-20">
-                <span class="tagline">Blogs</span>
-                <h2 class="title">Latest Blogs</h2>
-            </div>
-
-            <div class="row justify-content-center">
-                <div class="col-lg-4 col-md-6 col-sm-8">
-                    <div class="latest-blog-post mt-30">
-                        <div class="post-content">
-                            <h5 class="post-title">
-                                <a
-                                    href="https://profilo.xyz/Rabiot/blog/richard-mcclintock,-a-latin-professor-at-hampden-sydney-college/64">Richard
-                                    McClintock, a Latin professor at Hamp...</a>
-                            </h5>
-                            <ul class="post-meta">
-                                <li><a><i class="fas fa-user"></i> by
-                                        Rabiot</a></li>
-                                <li><a><i class="fas fa-calendar-alt"></i>
-                                        July 26, 2021</a></li>
-                            </ul>
-                        </div>
-                        <a class="post-thumb"
-                            href="https://profilo.xyz/Rabiot/blog/richard-mcclintock,-a-latin-professor-at-hampden-sydney-college/64">
-                            <img class="lazy" data-src="https://profilo.xyz/assets/front/img/user/blogs/1627288437.jpg"
-                                alt="Image">
-                        </a>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 col-sm-8">
-                    <div class="latest-blog-post mt-30">
-                        <div class="post-content">
-                            <h5 class="post-title">
-                                <a href="https://profilo.xyz/Rabiot/blog/many-desktop-publishing-packages-and-web-page/63">Many
-                                    desktop publishing packages and web page</a>
-                            </h5>
-                            <ul class="post-meta">
-                                <li><a><i class="fas fa-user"></i> by
-                                        Rabiot</a></li>
-                                <li><a><i class="fas fa-calendar-alt"></i>
-                                        July 26, 2021</a></li>
-                            </ul>
-                        </div>
-                        <a class="post-thumb"
-                            href="https://profilo.xyz/Rabiot/blog/many-desktop-publishing-packages-and-web-page/63">
-                            <img class="lazy" data-src="https://profilo.xyz/assets/front/img/user/blogs/1627288401.jpg"
-                                alt="Image">
-                        </a>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 col-sm-8">
-                    <div class="latest-blog-post mt-30">
-                        <div class="post-content">
-                            <h5 class="post-title">
-                                <a
-                                    href="https://profilo.xyz/Rabiot/blog/there-are-many-variations-of-passages-of-lorem-ipsum/62">There
-                                    are many variations of passages of Lore...</a>
-                            </h5>
-                            <ul class="post-meta">
-                                <li><a><i class="fas fa-user"></i> by
-                                        Rabiot</a></li>
-                                <li><a><i class="fas fa-calendar-alt"></i>
-                                        July 26, 2021</a></li>
-                            </ul>
-                        </div>
-                        <a class="post-thumb"
-                            href="https://profilo.xyz/Rabiot/blog/there-are-many-variations-of-passages-of-lorem-ipsum/62">
-                            <img class="lazy" data-src="https://profilo.xyz/assets/front/img/user/blogs/1627288376.jpg"
-                                alt="Image">
-                        </a>
-                    </div>
-                </div>
-            </div>
+        <div class="col-lg-4 col-md-6 col-sm-10">
+          <div class="service-box-one mt-30">
+            <a
+              class="service-thumb"
+              href="https://profilo.xyz/Rabiot/service/logo-design/65"
+            >
+              <img
+                data-src="https://profilo.xyz/assets/front/img/user/services/1627283873.jpg"
+                class="lazy entered loaded"
+                alt=""
+                data-ll-status="loaded"
+                src="https://profilo.xyz/assets/front/img/user/services/1627283873.jpg"
+              />
+            </a>
+            <h4 class="title">
+              <a href="https://profilo.xyz/Rabiot/service/logo-design/65"
+                >Logo Design</a
+              >
+            </h4>
+            <p>
+              There are many variations of passages of Lorem Ipsum available,
+              but the majority have suff
+            </p>
+          </div>
         </div>
-    </section>
-    <!--====== Latest Blog Section End ======-->
+        <div class="col-lg-4 col-md-6 col-sm-10">
+          <div class="service-box-one mt-30">
+            <a
+              class="service-thumb"
+              href="https://profilo.xyz/Rabiot/service/html-templates/66"
+            >
+              <img
+                data-src="https://profilo.xyz/assets/front/img/user/services/1627283902.jpg"
+                class="lazy entered loaded"
+                alt=""
+                data-ll-status="loaded"
+                src="https://profilo.xyz/assets/front/img/user/services/1627283902.jpg"
+              />
+            </a>
+            <h4 class="title">
+              <a href="https://profilo.xyz/Rabiot/service/html-templates/66"
+                >HTML Templates</a
+              >
+            </h4>
+            <p>
+              There are many variations of passages of Lorem Ipsum available,
+              but the majority have suff
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!--====== Service Section End ======-->
 
+  <!--====== Experience Section Start ======-->
+  <section class="experience-section section-gap" id="experience">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-6 col-md-9">
+          <div class="common-heading text-center mb-50">
+            <span class="tagline">Experience</span>
+            <h2 class="title">Job and Educational Experiences</h2>
+          </div>
+        </div>
+      </div>
+      <div class="experience-wrapper boxed-wrapper">
+        <div class="row justify-content-between">
+          <div class="col-lg-6 md-gap-80">
+            <h4 class="experience-wrapper-title">
+              <span
+                ><img
+                  class="lazy entered loaded"
+                  data-src="https://profilo.xyz/assets/front/img/profile1/education.png"
+                  alt=""
+                  data-ll-status="loaded"
+                  src="https://profilo.xyz/assets/front/img/profile1/education.png"
+              /></span>
+              Education
+            </h4>
+            <div class="experience-list">
+              <div class="single-experience">
+                <h5 class="title">Bachelor of Science</h5>
+                <span class="duration"> Jan 18, 2013 - Nov 28, 2017 </span>
+                <p>
+                  There are many variations of passages of Lorem Ipsum
+                  available, but the majority have suffered alteration in some
+                  form, by injected humour, or randomised
+                </p>
+              </div>
+              <div class="single-experience">
+                <h5 class="title">Higher Secondary School Certificate</h5>
+                <span class="duration"> Jan 1, 2011 - Dec 14, 2012 </span>
+                <p>
+                  Lorem Ipsum is simply dummy text of the printing and
+                  typesetting industry. Lorem Ipsum has been the industry's
+                  standard dummy text ever since the 1500s
+                </p>
+              </div>
+              <div class="single-experience">
+                <h5 class="title">Secondary School Certificate</h5>
+                <span class="duration"> Jan 26, 2001 - Dec 28, 2010 </span>
+                <p>
+                  It is a long established fact that a reader will be distracted
+                  by the readable content of a page when looking at its layout.
+                  The point of using Lorem Ipsum is that it
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <h4 class="experience-wrapper-title">
+              <span
+                ><img
+                  class="lazy entered loaded"
+                  data-src="https://profilo.xyz/assets/front/img/profile1/job.png"
+                  alt=""
+                  data-ll-status="loaded"
+                  src="https://profilo.xyz/assets/front/img/profile1/job.png"
+              /></span>
+              Job
+            </h4>
+            <div class="experience-list">
+              <div class="single-experience">
+                <h5 class="title">Laravel Developer [ABC Group]</h5>
+                <span class="duration"> Jul 1, 2021 - Present </span>
+                <p>
+                  Contrary to popular belief, Lorem Ipsum is not simply random
+                  text. It has roots in a piece of classical Latin literature
+                  from 45 BC, making it over 2000 years old.
+                </p>
+              </div>
+              <div class="single-experience">
+                <h5 class="title">Full-stack Developer [XYZsoft LTD]</h5>
+                <span class="duration"> Feb 26, 2020 - Jun 9, 2021 </span>
+                <p>
+                  There are many variations of passages of Lorem Ipsum
+                  available, but the majority have suffered alteration in some
+                  form, by injected humour, or randomised words
+                </p>
+              </div>
+              <div class="single-experience">
+                <h5 class="title">Frontend Designer [MNO Tech]</h5>
+                <span class="duration"> Feb 26, 2020 - Mar 9, 2020 </span>
+                <p>
+                  It is a long established fact that a reader will be distracted
+                  by the readable content of a page when looking at its layout.
+                  The point of using Lorem Ipsum is that it
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!--====== Experience Section End ======-->
+
+  <!--====== Counter Section Start ======-->
+  <section
+    class="counter-section lazy entered loaded"
+    data-bg="https://profilo.xyz/assets/front/img/user/home_settings/60fe5a94d25ab.jpg"
+    data-ll-status="loaded"
+    style="
+      background-image: url('https://profilo.xyz/assets/front/img/user/home_settings/60fe5a94d25ab.jpg');
+    "
+  >
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-3 col-md-6 col-sm-6">
+          <div class="counter-box mb-40">
+            <div class="counter-wrap">
+              <span class="count">12</span>
+              <span class="suffix">+</span>
+            </div>
+            <h6 class="title">Years of Experience</h6>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6 col-sm-6">
+          <div class="counter-box mb-40">
+            <div class="counter-wrap">
+              <span class="count">250</span>
+              <span class="suffix">+</span>
+            </div>
+            <h6 class="title">Satisfied Customes</h6>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6 col-sm-6">
+          <div class="counter-box mb-40">
+            <div class="counter-wrap">
+              <span class="count">800</span>
+              <span class="suffix">+</span>
+            </div>
+            <h6 class="title">Projects Completed</h6>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6 col-sm-6">
+          <div class="counter-box mb-40">
+            <div class="counter-wrap">
+              <span class="count">70</span>
+              <span class="suffix">+</span>
+            </div>
+            <h6 class="title">Countries</h6>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!--====== Counter Section End ======-->
+
+  <!--====== Latest Blog Section Start ======-->
+  <section class="latest-blog-section mt-5" id="blog">
+    <div class="container">
+      <div class="common-heading mb-20">
+        <h2 class="title">Related Coaches</h2>
+      </div>
+
+      <div class="row justify-content-center">
+        <div class="col-lg-4 col-md-6 col-sm-8">
+          <div class="latest-blog-post mt-30">
+            <div class="post-content">
+              <h5 class="post-title">
+                <a
+                  href="https://profilo.xyz/Rabiot/blog/richard-mcclintock,-a-latin-professor-at-hampden-sydney-college/64"
+                  >Richard McClintock, a Latin professor at Hamp...</a
+                >
+              </h5>
+              <ul class="post-meta">
+                <li>
+                  <a><i class="fas fa-user"></i> by Rabiot</a>
+                </li>
+                <li>
+                  <a><i class="fas fa-calendar-alt"></i> July 26, 2021</a>
+                </li>
+              </ul>
+            </div>
+            <a
+              class="post-thumb"
+              href="https://profilo.xyz/Rabiot/blog/richard-mcclintock,-a-latin-professor-at-hampden-sydney-college/64"
+            >
+              <img
+                class="lazy"
+                data-src="https://profilo.xyz/assets/front/img/user/blogs/1627288437.jpg"
+                alt="Image"
+              />
+            </a>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 col-sm-8">
+          <div class="latest-blog-post mt-30">
+            <div class="post-content">
+              <h5 class="post-title">
+                <a
+                  href="https://profilo.xyz/Rabiot/blog/many-desktop-publishing-packages-and-web-page/63"
+                  >Many desktop publishing packages and web page</a
+                >
+              </h5>
+              <ul class="post-meta">
+                <li>
+                  <a><i class="fas fa-user"></i> by Rabiot</a>
+                </li>
+                <li>
+                  <a><i class="fas fa-calendar-alt"></i> July 26, 2021</a>
+                </li>
+              </ul>
+            </div>
+            <a
+              class="post-thumb"
+              href="https://profilo.xyz/Rabiot/blog/many-desktop-publishing-packages-and-web-page/63"
+            >
+              <img
+                class="lazy"
+                data-src="https://profilo.xyz/assets/front/img/user/blogs/1627288401.jpg"
+                alt="Image"
+              />
+            </a>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 col-sm-8">
+          <div class="latest-blog-post mt-30">
+            <div class="post-content">
+              <h5 class="post-title">
+                <a
+                  href="https://profilo.xyz/Rabiot/blog/there-are-many-variations-of-passages-of-lorem-ipsum/62"
+                  >There are many variations of passages of Lore...</a
+                >
+              </h5>
+              <ul class="post-meta">
+                <li>
+                  <a><i class="fas fa-user"></i> by Rabiot</a>
+                </li>
+                <li>
+                  <a><i class="fas fa-calendar-alt"></i> July 26, 2021</a>
+                </li>
+              </ul>
+            </div>
+            <a
+              class="post-thumb"
+              href="https://profilo.xyz/Rabiot/blog/there-are-many-variations-of-passages-of-lorem-ipsum/62"
+            >
+              <img
+                class="lazy"
+                data-src="https://profilo.xyz/assets/front/img/user/blogs/1627288376.jpg"
+                alt="Image"
+              />
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!--====== Latest Blog Section End ======-->
 </template>
 <script>
-export default {
-
-}
+export default {};
 </script>
 <style lang="">
-    
 </style>
