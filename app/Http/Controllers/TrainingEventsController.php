@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Coach;
 use App\Models\TrainingEvent;
 use DateTime;
 use Illuminate\Http\Request;
@@ -13,8 +14,9 @@ class TrainingEventsController extends Controller
      */
     public function index()
     {
-        $trainingEvents = TrainingEvent::latest()->get();
-        return response(['trainingEvents' => $trainingEvents], 200);
+        $trainingEvents = TrainingEvent::whereDate('end_date', '>', now()->toDateString())->latest()->get();
+        $coaches = Coach::latest()->get();
+        return response(['trainingEvents' => $trainingEvents, 'coaches' => $coaches], 200);
     }
 
     /**
