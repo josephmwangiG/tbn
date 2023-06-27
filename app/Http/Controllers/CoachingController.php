@@ -36,7 +36,6 @@ class CoachingController extends Controller
             'end_date' => 'required|date',
             'location' => 'required|string|max:255',
             'description' => 'required|string',
-            'duration' => 'required|string|max:255',
             'image' => 'nullable|image|mimes:jpeg,png,jpg|max:2048',
             'registration_deadline' => 'required|date',
         ]);
@@ -49,7 +48,14 @@ class CoachingController extends Controller
         $months = $interval->m;
         $days = $interval->d;
 
-        $data['duration'] =  "Duration: {$months} months and {$days} days";
+        if ($months < 1 && $days > 0) {
+            $data['duration'] =  "{$days} days";
+        } elseif ($months > 0 && $days > 0) {
+            $data['duration'] =  "{$months} months and {$days} days";
+        } else {
+            $data['duration'] =  "{$months} months";
+        }
+
 
         // Upload and save the event image
         if ($request->hasFile('image')) {
@@ -92,7 +98,6 @@ class CoachingController extends Controller
             'end_date' => 'required|date',
             'location' => 'required|string|max:255',
             'description' => 'required|string',
-            'duration' => 'required|string|max:255',
             'image' => 'nullable|image|mimes:jpeg,png,jpg|max:2048',
             'registration_deadline' => 'required|date',
         ]);
@@ -105,7 +110,14 @@ class CoachingController extends Controller
         $months = $interval->m;
         $days = $interval->d;
 
-        $data['duration'] =  "Duration: {$months} months and {$days} days";
+        if ($months < 1 && $days > 0) {
+            $data['duration'] =  "{$days} days";
+        } elseif ($months > 0 && $days > 0) {
+            $data['duration'] =  "{$months} months and {$days} days";
+        } else {
+            $data['duration'] =  "{$months} months";
+        }
+
 
         // Upload and save the event image
         if ($request->hasFile('image')) {

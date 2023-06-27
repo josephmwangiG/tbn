@@ -90,16 +90,6 @@
             </div>
           </div>
         </div>
-        <div class="col-lg-6 mt-2 mt-lg-0">
-          <button class="btn btn-danger float-lg-right float-none btn-sm ml-2 mt-1"
-            data-href="https://profilo.xyz/admin/register/user/bulk-delete">
-            <i class="flaticon-interface-5"></i> Delete
-          </button>
-          <button class="btn btn-primary float-lg-right float-none btn-sm ml-2 mt-1" data-toggle="modal"
-            data-target="#trainingEventModal">
-            <i class="fas fa-plus"></i> Add Event
-          </button>
-        </div>
       </div>
     </div>
     <ConfirmDelete :message="'Event'" @confirmOption="deleteItem" />
