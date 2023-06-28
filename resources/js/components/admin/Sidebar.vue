@@ -61,16 +61,22 @@
                             </router-link>
                         </li>
 
+                        <li class="nav-item" :class="route.name == 'alumni' ? 'active' : ''">
+                            <router-link :to="{ name: 'alumni' }">
+                                <i class="ri-stack-fill"></i>
+                                <p>Alumni</p>
+                            </router-link>
+                        </li>
                         <li class="nav-item" :class="route.name == 'businesses' ? 'active' : ''">
                             <router-link :to="{ name: 'businesses' }">
                                 <i class="ri-stack-fill"></i>
-                                <p>Registered Businesses</p>
+                                <p>Businesses</p>
                             </router-link>
                         </li>
                         <li class="nav-item" :class="route.name == 'admin-coaches' ? 'active' : ''">
                             <router-link :to="{ name: 'admin-coaches' }">
                                 <i class="ri-group-line"></i>
-                                <p>Registered Coaches</p>
+                                <p>Coaches</p>
                             </router-link>
                         </li>
 

@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\BusinessController;
+use App\Http\Controllers\AlumniController;
 use App\Http\Controllers\CoachController;
 use App\Http\Controllers\CoachingController;
 use App\Http\Controllers\TrainingEventsController;
@@ -24,6 +25,8 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 Route::post("/login", [LoginController::class, 'authenticate']);
 Route::resource("businesses", BusinessController::class);
 Route::put("businesses/{id}/{option}", [BusinessController::class, 'approveAccount']);
+Route::resource("alumni", AlumniController::class);
+Route::put("alumni/{id}/{option}", [AlumniController::class, 'approveAccount']);
 Route::resource("coaches", CoachController::class);
 Route::put("coaches/{id}/{option}", [CoachController::class, 'approveAccount']);
 Route::resource("trainingEvents", TrainingEventsController::class);

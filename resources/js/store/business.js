@@ -18,6 +18,7 @@ export const useBusinessStore = defineStore("business", {
         async addBusinesses(form) {
             try {
                 let response = await axios.post("businesses", form);
+                this.businesses = response.data.businesses;
                 return true;
             } catch (e) {
                 return e.response;
@@ -25,7 +26,9 @@ export const useBusinessStore = defineStore("business", {
         },
         async approveAccount(id, option) {
             try {
-                let response = await axios.put("businesses/" + id + "/" + option);
+                let response = await axios.put(
+                    "businesses/" + id + "/" + option
+                );
                 this.businesses = response.data.businesses;
                 return true;
             } catch (e) {

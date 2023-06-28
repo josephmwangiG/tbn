@@ -82,7 +82,11 @@ class BusinessController extends Controller
             }
         });
 
-        return response(["successe" => "success", "success", 200]);
+        $businesses = Business::latest()
+            ->with('user')
+            ->get();
+
+        return response(["success" => "success", "businesses" => $businesses, "success", 200]);
     }
 
     /**

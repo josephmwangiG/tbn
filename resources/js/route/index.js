@@ -13,6 +13,7 @@ import RegisterCoach from "./../components/pages/RegisterCoach.vue";
 import Admin from "./../components/admin/Admin.vue";
 import Dashboard from "./../components/admin/Dashboard.vue";
 import TrainingEvents from "./../components/admin/TrainingEvents.vue";
+import Alumni from "./../components/admin/Alumni.vue";
 import CoachingEvents from "./../components/admin/CoachingEvents.vue";
 import Businesses from "./../components/admin/Businesses.vue";
 import AdminCoaches from "./../components/admin/AdminCoaches.vue";
@@ -125,6 +126,11 @@ export const routes = [
                 path: "coaching-events",
                 name: "coaching-events",
                 component: CoachingEvents,
+            },
+            {
+                path: "alumni",
+                name: "alumni",
+                component: Alumni,
             },
             {
                 path: "businesses",

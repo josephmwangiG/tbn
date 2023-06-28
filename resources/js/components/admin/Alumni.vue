@@ -2,7 +2,7 @@
   <div class="content">
     <div class="page-inner">
       <div class="page-header">
-        <h4 class="page-title">Businesses List</h4>
+        <h4 class="page-title">Alumni List</h4>
         <ul class="breadcrumbs">
           <li class="nav-home">
             <a href="https://profilo.xyz/admin/dashboard?language=en">
@@ -13,32 +13,31 @@
             <i class="ri-arrow-right-s-line bg-white"></i>
           </li>
           <li class="nav-item">
-            <a class="bg-white" href="#">Businesses List</a>
+            <a class="bg-white" href="#">Alumni List</a>
           </li>
         </ul>
       </div>
-      <div class="row" v-if="store.businesses != null">
+      <div class="row" v-if="store.alumni != null">
         <div class="col-md-12">
           <div class="card">
             <div class="card-header">
               <div class="row">
                 <div class="col-lg-6">
-                  <div class="card-title">Businesses List</div>
+                  <div class="card-title">Alumni List</div>
                 </div>
                 <div class="col-lg-6 mt-2 mt-lg-0">
-                  <!-- <button
+                  <button
                     class="btn btn-danger float-lg-right float-none btn-sm ml-2 mt-1"
                     data-href="https://profilo.xyz/admin/register/user/bulk-delete"
                   >
                     <i class="flaticon-interface-5"></i> Delete
-                  </button> -->
+                  </button>
                   <button
                     class="btn btn-primary float-lg-right float-none btn-sm ml-2 mt-1"
-                    @click="createItem"
                     data-toggle="modal"
-                    data-target="#addBusinessModal"
+                    data-target="#addAlumniModal"
                   >
-                    <i class="fas fa-plus"></i> Add Business
+                    <i class="fas fa-plus"></i> Add Alumni
                   </button>
                 </div>
               </div>
@@ -48,17 +47,17 @@
               <div class="row">
                 <div class="col-lg-12">
                   <div class="table-responsive">
-                    <table class="table table-striped mt-3" id="businessTable">
+                    <table class="table table-striped mt-3" id="alumniTable">
                       <thead>
                         <tr>
-                          <!-- <th scope="col" class="pt-2">
+                          <th scope="col" class="pt-2">
                             <input
                               type="checkbox"
                               class=""
                               style="width: 16px"
                             />
-                          </th> -->
-                          <th scope="col">Business Name</th>
+                          </th>
+                          <th scope="col">Alumni Name</th>
                           <th scope="col">Specialization</th>
                           <th scope="col">Employees</th>
                           <th scope="col">Email</th>
@@ -68,15 +67,15 @@
                         </tr>
                       </thead>
                       <tbody>
-                        <tr v-for="(item, index) in store.businesses">
-                          <!-- <td>
+                        <tr v-for="(item, index) in store.alumni">
+                          <td>
                             <input
                               type="checkbox"
                               class="bulk-check"
                               style="width: 16px"
                             />
-                          </td> -->
-                          <td>{{ item.business_name }}</td>
+                          </td>
+                          <td>{{ item.alumni_name }}</td>
                           <td>{{ item.specialization }}</td>
                           <td>{{ item.number_of_employees }}</td>
                           <td>{{ item.email }}</td>
@@ -101,9 +100,10 @@
                                 <button
                                   class="editbtn dropdown-item"
                                   data-toggle="modal"
-                                  data-target="#addBusinessModal"
+                                  data-target="#mailModal"
+                                  data-email="pefen68317@iucake.com"
                                 >
-                                  Edit
+                                  View
                                 </button>
                                 <button
                                   class="editbtn dropdown-item"
@@ -172,33 +172,20 @@
       </div>
 
       <ApproveUser @confirmOption="confirmOption" :option="accountAction" />
-      <AddBusiness
-        :form="form"
-        :key="formKey"
-        :action="action"
-        @newItem="newItem"
-      />
-      <ConfirmDelete :message="'Event'" @confirmOption="deleteItem" />
     </div>
   </div>
 </template>
 <script setup>
 import { onMounted, ref } from "vue";
-import AddBusiness from "./forms/AddBusiness.vue";
 import ApproveUser from "./forms/ApproveUser.vue";
 import DataTable from "datatables.net-vue3";
 import DataTablesCore from "datatables.net";
-import { useBusinessStore } from "@/store/business.js";
+import { useAlumniStore } from "@/store/alumni.js";
 import { ElNotification } from "element-plus";
-import ConfirmDelete from "../shared/ConfirmDelete.vue";
 
-const store = useBusinessStore();
+const store = useAlumniStore();
 const itemID = ref(0);
 const accountAction = ref("");
-
-const form = ref({});
-const action = ref("");
-const formKey = ref(0);
 
 const confirmOption = async (res) => {
   if (res && accountAction.value == "Approve") {
@@ -243,68 +230,9 @@ const confirmOption = async (res) => {
   }
 };
 
-const createItem = () => {
-  action.value = "Add";
-  formKey.value += 1;
-  form.value = {
-    business_name: "",
-    email: "",
-    password: "password",
-    address: "",
-    number_of_employees: "",
-    specialization: "",
-    website: "",
-    phone_number: "",
-    owners: [
-      {
-        name: "",
-        email: "",
-        phone_number: "",
-      },
-    ],
-    description: "",
-    annual_revenue: "",
-    years_of_operation: "",
-  };
-};
-const editItem = (item) => {
-  action.value = "Edit";
-  formKey.value += 1;
-  form.value = {
-    id: item.id,
-    name: item.name,
-    start_date: item.start_date,
-    end_date: item.end_date,
-    location: item.location,
-    description: item.description,
-    registration_deadline: item.registration_deadline,
-  };
-};
-
-const deleteItem = async (option) => {
-  if (option) {
-    let response = await store.deleteCoaching(itemID.value);
-
-    if (response.status == true) {
-      ElNotification({
-        title: "Success",
-        type: "success",
-        message: "Event Deleted",
-        duration: 2000,
-      });
-
-      $("#businessTable").DataTable();
-    }
-  }
-};
-
-const newItem = () => {
-  $("#businessTable").DataTable();
-};
-
 onMounted(async () => {
-  let response = await store.getBusinesses();
-  $("#businessTable").DataTable();
+  let response = await store.getAlumni();
+  $("#alumniTable").DataTable();
 });
 </script>
 <style scoped>
