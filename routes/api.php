@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\BusinessController;
 use App\Http\Controllers\AlumniController;
+use App\Http\Controllers\LoginController;
 use App\Http\Controllers\CoachController;
 use App\Http\Controllers\CoachingController;
 use App\Http\Controllers\TrainingEventsController;
@@ -19,10 +20,11 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
-    return $request->user();
-});
 Route::post("/login", [LoginController::class, 'authenticate']);
+Route::group(["middleware" => ['auth:sanctum']], function () {
+    Route::get('/get-user', [LoginController::class, "getUser"]);
+});
+
 Route::resource("businesses", BusinessController::class);
 Route::put("businesses/{id}/{option}", [BusinessController::class, 'approveAccount']);
 Route::resource("alumni", AlumniController::class);

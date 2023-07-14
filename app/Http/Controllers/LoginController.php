@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers\Auth;
+namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
 use App\Models\User;
@@ -45,6 +45,20 @@ class LoginController extends Controller
         } else {
             return response(["message" => "Incorrect credentials"], 200);
         }
+    }
+
+
+    public function getUser()
+    {
+        $user = request()->user();
+        dd($user);
+        return response([
+            "user" => [
+                "user" => $user,
+                "user_roles" => $user->roles,
+                "user_permissions" =>  $user->permissions,
+            ],
+        ], 200);
     }
 
     public function logout(Request $request)

@@ -51,11 +51,9 @@
 
 
     <!--   Core JS Files   -->
-    <script src="https://profilo.xyz/assets/admin/js/core/jquery-3.4.1.min.js"></script>
-    <script src="https://profilo.xyz/assets/admin/js/plugin/vue/vue.js"></script>
-    <script src="https://profilo.xyz/assets/admin/js/plugin/vue/axios.js"></script>
-    <script src="https://profilo.xyz/assets/admin/js/core/popper.min.js"></script>
-    <script src="https://profilo.xyz/assets/admin/js/core/bootstrap.min.js"></script>
+    <script src="{{ asset('js/jquery-3.4.1.min.js') }}"></script>
+    <script src="{{ asset('js/popper.min.js') }}"></script>
+    <script src="{{ asset('js/bootstrap.min.js') }}"></script>
 
     <!-- jQuery UI -->
     <script src="https://profilo.xyz/assets/admin/js/plugin/jquery-ui-1.12.1.custom/jquery-ui.min.js"></script>
