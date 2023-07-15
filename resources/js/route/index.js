@@ -7,6 +7,7 @@ import Contacts from "./../components/pages/Contacts.vue";
 import AccountCreated from "./../components/pages/AccountCreated.vue";
 import Pages from "./../components/pages/Pages.vue";
 import Login from "./../components/auth/Login.vue";
+import AdminLogin from "./../components/auth/AdminLogin.vue";
 import ResetPassword from "./../components/auth/ResetPassword.vue";
 import RegisterBusiness from "./../components/pages/RegisterBusiness.vue";
 import RegisterCoach from "./../components/pages/RegisterCoach.vue";
@@ -28,24 +29,25 @@ import { useRouter } from "vue-router";
 
 const router = useRouter();
 
-// function checkLogin(to, from, next) {
-//     if (to.meta.title != undefined) {
-//         document.title = "QI | " + to.meta.title;
-//     } else {
-//         document.title = "Quanta Insure";
-//     }
-//     if (localStorage.getItem("token") == null) {
-//         next({ name: "login" });
-//     } else {
-//         next();
-//     }
-// }
-
-// router.beforeEach((to, from) => {
-//     document.title = "QI | " + to.meta.title;
-// });
+function checkLogin(to, from, next) {
+    if (to.meta.title != undefined) {
+        document.title = "TBN | " + to.meta.title;
+    } else {
+        document.title = "TBN | Transformational Business Network";
+    }
+    if (localStorage.getItem("token") == null) {
+        next({ name: "admin-login" });
+    } else {
+        next();
+    }
+}
 
 export const routes = [
+    {
+        path: "/admin-login",
+        name: "admin-login",
+        component: AdminLogin,
+    },
     {
         path: "",
         component: Pages,
@@ -60,6 +62,7 @@ export const routes = [
                 name: "login",
                 component: Login,
             },
+
             {
                 path: "/reset-password",
                 name: "reset-password",
@@ -108,8 +111,9 @@ export const routes = [
         ],
     },
     {
-        path: "/admin",
+        path: "/app",
         component: Admin,
+        beforeEnter: checkLogin,
         children: [
             {
                 path: "",

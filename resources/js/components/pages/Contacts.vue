@@ -19,7 +19,7 @@
                 </div>
             </div>
         </section>
-        <section class="contacts-section pt-120 pb-120">
+        <section class="contacts-section py-5">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-5">
@@ -116,16 +116,17 @@
                                             <button class="main-btn">Submit</button>
                                         </div>
                                     </div>
-                            </div>
-                        </form>
+                                </div>
+                            </form>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
 
-</div></template>
+    </div>
+</template>
 <script>
 export default {
 

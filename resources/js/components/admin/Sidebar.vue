@@ -20,11 +20,7 @@
 
                             <div class="collapse in" id="collapseExample">
                                 <ul class="nav">
-                                    <li>
-                                        <router-link :to="{ name: 'profile' }">
-                                            <span class="link-collapse">Edit Profile</span>
-                                        </router-link>
-                                    </li>
+
                                     <li>
                                         <router-link :to="{ name: 'change-password' }">
                                             <span class="link-collapse">Change Password</span>
@@ -135,7 +131,22 @@
 </template>
 <script setup>
 import { useRoute } from "vue-router"
+import axios from "axios"
+
 const route = useRoute()
+
+const logout = async () => {
+    const headers = {
+        headers: { Authorization: "Bearer " + localStorage.getItem("token") },
+    };
+    try {
+        let response = await axios.post("logout", null, headers);
+        if (response.status == 200) {
+            localStorage.clear();
+            location.reload();
+        }
+    } catch (e) {}
+};
 </script>
 <style lang="">
     

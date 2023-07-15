@@ -66,21 +66,17 @@
                                             </div>
                                             <div class="u-text">
                                                 <h4>Johny</h4>
-                                                <p class="text-muted">admin@gmail.com</p><a
-                                                    href="https://profilo.xyz/admin/profile/edit"
-                                                    class="btn btn-xs btn-secondary btn-sm">Edit Profile</a>
+                                                <p class="text-muted">admin@gmail.com</p>
                                             </div>
                                         </div>
                                     </li>
                                     <li>
                                         <div class="dropdown-divider"></div>
-                                        <a class="dropdown-item" href="https://profilo.xyz/admin/profile/edit">Edit
-                                            Profile</a>
                                         <div class="dropdown-divider"></div>
-                                        <a class="dropdown-item" href="https://profilo.xyz/admin/changePassword">Change
+                                        <a class="dropdown-item" href="#">Change
                                             Password</a>
                                         <div class="dropdown-divider"></div>
-                                        <a class="dropdown-item" href="https://profilo.xyz/admin/logout">Logout</a>
+                                        <a class="dropdown-item" href="#">Logout</a>
                                     </li>
                                 </div>
                                 <div class="scroll-element scroll-x">

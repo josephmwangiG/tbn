@@ -106,7 +106,7 @@
                 </div>
             </div>
 
-            <AddBusiness />
+        
         </div>
     </div>
 </template>

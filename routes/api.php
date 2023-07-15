@@ -6,6 +6,7 @@ use App\Http\Controllers\LoginController;
 use App\Http\Controllers\CoachController;
 use App\Http\Controllers\CoachingController;
 use App\Http\Controllers\TrainingEventsController;
+use App\Http\Controllers\UserController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -21,8 +22,9 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::post("/login", [LoginController::class, 'authenticate']);
-Route::group(["middleware" => ['auth:sanctum']], function () {
-    Route::get('/get-user', [LoginController::class, "getUser"]);
+Route::group(["middleware" => ["auth:sanctum"]], function () {
+    Route::get('/get-user', [UserController::class, "getUser"]);
+    Route::post('/logout', [LoginController::class, "logout"]);
 });
 
 Route::resource("businesses", BusinessController::class);

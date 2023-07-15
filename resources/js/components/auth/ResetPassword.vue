@@ -18,7 +18,7 @@
             </div>
         </div>
     </section>
-    <section class="user-form-section pt-120 pb-120">
+    <section class="user-form-section py-5">
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-lg-8">

@@ -48,19 +48,6 @@ class LoginController extends Controller
     }
 
 
-    public function getUser()
-    {
-        $user = request()->user();
-        dd($user);
-        return response([
-            "user" => [
-                "user" => $user,
-                "user_roles" => $user->roles,
-                "user_permissions" =>  $user->permissions,
-            ],
-        ], 200);
-    }
-
     public function logout(Request $request)
     {
         $user = $request->user();

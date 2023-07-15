@@ -49,7 +49,7 @@
 
 
         <!--====== Start saas-featured-users section ======-->
-        <section class="saas-featured-users pt-120 pb-120">
+        <section class="saas-featured-users py-5">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-12">

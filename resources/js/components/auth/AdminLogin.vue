@@ -1,33 +1,14 @@
 <template>
-  <section
-    class="breadcrumbs-section bg_cover lazy entered loaded"
-    data-bg="https://profilo.xyz/assets/front/img/60ea8dcf724d7.jpg"
-    data-ll-status="loaded"
-    style="
-      background-image: url('https://profilo.xyz/assets/front/img/60ea8dcf724d7.jpg');
-    "
-  >
-    <div class="container">
-      <div class="row justify-content-center">
-        <div class="col-lg-12">
-          <div class="breadcrumbs-content text-center">
-            <h1>Login</h1>
-            <ul class="breadcrumbs-link">
-              <li><a href="https://profilo.xyz">Home</a></li>
-              <li class="active">Login</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
   <section class="user-form-section py-5">
     <div class="container">
       <div class="row justify-content-center">
-        <div class="col-lg-8">
+        <div class="col-lg-6 mt-5">
           <div class="user-form">
             <div class="title">
-              <h3>Login to your account</h3>
+              <h3>Admin</h3>
+            </div>
+            <div class="title">
+              <h4>Login to your account</h4>
             </div>
             <div class="alert alert-danger" v-if="incorrectCredential">
               <span>Incorrect credentials</span>
@@ -35,24 +16,15 @@
             <form @submit.prevent="login">
               <div class="form_group">
                 <span>Email Address*</span>
-                <el-input
-                  size="large"
-                  required
-                  v-model="form.email"
-                  type="email"
-                />
+                <el-input placeholder="Enter Email" size="large" required v-model="form.email" type="email" />
                 <span class="text-danger" v-if="errors.email">{{
                   errors.email[0]
                 }}</span>
               </div>
               <div class="form_group">
                 <span>Password *</span>
-                <el-input
-                  size="large"
-                  v-model="form.password"
-                  required
-                  type="password"
-                />
+                <el-input size="large" placeholder="Enter Your Password" v-model="form.password" required
+                  type="password" />
                 <span class="text-danger" v-if="errors.password">{{
                   errors.password[0]
                 }}</span>
@@ -60,20 +32,12 @@
 
               <div class="form_group d-sm-flex justify-content-between">
                 <div>
-                  <router-link :to="{ name: 'reset-password' }"
-                    >Lost your password?</router-link
-                  >
+                  <router-link :to="{ name: 'reset-password' }">Lost your password?</router-link>
                 </div>
                 <div>
-                  <span
-                    >Don't have an account?
-                    <router-link
-                      class="btn-link"
-                      :to="{ name: 'business-join' }"
-                      >Click Here</router-link
-                    >
-                    to Signup</span
-                  >
+                  <span>Don't have an account?
+                    <router-link class="btn-link" :to="{ name: 'business-join' }">Click Here</router-link>
+                    to Signup</span>
                 </div>
               </div>
               <div class="form_group">
@@ -116,8 +80,9 @@ const login = async () => {
 
     incorrectCredential.value = false;
     localStorage.setItem("token", response.token);
+    console.log(router.options.history.state.back)
     if (router.options.history.state.back == "/" || router.options.history.state.back == null) {
-      router.push({ name: "home" });
+      router.push({ name: "dashboard" });
     } else {
       router.push(router.options.history.state.back);
     }
