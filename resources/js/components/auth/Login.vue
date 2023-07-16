@@ -30,7 +30,7 @@
               <h3>Login to your account</h3>
             </div>
             <div class="alert alert-danger" v-if="incorrectCredential">
-              <span>Incorrect credentials</span>
+              <span>{{ message }}</span>
             </div>
             <form @submit.prevent="login">
               <div class="form_group">
@@ -98,12 +98,14 @@ const router = useRouter();
 const form = ref({ email: "", password: "" });
 const errors = ref({});
 const incorrectCredential = ref(false);
+const message = ref("");
 
 const login = async () => {
   let response = await store.login(form.value);
   if (response.status == true) {
     if (response.message != null) {
       incorrectCredential.value = true;
+      message.value = response.message;
       return;
     }
 
@@ -116,7 +118,10 @@ const login = async () => {
 
     incorrectCredential.value = false;
     localStorage.setItem("token", response.token);
-    if (router.options.history.state.back == "/" || router.options.history.state.back == null) {
+    if (
+      router.options.history.state.back == "/" ||
+      router.options.history.state.back == null
+    ) {
       router.push({ name: "home" });
     } else {
       router.push(router.options.history.state.back);

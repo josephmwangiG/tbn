@@ -16,15 +16,26 @@
             <form @submit.prevent="login">
               <div class="form_group">
                 <span>Email Address*</span>
-                <el-input placeholder="Enter Email" size="large" required v-model="form.email" type="email" />
+                <el-input
+                  placeholder="Enter Email"
+                  size="large"
+                  required
+                  v-model="form.email"
+                  type="email"
+                />
                 <span class="text-danger" v-if="errors.email">{{
                   errors.email[0]
                 }}</span>
               </div>
               <div class="form_group">
                 <span>Password *</span>
-                <el-input size="large" placeholder="Enter Your Password" v-model="form.password" required
-                  type="password" />
+                <el-input
+                  size="large"
+                  placeholder="Enter Your Password"
+                  v-model="form.password"
+                  required
+                  type="password"
+                />
                 <span class="text-danger" v-if="errors.password">{{
                   errors.password[0]
                 }}</span>
@@ -32,12 +43,20 @@
 
               <div class="form_group d-sm-flex justify-content-between">
                 <div>
-                  <router-link :to="{ name: 'reset-password' }">Lost your password?</router-link>
+                  <router-link :to="{ name: 'reset-password' }"
+                    >Lost your password?</router-link
+                  >
                 </div>
                 <div>
-                  <span>Don't have an account?
-                    <router-link class="btn-link" :to="{ name: 'business-join' }">Click Here</router-link>
-                    to Signup</span>
+                  <span
+                    >Don't have an account?
+                    <router-link
+                      class="btn-link"
+                      :to="{ name: 'business-join' }"
+                      >Click Here</router-link
+                    >
+                    to Signup</span
+                  >
                 </div>
               </div>
               <div class="form_group">
@@ -80,8 +99,12 @@ const login = async () => {
 
     incorrectCredential.value = false;
     localStorage.setItem("token", response.token);
-    console.log(router.options.history.state.back)
-    if (router.options.history.state.back == "/" || router.options.history.state.back == null) {
+    console.log(router.options.history.state.back);
+    if (
+      router.options.history.state.back == "/" ||
+      router.options.history.state.back == null ||
+      router.options.history.state.back == "/admin-login"
+    ) {
       router.push({ name: "dashboard" });
     } else {
       router.push(router.options.history.state.back);

@@ -34,6 +34,10 @@ class LoginController extends Controller
             $user = User::where(['email' => $credentials['email']])->first();
             $token = $user->createToken('authentication', ['All'])->plainTextToken;
 
+            if ($user->status == "Inactive") {
+                return response(["message" => "Your account is not active."], 200);
+            }
+
             return response([
                 "token" => $token,
                 "user" => [

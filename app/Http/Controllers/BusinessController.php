@@ -104,6 +104,12 @@ class BusinessController extends Controller
             'status' => $action,
         ]);
 
+        $user = $business->user;
+
+        $user->status = $action;
+
+        $user->save();
+
         $businesses = Business::latest()
             ->with('user')
             ->get();

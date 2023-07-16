@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="csrf-token" content="gj1qsrCpVYUBGJV3yrkWAsWkqZQJemnLHknf9RB7">
     <meta content='width=device-width, initial-scale=1.0, shrink-to-fit=no' name='viewport' />
-    <title>Profilex - Admin</title>
+    <title>TBN | Transformational Business Network</title>
     <link rel="icon" href="{{ asset('favicon.png') }}">
     <!-- CSS Files -->
     <link href="{{ asset('css/all.min.css') }}" rel="stylesheet">

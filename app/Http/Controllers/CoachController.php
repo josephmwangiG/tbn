@@ -52,7 +52,8 @@ class CoachController extends Controller
             $user  = User::create([
                 "email" => $data['email'],
                 "password" => Hash::make($data['password']),
-                "name" => $data['name']
+                "name" => $data['name'],
+                "user_type" => 'Coach'
             ]);
 
             $data['user_id'] = $user->id;
@@ -81,10 +82,16 @@ class CoachController extends Controller
             'status' => $action,
         ]);
 
+        $user = $coach->user;
+
+        $user->status = $action;
+
+        $user->save();
+
         $coaches = Coach::latest()
             ->with('user')
             ->get();
-            
+
         return response(['coaches' => $coaches], 200);
     }
     public function edit(Coach $coach)
