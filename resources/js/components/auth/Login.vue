@@ -13,7 +13,7 @@
           <div class="breadcrumbs-content text-center">
             <h1>Login</h1>
             <ul class="breadcrumbs-link">
-              <li><a href="https://profilo.xyz">Home</a></li>
+              <li><a href="/">Home</a></li>
               <li class="active">Login</li>
             </ul>
           </div>

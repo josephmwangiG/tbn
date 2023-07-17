@@ -101,7 +101,7 @@
                 <i class="ri-user-line"></i> Profile</router-link
               >
               <router-link
-                :to="{ name: 'profile' }"
+                :to="{ name: 'coach-profile' }"
                 class="main-btn"
                 v-if="store.user.user.user_type == 'Coach'"
               >

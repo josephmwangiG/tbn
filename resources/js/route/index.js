@@ -2,6 +2,8 @@ import Home from "./../components/pages/Home.vue";
 import About from "./../components/pages/About.vue";
 import Coaches from "./../components/pages/Coaches.vue";
 import Profile from "./../components/pages/Profile.vue";
+import CoachProfile from "./../components/pages/CoachProfile.vue";
+import EditCoachProfile from "./../components/pages/forms/EditCoachProfile.vue";
 import Training from "./../components/pages/Training.vue";
 import Contacts from "./../components/pages/Contacts.vue";
 import AccountCreated from "./../components/pages/AccountCreated.vue";
@@ -44,7 +46,7 @@ function checkLogin(to, from, next) {
 
 export const routes = [
     {
-        path: "/admin-login",
+        path: "/app/admin-login",
         name: "admin-login",
         component: AdminLogin,
     },
@@ -107,6 +109,16 @@ export const routes = [
                 path: "/profile",
                 name: "profile",
                 component: Profile,
+            },
+            {
+                path: "/coach/profile",
+                name: "coach-profile",
+                component: CoachProfile,
+            },
+            {
+                path: "/coach/profile/edit",
+                name: "edit-coach-profile",
+                component: EditCoachProfile,
             },
         ],
     },

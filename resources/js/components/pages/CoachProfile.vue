@@ -50,13 +50,11 @@
               blandit gravida. Etiam sollicitudin aliquet vehicula. Morbi ante
               libero, porttitor ut sodales non, gravida at lacus.
             </p>
-            <a
-              href="https://profilo.xyz/assets/front/img/user/cv/617d27f9ab997.pdf"
+            <router-link
+              :to="{ name: 'edit-coach-profile' }"
               class="template-btn"
-              download="Rabiot.pdf"
-              target="_blank"
             >
-              Download CV</a
+              Edit Profile</router-link
             >
           </div>
         </div>

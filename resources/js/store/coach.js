@@ -23,6 +23,58 @@ export const useCoachStore = defineStore("coach", {
                 return e.response;
             }
         },
+        async editCoachProfile(form) {
+            try {
+                let response = await axios.put("coaches/" + form.id, form);
+                return true;
+            } catch (e) {
+                return e.response;
+            }
+        },
+        async addCoachEducation(form) {
+            try {
+                let response = await axios.post(
+                    "coaches/profile/add-education",
+                    form
+                );
+                return true;
+            } catch (e) {
+                return e.response;
+            }
+        },
+        async updateCoachEducation(form) {
+            try {
+                let response = await axios.put(
+                    "coaches/profile/edit-education/" + form.id,
+                    form
+                );
+                return true;
+            } catch (e) {
+                return e.response;
+            }
+        },
+        async addCoachExperience(form) {
+            try {
+                let response = await axios.post(
+                    "coaches/profile/add-experience",
+                    form
+                );
+                return true;
+            } catch (e) {
+                return e.response;
+            }
+        },
+        async updateCoachExperience(form) {
+            try {
+                let response = await axios.put(
+                    "coaches/profile/edit-experience/" + form.id,
+                    form
+                );
+                return true;
+            } catch (e) {
+                return e.response;
+            }
+        },
         async approveAccount(id, option) {
             try {
                 let response = await axios.put("coaches/" + id + "/" + option);

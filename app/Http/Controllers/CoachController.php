@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Coach;
+use App\Models\Education;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
@@ -102,9 +103,77 @@ class CoachController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, Coach $coach)
+    public function update(Request $request, $id)
     {
-        //
+        $data = $request->validate([
+            "name" => 'required',
+            "highest_level_of_education" => '',
+            "description" => '',
+            "website" => '',
+            "phone_number" => 'required',
+            "specialization" => 'required',
+            "current_employment" => '',
+            "current_employer" => '',
+        ]);
+
+        $coach = Coach::find($id);
+
+        DB::transaction(function () use ($data, $coach) {
+            $coach->update($data);
+        });
+
+        return response(["success" => "Success"], 200);
+    }
+
+
+    public function addEducation(Request $request)
+    {
+        $data = $request->validate([
+            "institution" => 'required',
+            "program" => 'required|unique:users',
+            "certificate" => 'required',
+            "start_date" => '',
+            "description" => '',
+            "completion_date" => '',
+            "currently_enrolled" => 'required',
+        ]);
+
+        DB::transaction(function () use ($data) {
+            $user  = Request()->user();
+
+            $data['coach_id'] = $user->coach->id;
+
+            Education::create($data);
+        });
+
+        return response(["success" => "Success"], 200);
+    }
+
+    public function updateEducation(Request $request, $id)
+    {
+        $data = $request->validate([
+            "institution" => 'required',
+            "program" => 'required|unique:users',
+            "certificate" => 'required',
+            "start_date" => '',
+            "description" => '',
+            "completion_date" => '',
+            "currently_enrolled" => 'required',
+        ]);
+
+        DB::transaction(function () use ($data, $id) {
+            $education = Education::find($id);
+            $education->update($data);
+        });
+
+        return response(["success" => "Success"], 200);
+    }
+    public function deleteEducation($id)
+    {
+        $education = Education::find($id);
+        $education->delete();
+
+        return response(["success" => "Success"], 200);
     }
 
     /**
