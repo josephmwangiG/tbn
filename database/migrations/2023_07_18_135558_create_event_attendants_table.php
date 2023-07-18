@@ -13,7 +13,15 @@ return new class extends Migration
     {
         Schema::create('event_attendants', function (Blueprint $table) {
             $table->id();
+            $table->unsignedBigInteger("event_id");
+            $table->unsignedBigInteger("business_id");
+            $table->text("message")->nullable();
             $table->timestamps();
+            $table->softDeletes();
+            $table->index('id');
+
+            $table->foreign('event_id')->references('id')->on('training_events')->onDelete('cascade');
+            $table->foreign('business_id')->references('id')->on('businesses')->onDelete('cascade');
         });
     }
 

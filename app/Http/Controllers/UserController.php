@@ -8,7 +8,7 @@ class UserController extends Controller
 {
     public function getUser()
     {
-        $user = request()->user();
+        $user = request()->user()->with('coachProfile.educations', 'coachProfile.experiences', 'businessProfile.owners', 'businessProfile.bookings')->first();
         return response([
             "user" => [
                 "user" => $user,

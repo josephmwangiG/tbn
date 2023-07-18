@@ -18,6 +18,8 @@ return new class extends Migration
             $table->string("email");
             $table->string("phone_number")->nullable();
             $table->timestamps();
+            $table->softDeletes();
+            $table->index('id');
 
             $table->foreign('business_id')->references('id')->on('businesses')->onDelete('cascade');
         });

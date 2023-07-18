@@ -5,12 +5,26 @@ export const useBusinessStore = defineStore("business", {
     state: () => ({
         businesses: null,
         business: null,
+        headers: {
+            headers: {
+                Authorization: "Bearer " + localStorage.getItem("token"),
+            },
+        },
     }),
     actions: {
         async getBusinesses() {
             try {
                 let response = await axios.get("businesses");
                 this.businesses = response.data.businesses;
+                return true;
+            } catch (e) {
+                return e.response;
+            }
+        },
+        async getBusiness(id) {
+            try {
+                let response = await axios.get("businesses/" + id);
+                this.business = response.data.business;
                 return true;
             } catch (e) {
                 return e.response;
@@ -27,7 +41,11 @@ export const useBusinessStore = defineStore("business", {
         },
         async updateBusinessProfile(form) {
             try {
-                let response = await axios.put("businesses/" + form.id, form);
+                let response = await axios.put(
+                    "businesses/" + form.id + "/update/profile",
+                    form,
+                    this.headers
+                );
                 this.business = response.data.business;
                 return true;
             } catch (e) {
@@ -36,7 +54,11 @@ export const useBusinessStore = defineStore("business", {
         },
         async addBusinessOwner(form) {
             try {
-                let response = await axios.post("businesses/" + form.id + "/add-owner", form);
+                let response = await axios.post(
+                    "businesses/add/business/owner",
+                    form,
+                    this.headers
+                );
                 this.business = response.data.business;
                 return true;
             } catch (e) {

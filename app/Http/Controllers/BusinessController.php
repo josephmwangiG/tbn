@@ -92,9 +92,13 @@ class BusinessController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(Business $business)
+    public function show($id)
     {
-        //
+        $business = Business::where('id', $id)
+            ->with('owners', 'bookings', 'user')
+            ->first();
+
+        return response(["success" => "success", "business" => $business, "success", 200]);
     }
 
     public function approveAccount($id, $action)
@@ -131,6 +135,62 @@ class BusinessController extends Controller
     public function update(Request $request, Business $business)
     {
         //
+    }
+
+
+    public function updateProfile(Request $request, $id)
+    {
+        $data = $request->validate([
+            "business_name" => "required",
+            "address" => "",
+            "number_of_employees" => "",
+            "specialization" => "",
+            "phone_number" => "required",
+            "owners" => "",
+            "description" => "",
+            "annual_revenue" => "",
+            "years_of_operation" => "",
+            "website" => "",
+        ]);
+
+        $business = Business::find($id);
+
+        $business->update([
+            "business_name" => $data['business_name'],
+            "address" => $data['address'],
+            "number_of_employees" => $data['number_of_employees'],
+            "specialization" => $data['specialization'],
+            "phone_number" => $data['phone_number'],
+            "description" => $data['description'],
+            "annual_revenue" => $data['annual_revenue'],
+            "years_of_operation" => $data['years_of_operation'],
+            "website" => $data['website'],
+        ]);
+
+        $business = Business::where('id', $id)
+            ->with('owners', 'bookings', 'user')
+            ->first();
+
+        return response(["success" => "success", "business" => $business, "success", 200]);
+    }
+
+    public function addBusinessOwner(Request $request)
+    {
+        $data = $request->validate([
+            "name" => "required",
+            "business_id" => "",
+            "email" => "",
+            "phone_number" => "required",
+        ]);
+
+
+        BusinessOwner::create($data);
+
+        $business = Business::where('id', $data['business_id'])
+            ->with('owners', 'bookings', 'user')
+            ->first();
+
+        return response(["success" => "success", "business" => $business, "success", 200]);
     }
 
     /**

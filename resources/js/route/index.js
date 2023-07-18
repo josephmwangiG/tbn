@@ -96,6 +96,7 @@ export const routes = [
             {
                 path: "/coaches/book/:id",
                 name: "book-coach",
+                beforeEnter: checkLogin,
                 component: BookCoach,
             },
             {
@@ -131,6 +132,7 @@ export const routes = [
             {
                 path: "/business/profile/edit",
                 name: "edit-business-profile",
+                beforeEnter: checkLogin,
                 component: EditBusinessProfile,
             },
             {
@@ -141,6 +143,7 @@ export const routes = [
             {
                 path: "/coach/profile/edit",
                 name: "edit-coach-profile",
+                beforeEnter: checkLogin,
                 component: EditCoachProfile,
             },
         ],

@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Coach;
 use App\Models\Education;
+use App\Models\Experience;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
@@ -175,6 +176,57 @@ class CoachController extends Controller
 
         return response(["success" => "Success"], 200);
     }
+
+    public function addExperience(Request $request)
+    {
+        $data = $request->validate([
+            "institution" => 'required',
+            "program" => 'required|unique:users',
+            "certificate" => 'required',
+            "start_date" => '',
+            "description" => '',
+            "completion_date" => '',
+            "currently_enrolled" => 'required',
+        ]);
+
+        DB::transaction(function () use ($data) {
+            $user  = Request()->user();
+
+            $data['coach_id'] = $user->coach->id;
+
+            Experience::create($data);
+        });
+
+        return response(["success" => "Success"], 200);
+    }
+
+    public function updateExperience(Request $request, $id)
+    {
+        $data = $request->validate([
+            "institution" => 'required',
+            "program" => 'required|unique:users',
+            "certificate" => 'required',
+            "start_date" => '',
+            "description" => '',
+            "completion_date" => '',
+            "currently_enrolled" => 'required',
+        ]);
+
+        DB::transaction(function () use ($data, $id) {
+            $experience = Experience::find($id);
+            $experience->update($data);
+        });
+
+        return response(["success" => "Success"], 200);
+    }
+    public function deleteExperience($id)
+    {
+        $experience = Experience::find($id);
+        $experience->delete();
+
+        return response(["success" => "Success"], 200);
+    }
+
 
     /**
      * Remove the specified resource from storage.

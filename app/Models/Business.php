@@ -29,4 +29,14 @@ class Business extends Model
     {
         return $this->belongsTo(User::class);
     }
+
+    public function owners()
+    {
+        return $this->hasMany(BusinessOwner::class, 'business_id');
+    }
+
+    public function bookings()
+    {
+        return $this->hasMany(EventAttendant::class, 'business_id');
+    }
 }
