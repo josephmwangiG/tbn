@@ -69,7 +69,7 @@ class TrainingEventsController extends Controller
         // Create a new TrainingEvent instance with mass assignment
         TrainingEvent::create($data);
 
-        $trainingEvents = TrainingEvent::latest()->get();
+        $trainingEvents = TrainingEvent::whereDate('end_date', '>', now()->toDateString())->latest()->get();
         return response(['trainingEvents' => $trainingEvents], 200);
     }
 
@@ -131,7 +131,7 @@ class TrainingEventsController extends Controller
 
         $event->update($data);
 
-        $trainingEvents = TrainingEvent::latest()->get();
+        $trainingEvents = TrainingEvent::whereDate('end_date', '>', now()->toDateString())->latest()->get();
         return response(['trainingEvents' => $trainingEvents], 200);
     }
 
@@ -144,7 +144,7 @@ class TrainingEventsController extends Controller
 
         $event->delete();
 
-        $trainingEvents = TrainingEvent::latest()->get();
+        $trainingEvents = TrainingEvent::whereDate('end_date', '>', now()->toDateString())->latest()->get();
         return response(['trainingEvents' => $trainingEvents], 200);
     }
 }

@@ -2,9 +2,12 @@ import Home from "./../components/pages/Home.vue";
 import About from "./../components/pages/About.vue";
 import Coaches from "./../components/pages/Coaches.vue";
 import Profile from "./../components/pages/Profile.vue";
+import EditBusinessProfile from "./../components/pages/forms/EditBusinessProfile.vue";
 import CoachProfile from "./../components/pages/CoachProfile.vue";
 import EditCoachProfile from "./../components/pages/forms/EditCoachProfile.vue";
+import BookCoach from "./../components/pages/forms/BookCoach.vue";
 import Training from "./../components/pages/Training.vue";
+import ViewTraining from "./../components/pages/ViewTraining.vue";
 import Contacts from "./../components/pages/Contacts.vue";
 import AccountCreated from "./../components/pages/AccountCreated.vue";
 import Pages from "./../components/pages/Pages.vue";
@@ -86,9 +89,24 @@ export const routes = [
                 component: Coaches,
             },
             {
+                path: "/coaches/profile/:id",
+                name: "view-coach-profile",
+                component: CoachProfile,
+            },
+            {
+                path: "/coaches/book/:id",
+                name: "book-coach",
+                component: BookCoach,
+            },
+            {
                 path: "/training",
                 name: "training",
                 component: Training,
+            },
+            {
+                path: "training/view-training/:id",
+                name: "view-training",
+                component: ViewTraining,
             },
             {
                 path: "/business-application",
@@ -109,6 +127,11 @@ export const routes = [
                 path: "/profile",
                 name: "profile",
                 component: Profile,
+            },
+            {
+                path: "/business/profile/edit",
+                name: "edit-business-profile",
+                component: EditBusinessProfile,
             },
             {
                 path: "/coach/profile",

@@ -19,7 +19,7 @@ return new class extends Migration
             $table->string("certificate");
             $table->date("start_date");
             $table->date("compeletion_date")->nullable();
-            $table->text("currently_enrolled")->default('No');
+            $table->string("currently_enrolled")->default('No');
             $table->text("description")->nullable();
             $table->timestamps();
             $table->softDeletes();

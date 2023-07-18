@@ -11,15 +11,16 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('experiences', function (Blueprint $table) {
+        Schema::create('coach_bookings', function (Blueprint $table) {
             $table->id();
             $table->unsignedBigInteger("coach_id");
-            $table->string("employer");
-            $table->string("job_title");
+            $table->unsignedBigInteger("business_id");
+            $table->string("reason");
             $table->date("start_date");
-            $table->date("end_date")->nullable();
-            $table->string("current_job")->default('No');
-            $table->text("description")->nullable();
+            $table->string("duration");
+            $table->string("meeting_preference");
+            $table->string("status")->default('Pending');
+            $table->text("message")->nullable();
             $table->timestamps();
             $table->softDeletes();
             $table->index('id');
@@ -33,6 +34,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('experiences');
+        Schema::dropIfExists('coach_bookings');
     }
 };

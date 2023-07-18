@@ -1,13 +1,9 @@
 <template>
   <div v-if="store.trainingEvents != null">
-    <section
-      class="breadcrumbs-section bg_cover lazy entered loaded"
-      data-bg="https://profilo.xyz/assets/front/img/60ea8dcf724d7.jpg"
-      data-ll-status="loaded"
-      style="
+    <section class="breadcrumbs-section bg_cover lazy entered loaded"
+      data-bg="https://profilo.xyz/assets/front/img/60ea8dcf724d7.jpg" data-ll-status="loaded" style="
         background-image: url('https://profilo.xyz/assets/front/img/60ea8dcf724d7.jpg');
-      "
-    >
+      ">
       <div class="container">
         <div class="row justify-content-center">
           <div class="col-lg-12">
@@ -34,104 +30,58 @@
             </div>
           </div>
         </div>
-        <div class="row">
-          <div
-            class="col-lg-4 col-md-6 col-sm-12"
-            v-for="(item, index) in store.trainingEvents"
-          >
-            <div class="features-item mb-40">
-              <img
-                class="lazy entered loaded"
-                src="https://profilo.xyz/assets/front/img/user/1677050633author-6.jpg"
-              />
-              <h4>{{ item.name }}</h4>
-              <p>{{ item.description.substring(0, 200) }}</p>
+        <div class="row mt-4">
+          <div class="col-lg-4 col-md-6 col-sm-12" v-for="(item, index) in store.trainingEvents">
+            <div class=" mb-5 border p-3 rounded">
+             
+              <h4 class="my-1">{{ item.name }}</h4>
+              <span>
+                <small> <i class="ri-time-fill"></i> <strong>{{ item.start_date }}</strong> | {{ item.location }}</small>
+              </span>
+
+              <p class="my-2">{{ item.description.substring(0, 130) }}</p>
+              <router-link :to="{ name: 'view-training', params: { id: item.id } }" class="btn btn-outline-dark"> More
+                Details</router-link>
             </div>
           </div>
         </div>
       </div>
     </section>
-    <!--====== End saas-features section ======-->
 
     <!--====== Start saas-featured-users section ======-->
-    <section class="saas-featured-users py-5">
+    <section class="saas-featured-users pb-5">
       <div class="container">
         <div class="row">
           <div class="col-lg-12">
             <div class="section-title-one section-title-two mb-5">
-              <span class="span">Featured Coaches</span>
-              <h2>Take a look at the featured coaches</h2>
+              <span class="span">Take a look at the featured coaches</span>
             </div>
           </div>
         </div>
+
         <div class="row">
-          <div
-            class="col-lg-4 col-md-6 col-sm-12"
-            v-for="item in coaches"
-            :key="item.id"
-          >
+          <div class="col-lg-4 col-md-6 col-sm-12" v-for="item in coaches" :key="item.id">
             <div class="user-item mb-5">
               <div class="title">
-                <img
-                  class="lazy entered loaded"
-                  src="https://profilo.xyz/assets/front/img/user/1677050633author-6.jpg"
-                />
+                <img class="lazy entered loaded" src="https://profilo.xyz/assets/front/img/user/1677050633author-6.jpg" />
                 <h5>{{ item.name }}</h5>
                 <strong>{{ item.specialization }}</strong>
                 <span>{{ item.current_employment }}</span>
+              
               </div>
               <div class="user-button">
                 <ul>
                   <li>
-                    <router-link :to="{ name: 'profile' }" class="main-btn"
-                      ><i class="fas fa-eye"></i>Profile</router-link
-                    >
+                    <router-link :to="{ name: 'profile' }" class="main-btn"><i
+                        class="fas fa-eye"></i>Profile</router-link>
                   </li>
                   <li>
-                    <a
-                      href="https://profilo.xyz/user/follow/80"
-                      class="main-btn"
-                      ><i class="fal fa-user-plus"></i>Book
+                    <a href="https://profilo.xyz/user/follow/80" class="main-btn"><i class="fal fa-user-plus"></i>Book
                     </a>
                   </li>
                 </ul>
               </div>
-              <div class="social-box">
-                <ul class="social-link">
-                  <li>
-                    <a
-                      href="http://example.com/"
-                      class="facebook"
-                      target="_blank"
-                      ><i class="fab fa-facebook"></i
-                    ></a>
-                  </li>
-                  <li>
-                    <a
-                      href="http://example.com/"
-                      class="facebook"
-                      target="_blank"
-                      ><i class="fab fa-twitter"></i
-                    ></a>
-                  </li>
-                  <li>
-                    <a
-                      href="http://example.com/"
-                      class="facebook"
-                      target="_blank"
-                      ><i class="fab fa-google-plus-g"></i
-                    ></a>
-                  </li>
-                  <li>
-                    <a
-                      href="http://example.com/"
-                      class="facebook"
-                      target="_blank"
-                      ><i class="fab fa-linkedin"></i
-                    ></a>
-                  </li>
-                </ul>
-              </div>
+            
             </div>
           </div>
         </div>

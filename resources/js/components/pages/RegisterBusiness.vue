@@ -1,13 +1,9 @@
 <template>
   <div>
-    <section
-      class="breadcrumbs-section bg_cover lazy entered loaded"
-      data-bg="https://profilo.xyz/assets/front/img/60ea8dcf724d7.jpg"
-      data-ll-status="loaded"
-      style="
+    <section class="breadcrumbs-section bg_cover lazy entered loaded"
+      data-bg="https://profilo.xyz/assets/front/img/60ea8dcf724d7.jpg" data-ll-status="loaded" style="
         background-image: url('https://profilo.xyz/assets/front/img/60ea8dcf724d7.jpg');
-      "
-    >
+      ">
       <div class="container">
         <div class="row justify-content-center">
           <div class="col-lg-12">
@@ -29,42 +25,24 @@
           <div class="row mt-5">
             <div class="form-group col-lg-4 mt-2">
               <span>Business/Company Name</span>
-              <el-input
-                style="border: black"
-                v-model="form.business_name"
-                size="large"
-                placeholder="Business/Company Name"
-                type="text"
-                required="required"
-              ></el-input>
+              <el-input style="border: black" v-model="form.business_name" size="large"
+                placeholder="Business/Company Name" type="text" required="required"></el-input>
               <span class="text-danger" v-if="errors.business_name">{{
                 errors.business_name[0]
               }}</span>
             </div>
             <div class="form-group col-lg-4 mt-2">
               <span>Email Address*</span>
-              <el-input
-                style="border: black"
-                v-model="form.email"
-                size="large"
-                placeholder="Email Address"
-                type="email"
-                required="required"
-              ></el-input>
+              <el-input style="border: black" v-model="form.email" size="large" placeholder="Email Address" type="email"
+                required="required"></el-input>
               <span class="text-danger" v-if="errors.email">{{
                 errors.email[0]
               }}</span>
             </div>
             <div class="form-group col-lg-4 mt-2">
               <span>Password*</span>
-              <el-input
-                style="border: black"
-                v-model="form.password"
-                size="large"
-                placeholder="Password"
-                type="password"
-                required="required"
-              ></el-input>
+              <el-input style="border: black" v-model="form.password" size="large" placeholder="Password" type="password"
+                required="required"></el-input>
               <span class="text-danger" v-if="errors.password">{{
                 errors.password[0]
               }}</span>
@@ -72,41 +50,24 @@
 
             <div class="form-group col-lg-4 mt-2">
               <span>Phone Number</span>
-              <el-input
-                style="border: black"
-                v-model="form.phone_number"
-                size="large"
-                type="text"
-                placeholder="Phone Number"
-                required="required"
-              ></el-input>
+              <el-input style="border: black" v-model="form.phone_number" size="large" type="text"
+                placeholder="Phone Number" required="required"></el-input>
               <span class="text-danger" v-if="errors.phone_number">{{
                 errors.phone_number[0]
               }}</span>
             </div>
             <div class="form-group col-lg-4 mt-2">
               <span>Address/Location</span>
-              <el-input
-                style="border: black"
-                v-model="form.address"
-                size="large"
-                type="text"
-                placeholder="Address details"
-              ></el-input>
+              <el-input style="border: black" v-model="form.address" size="large" type="text"
+                placeholder="Address details"></el-input>
               <span class="text-danger" v-if="errors.address">{{
                 errors.address[0]
               }}</span>
             </div>
             <div class="form-group col-lg-4 mt-2">
               <span>Specialization</span>
-              <el-select
-                filterable
-                class="w-100"
-                v-model="form.specialization"
-                size="large"
-                type="text"
-                placeholder="Address details"
-              >
+              <el-select filterable class="w-100" v-model="form.specialization" size="large" type="text"
+                placeholder="Address details">
                 <el-option value="Marketing">Marketing</el-option>
               </el-select>
               <span class="text-danger" v-if="errors.specialization">{{
@@ -119,137 +80,79 @@
               <hr />
             </div>
 
-            <div class="col-lg-12">
-              <div class="form-group">
-                <span>Website</span>
-                <el-input
-                  style="border: black"
-                  v-model="form.website"
-                  type="text"
-                  size="large"
-                  placeholder="Website"
-                />
-                <span class="text-danger" v-if="errors.website">{{
-                  errors.website[0]
-                }}</span>
-              </div>
+
+            <div class="form-group col-lg-12">
+              <span>Website</span>
+              <el-input style="border: black" v-model="form.website" type="text" size="large" placeholder="Website" />
+              <span class="text-danger" v-if="errors.website">{{
+                errors.website[0]
+              }}</span>
             </div>
-            <div class="col-lg-4">
+
+            <div class="form-group col-lg-4">
               <span>Number of Employees</span>
-              <div class="form-group">
-                <el-input
-                  type="number"
-                  style="border: black"
-                  v-model="form.number_of_employees"
-                  size="large"
-                  placeholder="Number of Employees"
-                />
-                <span class="text-danger" v-if="errors.number_of_employees">{{
-                  errors.number_of_employees[0]
-                }}</span>
-              </div>
+              <el-input type="number" style="border: black" v-model="form.number_of_employees" size="large"
+                placeholder="Number of Employees" />
+              <span class="text-danger" v-if="errors.number_of_employees">{{
+                errors.number_of_employees[0]
+              }}</span>
             </div>
-            <div class="col-lg-4">
-              <div class="form-group">
-                <span>Years of Operation</span>
-                <el-input
-                  type="number"
-                  style="border: black"
-                  v-model="form.years_of_operation"
-                  size="large"
-                  placeholder="Years of Operation"
-                />
-                <span class="text-danger" v-if="errors.years_of_operation">{{
-                  errors.years_of_operation[0]
-                }}</span>
-              </div>
+
+            <div class="form-group col-lg-4">
+              <span>Years of Operation</span>
+              <el-input type="number" style="border: black" v-model="form.years_of_operation" size="large"
+                placeholder="Years of Operation" />
+              <span class="text-danger" v-if="errors.years_of_operation">{{
+                errors.years_of_operation[0]
+              }}</span>
             </div>
-            <div class="col-lg-4">
-              <div class="form-group">
-                <span>Approximate Annual Revenue</span>
-                <el-input
-                  :formatter="removeletter"
-                  :parser="(value) => value.replace(/\$\s?|(,*)/g, '')"
-                  style="border: black"
-                  v-model="revenue"
-                  size="large"
-                  placeholder="Approximate Annual Revenue"
-                />
-                <span class="text-danger" v-if="errors.annual_revenue">{{
-                  errors.annual_revenue[0]
-                }}</span>
-              </div>
+
+            <div class="form-group col-lg-4">
+              <span>Approximate Annual Revenue</span>
+              <el-input :formatter="removeletter" :parser="(value) => value.replace(/\$\s?|(,*)/g, '')"
+                style="border: black" v-model="revenue" size="large" placeholder="Approximate Annual Revenue" />
+              <span class="text-danger" v-if="errors.annual_revenue">{{
+                errors.annual_revenue[0]
+              }}</span>
             </div>
 
             <div class="col-12">
               <div class="d-flex justify-content-between my-3">
                 <h5>Business Owners</h5>
-                <i
-                  @click="addOwner"
-                  style="font-size: 30px"
-                  class="ri-add-circle-line"
-                ></i>
+                <i @click="addOwner" style="font-size: 30px" class="ri-add-circle-line"></i>
               </div>
-              <div
-                class="row"
-                v-for="(item, index) in form.owners"
-                :key="index"
-              >
-                <div class="col-lg-4">
+              <div class="row" v-for="(item, index) in form.owners" :key="index">
+
+                <div class="form-group col-lg-4">
                   <span>Full Names</span>
-                  <div class="form-group">
-                    <el-input
-                      style="border: black"
-                      v-model="item.name"
-                      type="text"
-                      size="large"
-                      placeholder="Full Names"
-                      required=""
-                    />
-                  </div>
+                  <el-input style="border: black" v-model="item.name" type="text" size="large" placeholder="Full Names"
+                    required="" />
                 </div>
-                <div class="col-lg-4">
-                  <div class="form-group">
-                    <span>Owner Email</span>
-                    <el-input
-                      style="border: black"
-                      v-model="item.email"
-                      size="large"
-                      type="email"
-                      placeholder="Owner Email"
-                    />
-                  </div>
+
+
+                <div class="form-group col-lg-4">
+                  <span>Owner Email</span>
+                  <el-input style="border: black" v-model="item.email" size="large" type="email"
+                    placeholder="Owner Email" />
                 </div>
-                <div class="col-lg-4">
-                  <div class="form-group">
-                    <span>Phone Number</span>
-                    <el-input
-                      style="border: black"
-                      v-model="item.phone_number"
-                      size="large"
-                      placeholder="Phone Number"
-                    />
-                  </div>
+
+
+                <div class="form-group col-lg-4">
+                  <span>Phone Number</span>
+                  <el-input style="border: black" v-model="item.phone_number" size="large" placeholder="Phone Number" />
                 </div>
+
               </div>
             </div>
 
-            <div class="col-lg-12">
-              <div class="form-group">
-                <span>Description</span>
-                <el-input
-                  style="border: black"
-                  v-model="form.description"
-                  type="textarea"
-                  placeholder="Business Description"
-                />
-              </div>
+            <div class="form-group col-lg-12">
+              <span>Description</span>
+              <el-input style="border: black" v-model="form.description" type="textarea"
+                placeholder="Business Description" />
             </div>
 
-            <div class="col-lg-12">
-              <div class="form-group">
-                <button type="submit" class="main-btn">Submit</button>
-              </div>
+            <div class="form-group col-lg-12">
+              <button type="submit" class="main-btn">Submit</button>
             </div>
           </div>
         </form>

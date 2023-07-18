@@ -1,12 +1,8 @@
 <template>
-  <section
-    class="breadcrumbs-section bg_cover lazy entered loaded"
-    data-bg="https://profilo.xyz/assets/front/img/60ea8dcf724d7.jpg"
-    data-ll-status="loaded"
-    style="
+  <section class="breadcrumbs-section bg_cover lazy entered loaded"
+    data-bg="https://profilo.xyz/assets/front/img/60ea8dcf724d7.jpg" data-ll-status="loaded" style="
       background-image: url('https://profilo.xyz/assets/front/img/60ea8dcf724d7.jpg');
-    "
-  >
+    ">
     <div class="container">
       <div class="row justify-content-center">
         <div class="col-lg-12">
@@ -27,13 +23,9 @@
       <div class="row align-items-center justify-content-center">
         <div class="col-lg-6 col-sm-9">
           <div class="block-img text-center pr-0 pr-lg-5 md-gap-50">
-            <img
-              data-src="https://profilo.xyz/assets/front/img/user/home_settings/60fe5a0ff1573.png"
-              class="animate-float-bob-y lazy entered loaded"
-              alt="About Image"
-              data-ll-status="loaded"
-              src="https://profilo.xyz/assets/front/img/user/home_settings/60fe5a0ff1573.png"
-            />
+            <img data-src="https://profilo.xyz/assets/front/img/user/home_settings/60fe5a0ff1573.png"
+              class="animate-float-bob-y lazy entered loaded" alt="About Image" data-ll-status="loaded"
+              src="https://profilo.xyz/assets/front/img/user/home_settings/60fe5a0ff1573.png" />
           </div>
         </div>
         <div class="col-lg-6 col-md-10">
@@ -50,14 +42,8 @@
               blandit gravida. Etiam sollicitudin aliquet vehicula. Morbi ante
               libero, porttitor ut sodales non, gravida at lacus.
             </p>
-            <a
-              href="https://profilo.xyz/assets/front/img/user/cv/617d27f9ab997.pdf"
-              class="template-btn"
-              download="Rabiot.pdf"
-              target="_blank"
-            >
-              Download CV</a
-            >
+            <router-link :to="{ name: 'edit-business-profile' }" class="template-btn">
+              Edit Profile</router-link>
           </div>
         </div>
       </div>
@@ -71,13 +57,9 @@
       <div class="row align-items-center justify-content-center">
         <div class="col-lg-6 order-lg-last col-sm-9">
           <div class="block-img pl-0 pl-xl-5 md-gap-50">
-            <img
-              data-src="https://profilo.xyz/assets/front/img/user/home_settings/60fe5a0ff1a9c.png"
-              class="animate-float-bob-y lazy entered loaded"
-              alt="Image"
-              data-ll-status="loaded"
-              src="https://profilo.xyz/assets/front/img/user/home_settings/60fe5a0ff1a9c.png"
-            />
+            <img data-src="https://profilo.xyz/assets/front/img/user/home_settings/60fe5a0ff1a9c.png"
+              class="animate-float-bob-y lazy entered loaded" alt="Image" data-ll-status="loaded"
+              src="https://profilo.xyz/assets/front/img/user/home_settings/60fe5a0ff1a9c.png" />
           </div>
         </div>
         <div class="col-lg-6 order-lg-first col-md-10">
@@ -97,10 +79,7 @@
                 <h6 class="title">HTML5</h6>
                 <div class="progress-bar-wrap">
                   <div class="progress-line">
-                    <div
-                      class="line"
-                      style="background-color: rgb(75, 56, 105); width: 80%"
-                    ></div>
+                    <div class="line" style="background-color: rgb(75, 56, 105); width: 80%"></div>
                   </div>
                   <div class="counter-wrap">
                     <span class="count">80</span>
@@ -112,10 +91,7 @@
                 <h6 class="title">CSS3</h6>
                 <div class="progress-bar-wrap">
                   <div class="progress-line">
-                    <div
-                      class="line"
-                      style="background-color: rgb(20, 39, 155); width: 70%"
-                    ></div>
+                    <div class="line" style="background-color: rgb(20, 39, 155); width: 70%"></div>
                   </div>
                   <div class="counter-wrap">
                     <span class="count">70</span>
@@ -127,10 +103,7 @@
                 <h6 class="title">Laravel</h6>
                 <div class="progress-bar-wrap">
                   <div class="progress-line">
-                    <div
-                      class="line"
-                      style="background-color: rgb(224, 36, 1); width: 90%"
-                    ></div>
+                    <div class="line" style="background-color: rgb(224, 36, 1); width: 90%"></div>
                   </div>
                   <div class="counter-wrap">
                     <span class="count">90</span>
@@ -157,22 +130,13 @@
       <div class="row service-boxes justify-content-center">
         <div class="col-lg-4 col-md-6 col-sm-10">
           <div class="service-box-one mt-30">
-            <a
-              class="service-thumb"
-              href="https://profilo.xyz/Rabiot/service/ecommerce-website/64"
-            >
-              <img
-                data-src="https://profilo.xyz/assets/front/img/user/services/1627283854.jpg"
-                class="lazy entered loaded"
-                alt=""
-                data-ll-status="loaded"
-                src="https://profilo.xyz/assets/front/img/user/services/1627283854.jpg"
-              />
+            <a class="service-thumb" href="https://profilo.xyz/Rabiot/service/ecommerce-website/64">
+              <img data-src="https://profilo.xyz/assets/front/img/user/services/1627283854.jpg"
+                class="lazy entered loaded" alt="" data-ll-status="loaded"
+                src="https://profilo.xyz/assets/front/img/user/services/1627283854.jpg" />
             </a>
             <h4 class="title">
-              <a href="https://profilo.xyz/Rabiot/service/ecommerce-website/64"
-                >Ecommerce Website</a
-              >
+              <a href="https://profilo.xyz/Rabiot/service/ecommerce-website/64">Ecommerce Website</a>
             </h4>
             <p>
               There are many variations of passages of Lorem Ipsum available,
@@ -182,22 +146,13 @@
         </div>
         <div class="col-lg-4 col-md-6 col-sm-10">
           <div class="service-box-one mt-30">
-            <a
-              class="service-thumb"
-              href="https://profilo.xyz/Rabiot/service/logo-design/65"
-            >
-              <img
-                data-src="https://profilo.xyz/assets/front/img/user/services/1627283873.jpg"
-                class="lazy entered loaded"
-                alt=""
-                data-ll-status="loaded"
-                src="https://profilo.xyz/assets/front/img/user/services/1627283873.jpg"
-              />
+            <a class="service-thumb" href="https://profilo.xyz/Rabiot/service/logo-design/65">
+              <img data-src="https://profilo.xyz/assets/front/img/user/services/1627283873.jpg"
+                class="lazy entered loaded" alt="" data-ll-status="loaded"
+                src="https://profilo.xyz/assets/front/img/user/services/1627283873.jpg" />
             </a>
             <h4 class="title">
-              <a href="https://profilo.xyz/Rabiot/service/logo-design/65"
-                >Logo Design</a
-              >
+              <a href="https://profilo.xyz/Rabiot/service/logo-design/65">Logo Design</a>
             </h4>
             <p>
               There are many variations of passages of Lorem Ipsum available,
@@ -207,22 +162,13 @@
         </div>
         <div class="col-lg-4 col-md-6 col-sm-10">
           <div class="service-box-one mt-30">
-            <a
-              class="service-thumb"
-              href="https://profilo.xyz/Rabiot/service/html-templates/66"
-            >
-              <img
-                data-src="https://profilo.xyz/assets/front/img/user/services/1627283902.jpg"
-                class="lazy entered loaded"
-                alt=""
-                data-ll-status="loaded"
-                src="https://profilo.xyz/assets/front/img/user/services/1627283902.jpg"
-              />
+            <a class="service-thumb" href="https://profilo.xyz/Rabiot/service/html-templates/66">
+              <img data-src="https://profilo.xyz/assets/front/img/user/services/1627283902.jpg"
+                class="lazy entered loaded" alt="" data-ll-status="loaded"
+                src="https://profilo.xyz/assets/front/img/user/services/1627283902.jpg" />
             </a>
             <h4 class="title">
-              <a href="https://profilo.xyz/Rabiot/service/html-templates/66"
-                >HTML Templates</a
-              >
+              <a href="https://profilo.xyz/Rabiot/service/html-templates/66">HTML Templates</a>
             </h4>
             <p>
               There are many variations of passages of Lorem Ipsum available,
@@ -250,14 +196,9 @@
         <div class="row justify-content-between">
           <div class="col-lg-6 md-gap-80">
             <h4 class="experience-wrapper-title">
-              <span
-                ><img
-                  class="lazy entered loaded"
-                  data-src="https://profilo.xyz/assets/front/img/profile1/education.png"
-                  alt=""
-                  data-ll-status="loaded"
-                  src="https://profilo.xyz/assets/front/img/profile1/education.png"
-              /></span>
+              <span><img class="lazy entered loaded"
+                  data-src="https://profilo.xyz/assets/front/img/profile1/education.png" alt="" data-ll-status="loaded"
+                  src="https://profilo.xyz/assets/front/img/profile1/education.png" /></span>
               Education
             </h4>
             <div class="experience-list">
@@ -292,14 +233,8 @@
           </div>
           <div class="col-lg-6">
             <h4 class="experience-wrapper-title">
-              <span
-                ><img
-                  class="lazy entered loaded"
-                  data-src="https://profilo.xyz/assets/front/img/profile1/job.png"
-                  alt=""
-                  data-ll-status="loaded"
-                  src="https://profilo.xyz/assets/front/img/profile1/job.png"
-              /></span>
+              <span><img class="lazy entered loaded" data-src="https://profilo.xyz/assets/front/img/profile1/job.png"
+                  alt="" data-ll-status="loaded" src="https://profilo.xyz/assets/front/img/profile1/job.png" /></span>
               Job
             </h4>
             <div class="experience-list">
@@ -339,14 +274,10 @@
   <!--====== Experience Section End ======-->
 
   <!--====== Counter Section Start ======-->
-  <section
-    class="counter-section lazy entered loaded"
-    data-bg="https://profilo.xyz/assets/front/img/user/home_settings/60fe5a94d25ab.jpg"
-    data-ll-status="loaded"
-    style="
+  <section class="counter-section lazy entered loaded"
+    data-bg="https://profilo.xyz/assets/front/img/user/home_settings/60fe5a94d25ab.jpg" data-ll-status="loaded" style="
       background-image: url('https://profilo.xyz/assets/front/img/user/home_settings/60fe5a94d25ab.jpg');
-    "
-  >
+    ">
     <div class="container">
       <div class="row">
         <div class="col-lg-3 col-md-6 col-sm-6">
