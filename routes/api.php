@@ -26,12 +26,13 @@ Route::group(["middleware" => ["auth:sanctum"]], function () {
     Route::get('/get-user', [UserController::class, "getUser"]);
 
     // Coach
-    Route::put("coaches/profile/add-education", [CoachController::class, 'addEducation']);
+    Route::post("coaches/profile/add-education", [CoachController::class, 'addEducation']);
     Route::put("coaches/profile/update-education/{id}", [CoachController::class, 'updateEducation']);
-    Route::put("coaches/profile/add-experience", [CoachController::class, 'addExperience']);
+    Route::post("coaches/profile/add-experience", [CoachController::class, 'addExperience']);
     Route::put("coaches/profile/update-experience", [CoachController::class, 'updateExperience']);
     Route::put("coaches/profile/add-owner", [CoachController::class, 'addOwner']);
-    Route::put("coaches/profile/update-owner/{id}", [CoachController::class, 'updateOwner']);
+    Route::get("coaches/{id}/get/profile", [CoachController::class, 'show']);
+    Route::put("coaches/{id}/update/profile", [CoachController::class, 'updateProfile']);
 
     Route::post('/logout', [LoginController::class, "logout"]);
 });

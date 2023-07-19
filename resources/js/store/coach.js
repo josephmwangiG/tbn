@@ -4,12 +4,31 @@ import { defineStore } from "pinia";
 export const useCoachStore = defineStore("coach", {
     state: () => ({
         coaches: null,
+        coach: null,
+        headers: {
+            headers: {
+                Authorization: "Bearer " + localStorage.getItem("token"),
+            },
+        },
     }),
     actions: {
         async getCoaches() {
             try {
                 let response = await axios.get("coaches");
                 this.coaches = response.data.coaches;
+                return true;
+            } catch (e) {
+                return e.response;
+            }
+        },
+
+        async getCoachProfile(id) {
+            try {
+                let response = await axios.get(
+                    "coaches/" + id + "/get/profile",
+                    this.headers
+                );
+                this.coach = response.data.coach;
                 return true;
             } catch (e) {
                 return e.response;
@@ -23,9 +42,14 @@ export const useCoachStore = defineStore("coach", {
                 return e.response;
             }
         },
-        async editCoachProfile(form) {
+        async updateCoachProfile(form) {
             try {
-                let response = await axios.put("coaches/" + form.id, form);
+                let response = await axios.put(
+                    "coaches/" + form.id + "/update/profile",
+                    form,
+                    this.headers
+                );
+                this.coach = response.data.coach;
                 return true;
             } catch (e) {
                 return e.response;
@@ -35,7 +59,8 @@ export const useCoachStore = defineStore("coach", {
             try {
                 let response = await axios.post(
                     "coaches/profile/add-education",
-                    form
+                    form,
+                    this.headers
                 );
                 return true;
             } catch (e) {
@@ -46,7 +71,8 @@ export const useCoachStore = defineStore("coach", {
             try {
                 let response = await axios.put(
                     "coaches/profile/edit-education/" + form.id,
-                    form
+                    form,
+                    this.headers
                 );
                 return true;
             } catch (e) {
@@ -57,7 +83,8 @@ export const useCoachStore = defineStore("coach", {
             try {
                 let response = await axios.post(
                     "coaches/profile/add-experience",
-                    form
+                    form,
+                    this.headers
                 );
                 return true;
             } catch (e) {
@@ -68,7 +95,8 @@ export const useCoachStore = defineStore("coach", {
             try {
                 let response = await axios.put(
                     "coaches/profile/edit-experience/" + form.id,
-                    form
+                    form,
+                    this.headers
                 );
                 return true;
             } catch (e) {
