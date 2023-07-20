@@ -38,4 +38,14 @@ class Coach extends Model
     {
         return $this->hasMany(Experience::class, 'coach_id');
     }
+
+    public function educations()
+    {
+        return $this->hasMany(Education::class, 'coach_id');
+    }
+
+    public function experiences()
+    {
+        return $this->hasMany(Experience::class, 'coach_id');
+    }
 }

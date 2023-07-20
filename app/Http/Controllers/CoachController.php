@@ -69,9 +69,13 @@ class CoachController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(Coach $coach)
+    public function show($id)
     {
-        //
+        $coach = Coach::where('id', $id)
+            ->with('user', 'educations', 'experiences')
+            ->first();
+
+        return response(['coach' => $coach], 200);
     }
 
     /**
@@ -125,24 +129,50 @@ class CoachController extends Controller
 
         return response(["success" => "Success"], 200);
     }
+    public function updateProfile(Request $request, $id)
+    {
+        $data = $request->validate([
+            "name" => 'required',
+            "highest_level_of_education" => '',
+            "description" => '',
+            "website" => '',
+            "phone_number" => 'required',
+            "specialization" => 'required',
+            "current_employment" => '',
+            "current_employer" => '',
+            "ye" => '',
+        ]);
+
+        $coach = Coach::find($id);
+
+        DB::transaction(function () use ($data, $coach) {
+            $coach->update($data);
+        });
+
+        $coach = Coach::where('id', $id)
+            ->with('educations', 'experiences', 'user')
+            ->first();
+
+        return response(["success" => "Success", "coach" => $coach], 200);
+    }
 
 
     public function addEducation(Request $request)
     {
         $data = $request->validate([
             "institution" => 'required',
-            "program" => 'required|unique:users',
+            "program" => '',
             "certificate" => 'required',
             "start_date" => '',
             "description" => '',
             "completion_date" => '',
-            "currently_enrolled" => 'required',
+            "currently_enrolled" => '',
         ]);
 
         DB::transaction(function () use ($data) {
             $user  = Request()->user();
 
-            $data['coach_id'] = $user->coach->id;
+            $data['coach_id'] = $user->coachProfile->id;
 
             Education::create($data);
         });
@@ -177,6 +207,7 @@ class CoachController extends Controller
         return response(["success" => "Success"], 200);
     }
 
+<<<<<<< HEAD
     public function addExperience(Request $request)
     {
         $data = $request->validate([
@@ -187,18 +218,35 @@ class CoachController extends Controller
             "description" => '',
             "completion_date" => '',
             "currently_enrolled" => 'required',
+=======
+
+    public function addExperience(Request $request)
+    {
+        $data = $request->validate([
+            "employer" => 'required',
+            "job_title" => '',
+            "start_date" => '',
+            "end_date" => '',
+            "description" => '',
+            "current_job" => '',
+>>>>>>> e2d8be40585dac585685353618c4bc1246b0bfb9
         ]);
 
         DB::transaction(function () use ($data) {
             $user  = Request()->user();
 
+<<<<<<< HEAD
             $data['coach_id'] = $user->coach->id;
+=======
+            $data['coach_id'] = $user->coachProfile->id;
+>>>>>>> e2d8be40585dac585685353618c4bc1246b0bfb9
 
             Experience::create($data);
         });
 
         return response(["success" => "Success"], 200);
     }
+<<<<<<< HEAD
 
     public function updateExperience(Request $request, $id)
     {
@@ -228,6 +276,8 @@ class CoachController extends Controller
     }
 
 
+=======
+>>>>>>> e2d8be40585dac585685353618c4bc1246b0bfb9
     /**
      * Remove the specified resource from storage.
      */
