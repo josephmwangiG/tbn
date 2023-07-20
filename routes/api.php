@@ -22,6 +22,8 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::post("/login", [LoginController::class, 'authenticate']);
+Route::get("coaches/{id}/view/profile", [CoachController::class, 'show']);
+
 Route::group(["middleware" => ["auth:sanctum"]], function () {
     Route::get('/get-user', [UserController::class, "getUser"]);
     Route::put('/businesses/{id}/update/profile', [BusinessController::class, "updateProfile"]);
