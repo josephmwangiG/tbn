@@ -77,7 +77,9 @@
                 </div>
               </div>
               <div class="form_group">
-                <button class="main-btn">LOG IN</button>
+                <button :disabled="loading" class="main-btn">
+                  {{ loading ? "Processing..." : "LOG IN" }}
+                </button>
               </div>
             </form>
           </div>
@@ -98,9 +100,11 @@ const router = useRouter();
 const form = ref({ email: "", password: "" });
 const errors = ref({});
 const incorrectCredential = ref(false);
+const loading = ref(false);
 const message = ref("");
 
 const login = async () => {
+  loading.value = true;
   let response = await store.login(form.value);
   if (response.status == true) {
     if (response.message != null) {
@@ -129,6 +133,8 @@ const login = async () => {
   } else {
     errors.value = response.data.errors;
   }
+
+  loading.value = false;
 };
 </script>
 <style lang="">

@@ -26,7 +26,7 @@
       <div class="d-flex justify-content-between">
         <h3>Edit Profile</h3>
 
-        <router-link :to="{ name: 'coach-profile' }" class="main-btn">
+        <router-link :to="{ name: 'profile' }" class="main-btn">
           <i class="ri-user-line"></i> Profile</router-link
         >
       </div>
@@ -164,7 +164,9 @@
                 </div>
 
                 <div class="form-group col-lg-12">
-                  <button type="submit" class="main-btn">Update Profile</button>
+                  <button type="submit" :disabled="loading" class="main-btn">
+                    {{ loading ? "Processing..." : "Update Profile" }}
+                  </button>
                 </div>
               </div>
             </form>
@@ -226,7 +228,13 @@
                 </div>
 
                 <div class="form-group col-lg-2 text-right">
-                  <button type="submit" class="main-btn mt-4">Save</button>
+                  <button
+                    type="submit"
+                    class="main-btn mt-4"
+                    :disabled="loading"
+                  >
+                    {{ loading ? "Processing..." : "Save" }}
+                  </button>
                 </div>
               </div>
             </form>
@@ -280,7 +288,9 @@
                   />
                 </div>
                 <div class="form-group col-lg-12">
-                  <button type="submit" class="main-btn">Save</button>
+                  <button type="submit" class="main-btn" :disabled="loading">
+                    {{ loading ? "Processing..." : "Save" }}
+                  </button>
                 </div>
               </div>
             </form>
@@ -304,6 +314,7 @@ const businessStore = useBusinessStore();
 let errors = ref({});
 const activeName = ref("profile");
 let addingOwner = ref(false);
+let loading = ref(false);
 
 const revenue = ref("");
 
@@ -312,6 +323,7 @@ let form = ref({});
 let ownerForm = ref({});
 
 const addBusinessOwner = async () => {
+  loading.value = true;
   let response = await businessStore.addBusinessOwner(ownerForm.value);
 
   if (response == true) {
@@ -326,9 +338,12 @@ const addBusinessOwner = async () => {
   } else {
     errors.value = response.data.errors;
   }
+
+  loading.value = false;
 };
 
 const updateBusinessProfile = async () => {
+  loading.value = true;
   let response = await businessStore.updateBusinessProfile(form.value);
 
   if (response == true) {
@@ -341,6 +356,8 @@ const updateBusinessProfile = async () => {
   } else {
     errors.value = response.data.errors;
   }
+
+  loading.value = false;
 };
 
 onMounted(async () => {
