@@ -66,7 +66,10 @@
               <li class="menu-item">
                 <router-link :to="{ name: 'contacts' }">Contact</router-link>
               </li>
-              <li class="menu-item d-xl-none d-block" v-if="store.user == null">
+              <li
+                class="menu-item d-xl-none d-block"
+                v-if="store.user == 'NONE'"
+              >
                 <router-link :to="{ name: 'login' }">Login</router-link>
               </li>
               <li class="menu-item d-xl-none d-block" v-else>
@@ -93,14 +96,15 @@
               <router-link
                 :to="{ name: 'login' }"
                 class="main-btn"
-                v-if="store.user == null"
+                v-if="store.user == 'NONE'"
                 ><i class="fal fa-sign-in-alt"></i>Login</router-link
               >
               <router-link
                 :to="{ name: 'profile' }"
                 class="main-btn"
                 v-if="
-                  store.user != null && store.user.user.user_type == 'Business'
+                  store.user != 'NONE' &&
+                  store.user.user.user_type == 'Business'
                 "
               >
                 <i class="ri-user-line"></i> Profile</router-link
@@ -109,7 +113,7 @@
                 :to="{ name: 'coach-profile' }"
                 class="main-btn"
                 v-if="
-                  store.user != null && store.user.user.user_type == 'Coach'
+                  store.user != 'NONE' && store.user.user.user_type == 'Coach'
                 "
               >
                 <i class="ri-user-line"></i> Profile</router-link
@@ -118,7 +122,7 @@
                 href="#"
                 class="main-btn bg-danger ml-2"
                 @click="logout"
-                v-if="store.user != null"
+                v-if="store.user != 'NONE'"
                 ><i class="ri-power-line"></i>Logout</a
               >
             </div>
@@ -136,6 +140,7 @@
 <script setup>
 import { useAuthStore } from "@/store/auth.js";
 import { ElNotification } from "element-plus";
+import { onMounted } from "vue";
 
 import { useRoute } from "vue-router";
 import axios from "axios";
@@ -164,6 +169,8 @@ const logout = async () => {
     }
   } catch (e) {}
 };
+
+onMounted(async () => {});
 </script>
 <style>
 .dd-trigger .fas.fa-angle-down {
