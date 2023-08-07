@@ -39,6 +39,18 @@ export const useBusinessStore = defineStore("business", {
                 return e.response;
             }
         },
+        async getBusinessProfile(id) {
+            try {
+                let response = await axios.get(
+                    "businesses/" + id + "/get/profile",
+                    this.headers
+                );
+                this.business = response.data.business;
+                return true;
+            } catch (e) {
+                return e.response;
+            }
+        },
         async updateBusinessProfile(form) {
             try {
                 let response = await axios.put(

@@ -31,7 +31,7 @@ class LoginController extends Controller
 
         if (Auth::attempt($credentials)) {
             // Authentication passed...
-            $user = User::where(['email' => $credentials['email']])->first();
+            $user = User::where(['email' => $credentials['email']])->with('coachProfile.educations', 'coachProfile.experiences', 'businessProfile.owners', 'businessProfile.bookings')->first();
             $token = $user->createToken('authentication', ['All'])->plainTextToken;
 
             if ($user->status == "Inactive") {

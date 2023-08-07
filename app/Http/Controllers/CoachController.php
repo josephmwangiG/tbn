@@ -222,7 +222,7 @@ class CoachController extends Controller
         DB::transaction(function () use ($data) {
             $user  = Request()->user();
 
-            $data['coach_id'] = $user->coach->id;
+            $data['coach_id'] = $user->coachProfile->id;
 
             Experience::create($data);
         });

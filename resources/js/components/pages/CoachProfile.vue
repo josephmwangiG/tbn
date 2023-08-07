@@ -1,8 +1,12 @@
 <template>
-  <section class="breadcrumbs-section bg_cover lazy entered loaded"
-    data-bg="https://profilo.xyz/assets/front/img/60ea8dcf724d7.jpg" data-ll-status="loaded" style="
+  <section
+    class="breadcrumbs-section bg_cover lazy entered loaded"
+    data-bg="https://profilo.xyz/assets/front/img/60ea8dcf724d7.jpg"
+    data-ll-status="loaded"
+    style="
       background-image: url('https://profilo.xyz/assets/front/img/60ea8dcf724d7.jpg');
-    ">
+    "
+  >
     <div class="container">
       <div class="row justify-content-center">
         <div class="col-lg-12">
@@ -18,36 +22,49 @@
     </div>
   </section>
   <!--====== About Section Start ======-->
-  <section class="about-section mt-5" id="about">
+  <section
+    class="about-section mt-5"
+    id="about"
+    v-if="coachStore.coach != null"
+  >
     <div class="container">
       <div class="row align-items-center justify-content-center">
         <div class="col-lg-6 col-sm-9">
           <div class="block-img text-center pr-0 pr-lg-5 md-gap-50">
-            <img data-src="https://profilo.xyz/assets/front/img/user/home_settings/60fe5a0ff1573.png"
-              class="animate-float-bob-y lazy entered loaded" alt="About Image" data-ll-status="loaded"
-              src="https://profilo.xyz/assets/front/img/user/home_settings/60fe5a0ff1573.png" />
+            <img
+              data-src="https://profilo.xyz/assets/front/img/user/home_settings/60fe5a0ff1573.png"
+              class="animate-float-bob-y lazy entered loaded"
+              alt="About Image"
+              data-ll-status="loaded"
+              src="https://profilo.xyz/assets/front/img/user/home_settings/60fe5a0ff1573.png"
+            />
           </div>
         </div>
         <div class="col-lg-6 col-md-10">
           <div class="about-content">
             <div class="common-heading mb-30">
-              <span class="tagline">Joseph Mwangi</span>
-              <h2 class="title">About Me</h2>
+              <span class="tagline">{{ coachStore.coach.name }}</span>
+              <h2 class="title">Profile Summary</h2>
             </div>
             <p class="mb-30">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis at
-              est id leo luctus gravida a in ipsum. Vivamus vel molestie nisi.
-              Aliquam maximus maximus velit, id scelerisque urna elementum nec.
-              Aenean laoreet bibendum tellus sed tincidunt. Proin commodo
-              blandit gravida. Etiam sollicitudin aliquet vehicula. Morbi ante
-              libero, porttitor ut sodales non, gravida at lacus.
-
+              {{ coachStore.coach.description }}
             </p>
-            <router-link :to="{ name: 'edit-coach-profile' }" class="template-btn"
-              v-if="route.name != 'view-coach-profile'">
-              Edit Profile</router-link>
-            <router-link :to="{ name: 'book-coach' }" class="template-btn" v-if="route.name == 'view-coach-profile'">
-              Book</router-link>
+            <router-link
+              :to="{ name: 'edit-coach-profile' }"
+              class="template-btn"
+              v-if="
+                token && store.user.user.coach_profile.id == coachStore.coach.id
+              "
+            >
+              Edit Profile</router-link
+            >
+            <router-link
+              :to="{ name: 'book-coach' }"
+              class="template-btn"
+              v-if="route.name == 'view-coach-profile'"
+            >
+              Book</router-link
+            >
           </div>
         </div>
       </div>
@@ -56,14 +73,22 @@
   <!--====== End Text Block ======-->
 
   <!--====== Skill Section Start ======-->
-  <section class="skill-section section-gap" id="skill">
+  <section
+    class="skill-section section-gap"
+    id="skill"
+    v-if="coachStore.coach != null"
+  >
     <div class="container">
       <div class="row align-items-center justify-content-center">
         <div class="col-lg-6 order-lg-last col-sm-9">
           <div class="block-img pl-0 pl-xl-5 md-gap-50">
-            <img data-src="https://profilo.xyz/assets/front/img/user/home_settings/60fe5a0ff1a9c.png"
-              class="animate-float-bob-y lazy entered loaded" alt="Image" data-ll-status="loaded"
-              src="https://profilo.xyz/assets/front/img/user/home_settings/60fe5a0ff1a9c.png" />
+            <img
+              data-src="https://profilo.xyz/assets/front/img/user/home_settings/60fe5a0ff1a9c.png"
+              class="animate-float-bob-y lazy entered loaded"
+              alt="Image"
+              data-ll-status="loaded"
+              src="https://profilo.xyz/assets/front/img/user/home_settings/60fe5a0ff1a9c.png"
+            />
           </div>
         </div>
         <div class="col-lg-6 order-lg-first col-md-10">
@@ -83,7 +108,10 @@
                 <h6 class="title">HTML5</h6>
                 <div class="progress-bar-wrap">
                   <div class="progress-line">
-                    <div class="line" style="background-color: rgb(75, 56, 105); width: 80%"></div>
+                    <div
+                      class="line"
+                      style="background-color: rgb(75, 56, 105); width: 80%"
+                    ></div>
                   </div>
                   <div class="counter-wrap">
                     <span class="count">80</span>
@@ -95,7 +123,10 @@
                 <h6 class="title">CSS3</h6>
                 <div class="progress-bar-wrap">
                   <div class="progress-line">
-                    <div class="line" style="background-color: rgb(20, 39, 155); width: 70%"></div>
+                    <div
+                      class="line"
+                      style="background-color: rgb(20, 39, 155); width: 70%"
+                    ></div>
                   </div>
                   <div class="counter-wrap">
                     <span class="count">70</span>
@@ -107,7 +138,10 @@
                 <h6 class="title">Laravel</h6>
                 <div class="progress-bar-wrap">
                   <div class="progress-line">
-                    <div class="line" style="background-color: rgb(224, 36, 1); width: 90%"></div>
+                    <div
+                      class="line"
+                      style="background-color: rgb(224, 36, 1); width: 90%"
+                    ></div>
                   </div>
                   <div class="counter-wrap">
                     <span class="count">90</span>
@@ -124,7 +158,11 @@
   <!--====== Skill Section End ======-->
 
   <!--====== Service Section Start ======-->
-  <section class="service-section section-gap bg-offwhite-color" id="service">
+  <section
+    class="service-section section-gap bg-offwhite-color"
+    id="service"
+    v-if="coachStore.coach != null"
+  >
     <div class="container">
       <div class="common-heading text-center mb-20">
         <span class="tagline">Service</span>
@@ -134,13 +172,22 @@
       <div class="row service-boxes justify-content-center">
         <div class="col-lg-4 col-md-6 col-sm-10">
           <div class="service-box-one mt-30">
-            <a class="service-thumb" href="https://profilo.xyz/Rabiot/service/ecommerce-website/64">
-              <img data-src="https://profilo.xyz/assets/front/img/user/services/1627283854.jpg"
-                class="lazy entered loaded" alt="" data-ll-status="loaded"
-                src="https://profilo.xyz/assets/front/img/user/services/1627283854.jpg" />
+            <a
+              class="service-thumb"
+              href="https://profilo.xyz/Rabiot/service/ecommerce-website/64"
+            >
+              <img
+                data-src="https://profilo.xyz/assets/front/img/user/services/1627283854.jpg"
+                class="lazy entered loaded"
+                alt=""
+                data-ll-status="loaded"
+                src="https://profilo.xyz/assets/front/img/user/services/1627283854.jpg"
+              />
             </a>
             <h4 class="title">
-              <a href="https://profilo.xyz/Rabiot/service/ecommerce-website/64">Ecommerce Website</a>
+              <a href="https://profilo.xyz/Rabiot/service/ecommerce-website/64"
+                >Ecommerce Website</a
+              >
             </h4>
             <p>
               There are many variations of passages of Lorem Ipsum available,
@@ -150,13 +197,22 @@
         </div>
         <div class="col-lg-4 col-md-6 col-sm-10">
           <div class="service-box-one mt-30">
-            <a class="service-thumb" href="https://profilo.xyz/Rabiot/service/logo-design/65">
-              <img data-src="https://profilo.xyz/assets/front/img/user/services/1627283873.jpg"
-                class="lazy entered loaded" alt="" data-ll-status="loaded"
-                src="https://profilo.xyz/assets/front/img/user/services/1627283873.jpg" />
+            <a
+              class="service-thumb"
+              href="https://profilo.xyz/Rabiot/service/logo-design/65"
+            >
+              <img
+                data-src="https://profilo.xyz/assets/front/img/user/services/1627283873.jpg"
+                class="lazy entered loaded"
+                alt=""
+                data-ll-status="loaded"
+                src="https://profilo.xyz/assets/front/img/user/services/1627283873.jpg"
+              />
             </a>
             <h4 class="title">
-              <a href="https://profilo.xyz/Rabiot/service/logo-design/65">Logo Design</a>
+              <a href="https://profilo.xyz/Rabiot/service/logo-design/65"
+                >Logo Design</a
+              >
             </h4>
             <p>
               There are many variations of passages of Lorem Ipsum available,
@@ -166,13 +222,22 @@
         </div>
         <div class="col-lg-4 col-md-6 col-sm-10">
           <div class="service-box-one mt-30">
-            <a class="service-thumb" href="https://profilo.xyz/Rabiot/service/html-templates/66">
-              <img data-src="https://profilo.xyz/assets/front/img/user/services/1627283902.jpg"
-                class="lazy entered loaded" alt="" data-ll-status="loaded"
-                src="https://profilo.xyz/assets/front/img/user/services/1627283902.jpg" />
+            <a
+              class="service-thumb"
+              href="https://profilo.xyz/Rabiot/service/html-templates/66"
+            >
+              <img
+                data-src="https://profilo.xyz/assets/front/img/user/services/1627283902.jpg"
+                class="lazy entered loaded"
+                alt=""
+                data-ll-status="loaded"
+                src="https://profilo.xyz/assets/front/img/user/services/1627283902.jpg"
+              />
             </a>
             <h4 class="title">
-              <a href="https://profilo.xyz/Rabiot/service/html-templates/66">HTML Templates</a>
+              <a href="https://profilo.xyz/Rabiot/service/html-templates/66"
+                >HTML Templates</a
+              >
             </h4>
             <p>
               There are many variations of passages of Lorem Ipsum available,
@@ -186,7 +251,15 @@
   <!--====== Service Section End ======-->
 
   <!--====== Experience Section Start ======-->
-  <section class="experience-section section-gap" id="experience">
+  <section
+    class="experience-section section-gap"
+    id="experience"
+    v-if="
+      coachStore.coach &&
+      (coachStore.coach.educations.length > 0 ||
+        coachStore.coach.experiences.length > 0)
+    "
+  >
     <div class="container">
       <div class="row justify-content-center">
         <div class="col-lg-6 col-md-9">
@@ -198,15 +271,27 @@
       </div>
       <div class="experience-wrapper boxed-wrapper">
         <div class="row justify-content-between">
-          <div class="col-lg-6 md-gap-80">
+          <div
+            class="col-lg-6 md-gap-80"
+            v-if="coachStore.coach.educations.length > 0"
+          >
             <h4 class="experience-wrapper-title">
-              <span><img class="lazy entered loaded"
-                  data-src="https://profilo.xyz/assets/front/img/profile1/education.png" alt="" data-ll-status="loaded"
-                  src="https://profilo.xyz/assets/front/img/profile1/education.png" /></span>
+              <span
+                ><img
+                  class="lazy entered loaded"
+                  data-src="https://profilo.xyz/assets/front/img/profile1/education.png"
+                  alt=""
+                  data-ll-status="loaded"
+                  src="https://profilo.xyz/assets/front/img/profile1/education.png"
+              /></span>
               Education
             </h4>
             <div class="experience-list">
-              <div class="single-experience">
+              <div
+                class="single-experience"
+                v-for="(item, index) in coachStore.coach.educations"
+                :key="index"
+              >
                 <h5 class="title">Bachelor of Science</h5>
                 <span class="duration"> Jan 18, 2013 - Nov 28, 2017 </span>
                 <p>
@@ -215,58 +300,32 @@
                   form, by injected humour, or randomised
                 </p>
               </div>
-              <div class="single-experience">
-                <h5 class="title">Higher Secondary School Certificate</h5>
-                <span class="duration"> Jan 1, 2011 - Dec 14, 2012 </span>
-                <p>
-                  Lorem Ipsum is simply dummy text of the printing and
-                  typesetting industry. Lorem Ipsum has been the industry's
-                  standard dummy text ever since the 1500s
-                </p>
-              </div>
-              <div class="single-experience">
-                <h5 class="title">Secondary School Certificate</h5>
-                <span class="duration"> Jan 26, 2001 - Dec 28, 2010 </span>
-                <p>
-                  It is a long established fact that a reader will be distracted
-                  by the readable content of a page when looking at its layout.
-                  The point of using Lorem Ipsum is that it
-                </p>
-              </div>
             </div>
           </div>
-          <div class="col-lg-6">
+          <div class="col-lg-6" v-if="coachStore.coach.experiences.length > 0">
             <h4 class="experience-wrapper-title">
-              <span><img class="lazy entered loaded" data-src="https://profilo.xyz/assets/front/img/profile1/job.png"
-                  alt="" data-ll-status="loaded" src="https://profilo.xyz/assets/front/img/profile1/job.png" /></span>
+              <span
+                ><img
+                  class="lazy entered loaded"
+                  data-src="https://profilo.xyz/assets/front/img/profile1/job.png"
+                  alt=""
+                  data-ll-status="loaded"
+                  src="https://profilo.xyz/assets/front/img/profile1/job.png"
+              /></span>
               Job
             </h4>
             <div class="experience-list">
-              <div class="single-experience">
+              <div
+                class="single-experience"
+                v-for="(item, index) in coachStore.coach.experiences"
+                :key="index"
+              >
                 <h5 class="title">Laravel Developer [ABC Group]</h5>
                 <span class="duration"> Jul 1, 2021 - Present </span>
                 <p>
                   Contrary to popular belief, Lorem Ipsum is not simply random
                   text. It has roots in a piece of classical Latin literature
                   from 45 BC, making it over 2000 years old.
-                </p>
-              </div>
-              <div class="single-experience">
-                <h5 class="title">Full-stack Developer [XYZsoft LTD]</h5>
-                <span class="duration"> Feb 26, 2020 - Jun 9, 2021 </span>
-                <p>
-                  There are many variations of passages of Lorem Ipsum
-                  available, but the majority have suffered alteration in some
-                  form, by injected humour, or randomised words
-                </p>
-              </div>
-              <div class="single-experience">
-                <h5 class="title">Frontend Designer [MNO Tech]</h5>
-                <span class="duration"> Feb 26, 2020 - Mar 9, 2020 </span>
-                <p>
-                  It is a long established fact that a reader will be distracted
-                  by the readable content of a page when looking at its layout.
-                  The point of using Lorem Ipsum is that it
                 </p>
               </div>
             </div>
@@ -278,10 +337,14 @@
   <!--====== Experience Section End ======-->
 
   <!--====== Counter Section Start ======-->
-  <section class="counter-section lazy entered loaded"
-    data-bg="https://profilo.xyz/assets/front/img/user/home_settings/60fe5a94d25ab.jpg" data-ll-status="loaded" style="
+  <section
+    class="counter-section lazy entered loaded"
+    data-bg="https://profilo.xyz/assets/front/img/user/home_settings/60fe5a94d25ab.jpg"
+    data-ll-status="loaded"
+    style="
       background-image: url('https://profilo.xyz/assets/front/img/user/home_settings/60fe5a94d25ab.jpg');
-    ">
+    "
+  >
     <div class="container">
       <div class="row">
         <div class="col-lg-3 col-md-6 col-sm-6">
@@ -325,12 +388,35 @@
   </section>
 </template>
 <script setup>
-import { useRoute } from 'vue-router'
+import { useRoute, useRouter } from "vue-router";
+import { onMounted } from "vue";
+import { useCoachStore } from "@/store/coach.js";
+import { useAuthStore } from "@/store/auth.js";
 
-const route = useRoute()
+const store = useAuthStore();
 
-console.log(route.name);
+const route = useRoute();
+const router = useRouter();
+const coachStore = useCoachStore();
 
+const token = localStorage.getItem("token");
+
+onMounted(async () => {
+  if (route.name == "view-coach-profile") {
+    await coachStore.viewCoachProfile(route.params.id);
+  } else {
+    if (localStorage.getItem("token")) {
+      let response = await coachStore.getCoachProfile(
+        store.user.user.coach_profile.id
+      );
+      if (response !== true) {
+        router.push({ name: "login" });
+      }
+    } else {
+      router.push({ name: "login" });
+    }
+  }
+});
 </script>
 <style lang="">
 </style>

@@ -34,6 +34,17 @@ export const useCoachStore = defineStore("coach", {
                 return e.response;
             }
         },
+        async viewCoachProfile(id) {
+            try {
+                let response = await axios.get(
+                    "coaches/" + id + "/view/profile"
+                );
+                this.coach = response.data.coach;
+                return true;
+            } catch (e) {
+                return e.response;
+            }
+        },
         async addCoach(form) {
             try {
                 let response = await axios.post("coaches", form);

@@ -141,8 +141,6 @@ $(function () {
 
     //===== Magnific Popup
 
-
-
     //===== Back to top
 
     $(window).on("scroll", function (event) {
@@ -163,127 +161,6 @@ $(function () {
             },
             1500
         );
-    });
-
-    //  Slick Slider js
-    $(".work-slide").slick({
-        dots: false,
-        arrows: false,
-        infinite: true,
-        autoplay: true,
-        speed: 2000,
-        slidesToShow: 4,
-        slidesToScroll: 1,
-        rtl: rtl == 1 ? true : false,
-        responsive: [
-            {
-                breakpoint: 1200,
-                settings: {
-                    slidesToShow: 3,
-                },
-            },
-            {
-                breakpoint: 768,
-                settings: {
-                    slidesToShow: 2,
-                },
-            },
-            {
-                breakpoint: 480,
-                settings: {
-                    slidesToShow: 1,
-                },
-            },
-        ],
-    });
-    $(".user-slide").slick({
-        dots: false,
-        arrows: false,
-        infinite: true,
-        autoplay: true,
-        slidesToShow: 3,
-        slidesToScroll: 1,
-        rtl: rtl == 1 ? true : false,
-        responsive: [
-            {
-                breakpoint: 1200,
-                settings: {
-                    slidesToShow: 2,
-                },
-            },
-            {
-                breakpoint: 768,
-                settings: {
-                    slidesToShow: 1,
-                },
-            },
-            {
-                breakpoint: 480,
-                settings: {
-                    slidesToShow: 1,
-                },
-            },
-        ],
-    });
-    $(".testimonial-slide").slick({
-        dots: false,
-        arrows: false,
-        infinite: true,
-        autoplay: true,
-        speed: 2000,
-        slidesToShow: 3,
-        slidesToScroll: 1,
-        rtl: rtl == 1 ? true : false,
-        responsive: [
-            {
-                breakpoint: 1200,
-                settings: {
-                    slidesToShow: 2,
-                },
-            },
-            {
-                breakpoint: 768,
-                settings: {
-                    slidesToShow: 1,
-                },
-            },
-            {
-                breakpoint: 480,
-                settings: {
-                    slidesToShow: 1,
-                },
-            },
-        ],
-    });
-    $(".sponsor-slide").slick({
-        dots: false,
-        arrows: false,
-        infinite: true,
-        autoplay: true,
-        speed: 2000,
-        slidesToShow: 4,
-        slidesToScroll: 1,
-        rtl: rtl == 1 ? true : false,
-        responsive: [
-            {
-                breakpoint: 1200,
-                settings: {
-                    slidesToShow: 3,
-                },
-            },
-            {
-                breakpoint: 768,
-                settings: {
-                    slidesToShow: 2,
-                },
-            },
-            {
-                breakpoint: 480,
-                settings: {
-                    slidesToShow: 1,
-                },
-            },
-        ],
     });
 
     // subscribe functionality
@@ -319,12 +196,6 @@ $(function () {
         });
     }
 
-    // jquery nice select js
-    $("select").niceSelect();
-
-    // wow min js
-    new WOW().init();
-
     $(".offer-timer").each(function () {
         let $this = $(this);
         let d = new Date($this.data("end_date"));
@@ -350,8 +221,6 @@ $(function () {
         });
     });
 
-    // lazy load init
-    var lazyLoadInstance = new LazyLoad();
 });
 
 //===== Prealoder
