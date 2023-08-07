@@ -31,7 +31,7 @@
         <div class="col-lg-6 col-md-10">
           <div class="about-content">
             <div class="common-heading mb-30">
-              <span class="tagline">Joseph Mwangi</span>
+              <span class="tagline">{{ businessStore }}</span>
               <h2 class="title">About Me</h2>
             </div>
             <p class="mb-30">
@@ -181,97 +181,7 @@
   </section>
   <!--====== Service Section End ======-->
 
-  <!--====== Experience Section Start ======-->
-  <section class="experience-section section-gap" id="experience">
-    <div class="container">
-      <div class="row justify-content-center">
-        <div class="col-lg-6 col-md-9">
-          <div class="common-heading text-center mb-50">
-            <span class="tagline">Experience</span>
-            <h2 class="title">Job and Educational Experiences</h2>
-          </div>
-        </div>
-      </div>
-      <div class="experience-wrapper boxed-wrapper">
-        <div class="row justify-content-between">
-          <div class="col-lg-6 md-gap-80">
-            <h4 class="experience-wrapper-title">
-              <span><img class="lazy entered loaded"
-                  data-src="https://profilo.xyz/assets/front/img/profile1/education.png" alt="" data-ll-status="loaded"
-                  src="https://profilo.xyz/assets/front/img/profile1/education.png" /></span>
-              Education
-            </h4>
-            <div class="experience-list">
-              <div class="single-experience">
-                <h5 class="title">Bachelor of Science</h5>
-                <span class="duration"> Jan 18, 2013 - Nov 28, 2017 </span>
-                <p>
-                  There are many variations of passages of Lorem Ipsum
-                  available, but the majority have suffered alteration in some
-                  form, by injected humour, or randomised
-                </p>
-              </div>
-              <div class="single-experience">
-                <h5 class="title">Higher Secondary School Certificate</h5>
-                <span class="duration"> Jan 1, 2011 - Dec 14, 2012 </span>
-                <p>
-                  Lorem Ipsum is simply dummy text of the printing and
-                  typesetting industry. Lorem Ipsum has been the industry's
-                  standard dummy text ever since the 1500s
-                </p>
-              </div>
-              <div class="single-experience">
-                <h5 class="title">Secondary School Certificate</h5>
-                <span class="duration"> Jan 26, 2001 - Dec 28, 2010 </span>
-                <p>
-                  It is a long established fact that a reader will be distracted
-                  by the readable content of a page when looking at its layout.
-                  The point of using Lorem Ipsum is that it
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-6">
-            <h4 class="experience-wrapper-title">
-              <span><img class="lazy entered loaded" data-src="https://profilo.xyz/assets/front/img/profile1/job.png"
-                  alt="" data-ll-status="loaded" src="https://profilo.xyz/assets/front/img/profile1/job.png" /></span>
-              Job
-            </h4>
-            <div class="experience-list">
-              <div class="single-experience">
-                <h5 class="title">Laravel Developer [ABC Group]</h5>
-                <span class="duration"> Jul 1, 2021 - Present </span>
-                <p>
-                  Contrary to popular belief, Lorem Ipsum is not simply random
-                  text. It has roots in a piece of classical Latin literature
-                  from 45 BC, making it over 2000 years old.
-                </p>
-              </div>
-              <div class="single-experience">
-                <h5 class="title">Full-stack Developer [XYZsoft LTD]</h5>
-                <span class="duration"> Feb 26, 2020 - Jun 9, 2021 </span>
-                <p>
-                  There are many variations of passages of Lorem Ipsum
-                  available, but the majority have suffered alteration in some
-                  form, by injected humour, or randomised words
-                </p>
-              </div>
-              <div class="single-experience">
-                <h5 class="title">Frontend Designer [MNO Tech]</h5>
-                <span class="duration"> Feb 26, 2020 - Mar 9, 2020 </span>
-                <p>
-                  It is a long established fact that a reader will be distracted
-                  by the readable content of a page when looking at its layout.
-                  The point of using Lorem Ipsum is that it
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  <!--====== Experience Section End ======-->
+
 
   <!--====== Counter Section Start ======-->
   <section class="counter-section lazy entered loaded"
@@ -320,8 +230,67 @@
     </div>
   </section>
 </template>
-<script>
-export default {};
+<script setup>
+import { onMounted, ref, computed } from "vue";
+import { useRouter } from "vue-router";
+import { useAuthStore } from "@/store/auth.js";
+import { useBusinessStore } from "@/store/business.js";
+import { ElNotification } from "element-plus";
+
+const token = localStorage.getItem("token");
+const store = useAuthStore();
+const businessStore = useBusinessStore();
+let errors = ref({});
+const activeName = ref("profile");
+let addingOwner = ref(false);
+
+const revenue = ref("");
+
+let form = ref({});
+
+let ownerForm = ref({});
+
+const addBusinessOwner = async () => {
+  let response = await businessStore.addBusinessOwner(ownerForm.value);
+
+  if (response == true) {
+    ElNotification({
+      title: "Success",
+      type: "success",
+      message: "Record added",
+      duration: 2000,
+    });
+    addingOwner.value = false;
+    ownerForm.value = {};
+  } else {
+    errors.value = response.data.errors;
+  }
+};
+
+const updateBusinessProfile = async () => {
+  let response = await businessStore.updateBusinessProfile(form.value);
+
+  if (response == true) {
+    ElNotification({
+      title: "Success",
+      type: "success",
+      message: "Profile details updated.",
+      duration: 2000,
+    });
+  } else {
+    errors.value = response.data.errors;
+  }
+};
+
+onMounted(async () => {
+  if (store.user != null) {
+    await businessStore.getBusiness(store.user.user.business_profile.id);
+  } else {
+    await store.getUser();
+    businessStore.business = store.user.user.business_profile;
+  }
+
+});
 </script>
 <style lang="">
 </style>

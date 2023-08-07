@@ -51,6 +51,7 @@ class BusinessController extends Controller
         DB::transaction(function () use ($data) {
             $user  = User::create([
                 "email" => $data['email'],
+                "user_type" => 'Business',
                 "password" => Hash::make($data['password']),
                 "name" => $data['business_name']
             ]);

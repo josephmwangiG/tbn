@@ -48,12 +48,9 @@ class User extends Authenticatable
     {
         return $this->hasOne(Coach::class, 'user_id');
     }
-<<<<<<< HEAD
 
     public function businessProfile()
     {
         return $this->hasOne(Business::class, 'user_id');
     }
-=======
->>>>>>> e2d8be40585dac585685353618c4bc1246b0bfb9
 }
